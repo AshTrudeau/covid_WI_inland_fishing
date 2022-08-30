@@ -8,6 +8,7 @@ Old version: vehicle.count.analysis.Rmd
 
 Code reads data from 'data for analysis' and 'lakevar' folders. 
 Files:
+
 data for analysis folder 
 - boatSamples.IS.csv: Sampling event data for boat-based instantaneous counts of fishing effort in 2018 and 2019. 
 - CREEL_POINT_BOATCOUNT.csv: Count data for boat-based instantaneous counts. Used to compare fraction of boats fishing vs. not fishing in 2020 and years previous.
