@@ -1,0 +1,678 @@
+"","sampleID","date","lakeID","site","time","siteID","projectID","notes","totalNonTrailers","totalInStateNonTrailers","totalBoats","boatsFishing","shoreAnglers","heavyWind","heavyRain","heavyClouds","enteredBy","collectedBy","totalTrailers","totalInStateTrailers"
+"1","AQ_boatLaunch_20200613_11:14_covidCreel.Instantaneous",20200613,"AQ","boatLaunch","11:14:00","AQ_boatLaunch","covidCreel.Instantaneous","sunny, hard to see lake",1,0,0,0,0,0,0,0,"AT","BZ, LZ",11,9
+"2","AQ_boatLaunch_20200625_13:18_covidCreel.Instantaneous",20200625,"AQ","boatLaunch","13:18:00","AQ_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","LZ",5,4
+"3","AQ_boatLaunch_20200626_12:04_covidCreel.Instantaneous",20200626,"AQ","boatLaunch","12:04:00","AQ_boatLaunch","covidCreel.Instantaneous",NA,2,2,0,0,0,0,0,0,"AT","LZ",2,2
+"4","AQ_boatLaunch_20200702_07:23_covidCreel.Instantaneous",20200702,"AQ","boatLaunch","07:23:00","AQ_boatLaunch","covidCreel.Instantaneous",NA,2,2,2,2,0,0,0,0,"AT","LZ",3,3
+"5","AQ_boatLaunch_20200704_08:03_covidCreel.Instantaneous",20200704,"AQ","boatLaunch","08:03:00","AQ_boatLaunch","covidCreel.Instantaneous","holiday",4,3,0,0,0,0,0,0,"AT","LZ",5,5
+"6","AQ_boatLaunch_20200716_11:29_covidCreel.Instantaneous",20200716,"AQ","boatLaunch","11:29:00","AQ_boatLaunch","covidCreel.Instantaneous",NA,2,2,3,2,0,0,0,0,"AT","LZ and BZ",3,3
+"7","AQ_boatLaunch_20200717_11:32_covidCreel.Instantaneous",20200717,"AQ","boatLaunch","11:32:00","AQ_boatLaunch","covidCreel.Instantaneous",NA,2,2,7,7,0,0,0,0,"AT","BS",10,8
+"8","AQ_boatLaunch_20200729_13:56_covidCreel.Instantaneous",20200729,"AQ","boatLaunch","13:56:00","AQ_boatLaunch","covidCreel.Instantaneous",NA,2,2,0,0,0,0,0,0,"AT","ML",4,3
+"9","AQ_boatLaunch_20200730_10:24_covidCreel.Instantaneous",20200730,"AQ","boatLaunch","10:24:00","AQ_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",3,3
+"10","AQ_boatLaunch_20200811_14:09_covidCreel.Instantaneous",20200811,"AQ","boatLaunch","14:09:00","AQ_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","KR",7,7
+"11","AR_boatLaunch_20200609_12:00_covidCreel.Instantaneous",20200609,"AR","boatLaunch","12:00:00","AR_boatLaunch","covidCreel.Instantaneous","partly sunny; hard to see whole lake",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"12","AR_boatLaunch_20200613_09:27_covidCreel.Instantaneous",20200613,"AR","boatLaunch","09:27:00","AR_boatLaunch","covidCreel.Instantaneous","sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"13","AR_boatLaunch_20200619_11:25_covidCreel.Instantaneous",20200619,"AR","boatLaunch","11:25:00","AR_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",0,0,0,0,0,0,0,0,"AT","ML",0,0
+"14","AR_boatLaunch_20200626_10:02_covidCreel.Instantaneous",20200626,"AR","boatLaunch","10:02:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"15","AR_boatLaunch_20200703_19:00_covidCreel.Instantaneous",20200703,"AR","boatLaunch","19:00:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",3,3
+"16","AR_boatLaunch_20200706_14:05_covidCreel.Instantaneous",20200706,"AR","boatLaunch","14:05:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,0
+"17","AR_boatLaunch_20200708_17:24_covidCreel.Instantaneous",20200708,"AR","boatLaunch","17:24:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"18","AR_boatLaunch_20200716_08:30_covidCreel.Instantaneous",20200716,"AR","boatLaunch","08:30:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"19","AR_boatLaunch_20200717_09:25_covidCreel.Instantaneous",20200717,"AR","boatLaunch","09:25:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,1
+"20","AR_boatLaunch_20200720_13:15_covidCreel.Instantaneous",20200720,"AR","boatLaunch","13:15:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",2,2
+"21","AR_boatLaunch_20200725_13:48_covidCreel.Instantaneous",20200725,"AR","boatLaunch","13:48:00","AR_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,1,0,0,0,0,0,"AT","LZ and BZ",3,3
+"22","AR_boatLaunch_20200728_18:07_covidCreel.Instantaneous",20200728,"AR","boatLaunch","18:07:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"23","AR_boatLaunch_20200729_12:19_covidCreel.Instantaneous",20200729,"AR","boatLaunch","12:19:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"24","AR_boatLaunch_20200730_08:05_covidCreel.Instantaneous",20200730,"AR","boatLaunch","08:05:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"25","AR_boatLaunch_20200803_13:16_covidCreel.Instantaneous",20200803,"AR","boatLaunch","13:16:00","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"26","AR_boatLaunch_20200811_12:07_covidCreel.Instantaneous",20200811,"AR","boatLaunch","12:07:00","AR_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","KR",1,1
+"27","AV_boatLaunch_20200611_10:55_covidCreel.Instantaneous",20200611,"AV","boatLaunch","10:55:00","AV_boatLaunch","covidCreel.Instantaneous","very windy overcast",1,1,0,0,0,1,0,0,"AT","BZ, LZ",0,0
+"28","AV_boatLaunch_20200624_09:22_covidCreel.Instantaneous",20200624,"AV","boatLaunch","09:22:00","AV_boatLaunch","covidCreel.Instantaneous",NA,3,2,1,1,0,0,0,0,"AT","LZ",4,4
+"29","AV_boatLaunch_20200630_13:32_covidCreel.Instantaneous",20200630,"AV","boatLaunch","13:32:00","AV_boatLaunch","covidCreel.Instantaneous","clear, sunny",3,2,0,0,0,0,0,0,"AT","KR",4,4
+"30","AV_boatLaunch_20200701_09:26_covidCreel.Instantaneous",20200701,"AV","boatLaunch","09:26:00","AV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,3,0,0,0,"AT","ML",2,2
+"31","AV_boatLaunch_20200702_12:55_covidCreel.Instantaneous",20200702,"AV","boatLaunch","12:55:00","AV_boatLaunch","covidCreel.Instantaneous",NA,2,2,1,1,0,0,0,0,"AT","LZ",1,1
+"32","AV_boatLaunch_20200703_15:29_covidCreel.Instantaneous",20200703,"AV","boatLaunch","15:29:00","AV_boatLaunch","covidCreel.Instantaneous",NA,3,3,3,0,0,0,0,0,"AT","ML",4,2
+"33","AV_boatLaunch_20200706_10:38_covidCreel.Instantaneous",20200706,"AV","boatLaunch","10:38:00","AV_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",1,1
+"34","AV_boatLaunch_20200708_14:04_covidCreel.Instantaneous",20200708,"AV","boatLaunch","14:04:00","AV_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,3,0,0,0,0,"AT","LZ",1,1
+"35","AV_boatLaunch_20200713_13:12_covidCreel.Instantaneous",20200713,"AV","boatLaunch","13:12:00","AV_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","KR",2,1
+"36","AV_boatLaunch_20200727_11:59_covidCreel.Instantaneous",20200727,"AV","boatLaunch","11:59:00","AV_boatLaunch","covidCreel.Instantaneous","3 forest service trucks, 1 with trailer. They were not counted",1,1,1,0,0,0,0,0,"AT","KR",0,0
+"37","AV_boatLaunch_20200728_14:53_covidCreel.Instantaneous",20200728,"AV","boatLaunch","14:53:00","AV_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",4,3
+"38","AV_boatLaunch_20200731_09:29_covidCreel.Instantaneous",20200731,"AV","boatLaunch","09:29:00","AV_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,1
+"39","AV_boatLaunch_20200803_09:13_covidCreel.Instantaneous",20200803,"AV","boatLaunch","09:13:00","AV_boatLaunch","covidCreel.Instantaneous","2 vehicles were ladies at landing for lake association",2,1,0,0,0,0,0,0,"AT","KR",0,0
+"40","AV_boatLaunch_20200810_10:47_covidCreel.Instantaneous",20200810,"AV","boatLaunch","10:47:00","AV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"41","BH_boatLaunch_20200621_11:48_covidCreel.Instantaneous",20200621,"BH","boatLaunch","11:48:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",5,5
+"42","BH_boatLaunch_20200622_15:55_covidCreel.Instantaneous",20200622,"BH","boatLaunch","15:55:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,0
+"43","BH_boatLaunch_20200623_10:16_covidCreel.Instantaneous",20200623,"BH","boatLaunch","10:16:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","KR",2,1
+"44","BH_boatLaunch_20200625_16:37_covidCreel.Instantaneous",20200625,"BH","boatLaunch","16:37:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"45","BH_boatLaunch_20200629_15:58_covidCreel.Instantaneous",20200629,"BH","boatLaunch","15:58:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",1,1
+"46","BH_boatLaunch_20200630_08:56_covidCreel.Instantaneous",20200630,"BH","boatLaunch","08:56:00","BH_boatLaunch","covidCreel.Instantaneous","clear, sunny",0,0,0,0,0,0,0,0,"AT","KR",1,1
+"47","BH_boatLaunch_20200702_10:37_covidCreel.Instantaneous",20200702,"BH","boatLaunch","10:37:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"48","BH_boatLaunch_20200704_11:20_covidCreel.Instantaneous",20200704,"BH","boatLaunch","11:20:00","BH_boatLaunch","covidCreel.Instantaneous","holiday",0,0,1,1,0,0,0,0,"AT","LZ",2,2
+"49","BH_boatLaunch_20200706_15:55_covidCreel.Instantaneous",20200706,"BH","boatLaunch","15:55:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","BS",1,1
+"50","BH_boatLaunch_20200708_12:04_covidCreel.Instantaneous",20200708,"BH","boatLaunch","12:04:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"51","BH_boatLaunch_20200713_09:05_covidCreel.Instantaneous",20200713,"BH","boatLaunch","09:05:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"52","BH_boatLaunch_20200727_09:21_covidCreel.Instantaneous",20200727,"BH","boatLaunch","09:21:00","BH_boatLaunch","covidCreel.Instantaneous",NA,1,0,0,0,0,0,0,0,"AT","KR",2,2
+"53","BH_boatLaunch_20200728_12:46_covidCreel.Instantaneous",20200728,"BH","boatLaunch","12:46:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"54","BH_boatLaunch_20200729_17:07_covidCreel.Instantaneous",20200729,"BH","boatLaunch","17:07:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"55","BH_boatLaunch_20200731_07:20_covidCreel.Instantaneous",20200731,"BH","boatLaunch","07:20:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"56","BH_boatLaunch_20200813_11:19_covidCreel.Instantaneous",20200813,"BH","boatLaunch","11:19:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"57","BK_boatLaunch_20200622_19:19_covidCreel.Instantaneous",20200622,"BK","boatLaunch","19:19:00","BK_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,0,0,0,0,0,"AT","BS",0,0
+"58","BK_boatLaunch_20200623_12:23_covidCreel.Instantaneous",20200623,"BK","boatLaunch","12:23:00","BK_boatLaunch","covidCreel.Instantaneous","couldn't find Indian",3,1,2,2,0,0,0,0,"AT","KR",2,1
+"59","BK_boatLaunch_20200624_08:20_covidCreel.Instantaneous",20200624,"BK","boatLaunch","08:20:00","BK_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","LZ",1,0
+"60","BK_boatLaunch_20200629_18:13_covidCreel.Instantaneous",20200629,"BK","boatLaunch","18:13:00","BK_boatLaunch","covidCreel.Instantaneous",NA,0,0,4,1,0,0,0,0,"AT","BS",1,1
+"61","BK_boatLaunch_20200630_11:46_covidCreel.Instantaneous",20200630,"BK","boatLaunch","11:46:00","BK_boatLaunch","covidCreel.Instantaneous","clear, sunny",3,3,2,2,0,0,0,0,"AT","KR",3,2
+"62","BK_boatLaunch_20200701_08:21_covidCreel.Instantaneous",20200701,"BK","boatLaunch","08:21:00","BK_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",0,0
+"63","BK_boatLaunch_20200702_12:02_covidCreel.Instantaneous",20200702,"BK","boatLaunch","12:02:00","BK_boatLaunch","covidCreel.Instantaneous",NA,9,6,3,2,3,0,0,0,"AT","LZ",5,4
+"64","BK_boatLaunch_20200703_14:36_covidCreel.Instantaneous",20200703,"BK","boatLaunch","14:36:00","BK_boatLaunch","covidCreel.Instantaneous",NA,14,9,3,0,0,0,0,0,"AT","ML",4,4
+"65","BK_boatLaunch_20200704_12:35_covidCreel.Instantaneous",20200704,"BK","boatLaunch","12:35:00","BK_boatLaunch","covidCreel.Instantaneous","holiday",20,14,3,1,0,0,0,0,"AT","LZ",4,3
+"66","BK_boatLaunch_20200706_09:39_covidCreel.Instantaneous",20200706,"BK","boatLaunch","09:39:00","BK_boatLaunch","covidCreel.Instantaneous",NA,3,3,0,0,0,0,0,0,"AT","LZ",3,2
+"67","BK_boatLaunch_20200706_17:45_covidCreel.Instantaneous",20200706,"BK","boatLaunch","17:45:00","BK_boatLaunch","covidCreel.Instantaneous",NA,1,1,5,2,0,0,0,0,"AT","BS",3,3
+"68","BK_boatLaunch_20200708_13:11_covidCreel.Instantaneous",20200708,"BK","boatLaunch","13:11:00","BK_boatLaunch","covidCreel.Instantaneous",NA,5,4,2,2,0,0,0,0,"AT","LZ",0,0
+"69","BK_boatLaunch_20200712_12:04_covidCreel.Instantaneous",20200712,"BK","boatLaunch","12:04:00","BK_boatLaunch","covidCreel.Instantaneous","sunny",5,5,1,1,0,0,0,0,"AT","LZ and BZ",1,1
+"70","BK_boatLaunch_20200713_12:06_covidCreel.Instantaneous",20200713,"BK","boatLaunch","12:06:00","BK_boatLaunch","covidCreel.Instantaneous",NA,7,6,0,0,0,0,0,0,"AT","KR",2,1
+"71","BK_boatLaunch_20200727_11:05_covidCreel.Instantaneous",20200727,"BK","boatLaunch","11:05:00","BK_boatLaunch","covidCreel.Instantaneous",NA,4,4,4,3,0,0,0,0,"AT","KR",1,1
+"72","BK_boatLaunch_20200728_14:00_covidCreel.Instantaneous",20200728,"BK","boatLaunch","14:00:00","BK_boatLaunch","covidCreel.Instantaneous",NA,6,6,0,0,0,0,0,0,"AT","ML",0,0
+"73","BK_boatLaunch_20200729_18:09_covidCreel.Instantaneous",20200729,"BK","boatLaunch","18:09:00","BK_boatLaunch","covidCreel.Instantaneous",NA,4,1,0,0,0,0,0,0,"AT","ML",2,0
+"74","BK_boatLaunch_20200731_08:33_covidCreel.Instantaneous",20200731,"BK","boatLaunch","08:33:00","BK_boatLaunch","covidCreel.Instantaneous",NA,2,2,1,1,0,0,0,0,"AT","LZ",2,2
+"75","BK_boatLaunch_20200803_08:09_covidCreel.Instantaneous",20200803,"BK","boatLaunch","08:09:00","BK_boatLaunch","covidCreel.Instantaneous","sunny and cold",3,3,0,0,0,0,0,0,"AT","KR",0,0
+"76","BK_boatLaunch_20200810_09:50_covidCreel.Instantaneous",20200810,"BK","boatLaunch","09:50:00","BK_boatLaunch","covidCreel.Instantaneous","Raining",0,0,1,0,0,0,0,0,"AT","BS",1,1
+"77","BOT_boatLaunch_20200607_15:15_covidCreel.Instantaneous",20200607,"BOT","boatLaunch","15:15:00","BOT_boatLaunch","covidCreel.Instantaneous","windy, partly sunny",0,0,3,3,0,0,0,0,"AT","BZ, LZ",3,2
+"78","BOT_boatLaunch_20200609_10:22_covidCreel.Instantaneous",20200609,"BOT","boatLaunch","10:22:00","BOT_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"79","BOT_boatLaunch_20200611_13:00_covidCreel.Instantaneous",20200611,"BOT","boatLaunch","13:00:00","BOT_boatLaunch","covidCreel.Instantaneous","sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"80","BOT_boatLaunch_20200624_11:28_covidCreel.Instantaneous",20200624,"BOT","boatLaunch","11:28:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","LZ",2,2
+"81","BOT_boatLaunch_20200626_08:21_covidCreel.Instantaneous",20200626,"BOT","boatLaunch","08:21:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"82","BOT_boatLaunch_20200701_11:17_covidCreel.Instantaneous",20200701,"BOT","boatLaunch","11:17:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","ML",0,0
+"83","BOT_boatLaunch_20200703_17:28_covidCreel.Instantaneous",20200703,"BOT","boatLaunch","17:28:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",2,1
+"84","BOT_boatLaunch_20200706_12:23_covidCreel.Instantaneous",20200706,"BOT","boatLaunch","12:23:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",3,1
+"85","BOT_boatLaunch_20200708_15:41_covidCreel.Instantaneous",20200708,"BOT","boatLaunch","15:41:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"86","BOT_boatLaunch_20200720_10:47_covidCreel.Instantaneous",20200720,"BOT","boatLaunch","10:47:00","BOT_boatLaunch","covidCreel.Instantaneous","cloudy, breezy",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"87","BOT_boatLaunch_20200722_12:01_covidCreel.Instantaneous",20200722,"BOT","boatLaunch","12:01:00","BOT_boatLaunch","covidCreel.Instantaneous","cloudy",0,0,1,0,0,0,0,0,"AT","LZ and BZ",0,0
+"88","BOT_boatLaunch_20200725_11:47_covidCreel.Instantaneous",20200725,"BOT","boatLaunch","11:47:00","BOT_boatLaunch","covidCreel.Instantaneous","party sunny",0,0,2,2,0,0,0,0,"AT","LZ and BZ",1,1
+"89","BOT_boatLaunch_20200727_13:56_covidCreel.Instantaneous",20200727,"BOT","boatLaunch","13:56:00","BOT_boatLaunch","covidCreel.Instantaneous","windy; storm clouds",0,0,0,0,0,1,0,1,"AT","KR",0,0
+"90","BOT_boatLaunch_20200728_16:40_covidCreel.Instantaneous",20200728,"BOT","boatLaunch","16:40:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"91","BOT_boatLaunch_20200730_06:40_covidCreel.Instantaneous",20200730,"BOT","boatLaunch","06:40:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,0
+"92","BOT_boatLaunch_20200731_11:13_covidCreel.Instantaneous",20200731,"BOT","boatLaunch","11:13:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",3,3
+"93","BOT_boatLaunch_20200803_11:09_covidCreel.Instantaneous",20200803,"BOT","boatLaunch","11:09:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"94","BOT_boatLaunch_20200810_12:53_covidCreel.Instantaneous",20200810,"BOT","boatLaunch","12:53:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,1
+"95","BOT_boatLaunch_20200811_10:14_covidCreel.Instantaneous",20200811,"BOT","boatLaunch","10:14:00","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","KR",1,1
+"96","BY_boatLaunch_20200609_12:31_covidCreel.Instantaneous",20200609,"BY","boatLaunch","12:31:00","BY_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",1,1
+"97","BY_boatLaunch_20200613_09:36_covidCreel.Instantaneous",20200613,"BY","boatLaunch","09:36:00","BY_boatLaunch","covidCreel.Instantaneous","sunny",0,0,1,1,0,0,0,0,"AT","BZ, LZ",1,1
+"98","BY_boatLaunch_20200619_11:34_covidCreel.Instantaneous",20200619,"BY","boatLaunch","11:34:00","BY_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",0,0,0,0,0,0,0,0,"AT","ML",0,0
+"99","BY_boatLaunch_20200626_10:08_covidCreel.Instantaneous",20200626,"BY","boatLaunch","10:08:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","LZ",3,3
+"100","BY_boatLaunch_20200703_19:05_covidCreel.Instantaneous",20200703,"BY","boatLaunch","19:05:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",2,2
+"101","BY_boatLaunch_20200706_14:10_covidCreel.Instantaneous",20200706,"BY","boatLaunch","14:10:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","LZ",1,0
+"102","BY_boatLaunch_20200708_17:30_covidCreel.Instantaneous",20200708,"BY","boatLaunch","17:30:00","BY_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","LZ",3,3
+"103","BY_boatLaunch_20200716_08:39_covidCreel.Instantaneous",20200716,"BY","boatLaunch","08:39:00","BY_boatLaunch","covidCreel.Instantaneous",NA,1,0,3,3,0,0,0,0,"AT","LZ and BZ",3,3
+"104","BY_boatLaunch_20200717_09:31_covidCreel.Instantaneous",20200717,"BY","boatLaunch","09:31:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"105","BY_boatLaunch_20200720_13:25_covidCreel.Instantaneous",20200720,"BY","boatLaunch","13:25:00","BY_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","KR",1,1
+"106","BY_boatLaunch_20200725_14:08_covidCreel.Instantaneous",20200725,"BY","boatLaunch","14:08:00","BY_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,0,0,0,0,0,0,"AT","LZ and BZ",2,2
+"107","BY_boatLaunch_20200728_18:21_covidCreel.Instantaneous",20200728,"BY","boatLaunch","18:21:00","BY_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","ML",1,1
+"108","BY_boatLaunch_20200729_12:14_covidCreel.Instantaneous",20200729,"BY","boatLaunch","12:14:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"109","BY_boatLaunch_20200730_08:13_covidCreel.Instantaneous",20200730,"BY","boatLaunch","08:13:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"110","BY_boatLaunch_20200803_13:24_covidCreel.Instantaneous",20200803,"BY","boatLaunch","13:24:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"111","BY_boatLaunch_20200811_12:13_covidCreel.Instantaneous",20200811,"BY","boatLaunch","12:13:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",1,1
+"112","CA_boatLaunch_20200621_09:25_covidCreel.Instantaneous",20200621,"CA","boatLaunch","09:25:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"113","CA_boatLaunch_20200625_14:56_covidCreel.Instantaneous",20200625,"CA","boatLaunch","14:56:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"114","CA_boatLaunch_20200629_13:42_covidCreel.Instantaneous",20200629,"CA","boatLaunch","13:42:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"115","CA_boatLaunch_20200702_08:57_covidCreel.Instantaneous",20200702,"CA","boatLaunch","08:57:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"116","CA_boatLaunch_20200704_09:45_covidCreel.Instantaneous",20200704,"CA","boatLaunch","09:45:00","CA_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"117","CA_boatLaunch_20200706_13:50_covidCreel.Instantaneous",20200706,"CA","boatLaunch","13:50:00","CA_boatLaunch","covidCreel.Instantaneous","Heavy rain, thunderstorm",0,0,0,0,0,0,1,1,"AT","BS",0,0
+"118","CA_boatLaunch_20200717_13:10_covidCreel.Instantaneous",20200717,"CA","boatLaunch","13:10:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"119","CA_boatLaunch_20200729_15:31_covidCreel.Instantaneous",20200729,"CA","boatLaunch","15:31:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"120","CA_boatLaunch_20200730_10:04_covidCreel.Instantaneous",20200730,"CA","boatLaunch","10:04:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"121","CA_boatLaunch_20200813_09:30_covidCreel.Instantaneous",20200813,"CA","boatLaunch","09:30:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"122","DS_boatLaunch_20200607_13:45_covidCreel.Instantaneous",20200607,"DS","boatLaunch","13:45:00","DS_boatLaunch","covidCreel.Instantaneous","overcast 56 degrees",0,0,0,0,0,0,0,0,"AT","BZ, LZ",3,3
+"123","DS_boatLaunch_20200611_11:35_covidCreel.Instantaneous",20200611,"DS","boatLaunch","11:35:00","DS_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"124","DS_boatLaunch_20200623_13:22_covidCreel.Instantaneous",20200623,"DS","boatLaunch","13:22:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"125","DS_boatLaunch_20200624_10:08_covidCreel.Instantaneous",20200624,"DS","boatLaunch","10:08:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",2,1
+"126","DS_boatLaunch_20200626_07:18_covidCreel.Instantaneous",20200626,"DS","boatLaunch","07:18:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"127","DS_boatLaunch_20200630_14:26_covidCreel.Instantaneous",20200630,"DS","boatLaunch","14:26:00","DS_boatLaunch","covidCreel.Instantaneous","party cloudy, breezy",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"128","DS_boatLaunch_20200702_13:45_covidCreel.Instantaneous",20200702,"DS","boatLaunch","13:45:00","DS_boatLaunch","covidCreel.Instantaneous","rain",0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"129","DS_boatLaunch_20200703_16:30_covidCreel.Instantaneous",20200703,"DS","boatLaunch","16:30:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","ML",0,0
+"130","DS_boatLaunch_20200706_11:12_covidCreel.Instantaneous",20200706,"DS","boatLaunch","11:12:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","LZ",2,2
+"131","DS_boatLaunch_20200708_14:36_covidCreel.Instantaneous",20200708,"DS","boatLaunch","14:36:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,1
+"132","DS_boatLaunch_20200720_08:44_covidCreel.Instantaneous",20200720,"DS","boatLaunch","08:44:00","DS_boatLaunch","covidCreel.Instantaneous","clear skies, chilly",0,0,1,0,0,0,0,0,"AT","KR",0,0
+"133","DS_boatLaunch_20200722_10:43_covidCreel.Instantaneous",20200722,"DS","boatLaunch","10:43:00","DS_boatLaunch","covidCreel.Instantaneous","overcast",1,1,3,1,0,0,0,0,"AT","LZ and BZ",4,4
+"134","DS_boatLaunch_20200727_12:35_covidCreel.Instantaneous",20200727,"DS","boatLaunch","12:35:00","DS_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","KR",0,0
+"135","DS_boatLaunch_20200728_15:27_covidCreel.Instantaneous",20200728,"DS","boatLaunch","15:27:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",1,1
+"136","DS_boatLaunch_20200731_10:01_covidCreel.Instantaneous",20200731,"DS","boatLaunch","10:01:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"137","DS_boatLaunch_20200803_09:50_covidCreel.Instantaneous",20200803,"DS","boatLaunch","09:50:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"138","DS_boatLaunch_20200810_11:32_covidCreel.Instantaneous",20200810,"DS","boatLaunch","11:32:00","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",1,1
+"139","DS_boatLaunch_20200811_08:50_covidCreel.Instantaneous",20200811,"DS","boatLaunch","08:50:00","DS_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","KR",0,0
+"140","DY_boatLaunch_20200621_09:58_covidCreel.Instantaneous",20200621,"DY","boatLaunch","09:58:00","DY_boatLaunch","covidCreel.Instantaneous",NA,3,3,2,0,0,0,0,0,"AT","ML",3,3
+"141","DY_boatLaunch_20200625_15:18_covidCreel.Instantaneous",20200625,"DY","boatLaunch","15:18:00","DY_boatLaunch","covidCreel.Instantaneous",NA,1,1,4,0,0,0,0,0,"AT","LZ",1,1
+"142","DY_boatLaunch_20200629_14:20_covidCreel.Instantaneous",20200629,"DY","boatLaunch","14:20:00","DY_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,0,0,0,0,0,"AT","BS",2,2
+"143","DY_boatLaunch_20200702_09:19_covidCreel.Instantaneous",20200702,"DY","boatLaunch","09:19:00","DY_boatLaunch","covidCreel.Instantaneous",NA,1,0,1,1,0,0,0,0,"AT","LZ",0,0
+"144","DY_boatLaunch_20200704_10:04_covidCreel.Instantaneous",20200704,"DY","boatLaunch","10:04:00","DY_boatLaunch","covidCreel.Instantaneous","holiday",4,3,4,0,0,0,0,0,"AT","LZ",3,3
+"145","DY_boatLaunch_20200706_14:06_covidCreel.Instantaneous",20200706,"DY","boatLaunch","14:06:00","DY_boatLaunch","covidCreel.Instantaneous",NA,2,2,0,0,0,0,0,0,"AT","BS",3,3
+"146","DY_boatLaunch_20200716_11:08_covidCreel.Instantaneous",20200716,"DY","boatLaunch","11:08:00","DY_boatLaunch","covidCreel.Instantaneous",NA,3,3,0,0,0,0,0,0,"AT","LZ and BZ",1,1
+"147","DY_boatLaunch_20200717_13:36_covidCreel.Instantaneous",20200717,"DY","boatLaunch","13:36:00","DY_boatLaunch","covidCreel.Instantaneous",NA,2,2,5,3,0,0,0,0,"AT","BS",4,3
+"148","DY_boatLaunch_20200727_07:53_covidCreel.Instantaneous",20200727,"DY","boatLaunch","07:53:00","DY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",2,2
+"149","DY_boatLaunch_20200729_15:54_covidCreel.Instantaneous",20200729,"DY","boatLaunch","15:54:00","DY_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","ML",3,3
+"150","DY_boatLaunch_20200730_11:49_covidCreel.Instantaneous",20200730,"DY","boatLaunch","11:49:00","DY_boatLaunch","covidCreel.Instantaneous",NA,4,2,1,1,2,0,0,0,"AT","ML",4,4
+"151","DY_boatLaunch_20200813_09:43_covidCreel.Instantaneous",20200813,"DY","boatLaunch","09:43:00","DY_boatLaunch","covidCreel.Instantaneous",NA,2,2,0,0,0,0,0,0,"AT","BS",2,2
+"152","ER_boatLaunch_20200609_11:50_covidCreel.Instantaneous",20200609,"ER","boatLaunch","11:50:00","ER_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",1,1
+"153","ER_boatLaunch_20200613_09:13_covidCreel.Instantaneous",20200613,"ER","boatLaunch","09:13:00","ER_boatLaunch","covidCreel.Instantaneous","sunny",0,0,1,1,0,0,0,0,"AT","BZ, LZ",1,1
+"154","ER_boatLaunch_20200619_10:41_covidCreel.Instantaneous",20200619,"ER","boatLaunch","10:41:00","ER_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",0,0,0,0,0,0,0,0,"AT","ML",0,0
+"155","ER_boatLaunch_20200624_13:43_covidCreel.Instantaneous",20200624,"ER","boatLaunch","13:43:00","ER_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","LZ",1,1
+"156","ER_boatLaunch_20200626_09:45_covidCreel.Instantaneous",20200626,"ER","boatLaunch","09:45:00","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"157","ER_boatLaunch_20200703_18:47_covidCreel.Instantaneous",20200703,"ER","boatLaunch","18:47:00","ER_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",0,0
+"158","ER_boatLaunch_20200706_13:52_covidCreel.Instantaneous",20200706,"ER","boatLaunch","13:52:00","ER_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","LZ",2,2
+"159","ER_boatLaunch_20200708_17:12_covidCreel.Instantaneous",20200708,"ER","boatLaunch","17:12:00","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"160","ER_boatLaunch_20200717_09:09_covidCreel.Instantaneous",20200717,"ER","boatLaunch","09:09:00","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"161","ER_boatLaunch_20200720_12:58_covidCreel.Instantaneous",20200720,"ER","boatLaunch","12:58:00","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",1,0
+"162","ER_boatLaunch_20200725_13:32_covidCreel.Instantaneous",20200725,"ER","boatLaunch","13:32:00","ER_boatLaunch","covidCreel.Instantaneous","partly sunny",1,1,4,0,0,0,0,0,"AT","LZ and BZ",0,0
+"163","ER_boatLaunch_20200728_17:55_covidCreel.Instantaneous",20200728,"ER","boatLaunch","17:55:00","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"164","ER_boatLaunch_20200730_07:54_covidCreel.Instantaneous",20200730,"ER","boatLaunch","07:54:00","ER_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","ML",0,0
+"165","ER_boatLaunch_20200803_12:59_covidCreel.Instantaneous",20200803,"ER","boatLaunch","12:59:00","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",1,1
+"166","ER_boatLaunch_20200810_14:40_covidCreel.Instantaneous",20200810,"ER","boatLaunch","14:40:00","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"167","ER_boatLaunch_20200811_11:52_covidCreel.Instantaneous",20200811,"ER","boatLaunch","11:52:00","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"168","FD_boatLaunch_20200607_16:04_covidCreel.Instantaneous",20200607,"FD","boatLaunch","16:04:00","FD_boatLaunch","covidCreel.Instantaneous","sunny",0,0,1,1,0,0,0,0,"AT","BZ, LZ",2,2
+"169","FD_boatLaunch_20200609_11:04_covidCreel.Instantaneous",20200609,"FD","boatLaunch","11:04:00","FD_boatLaunch","covidCreel.Instantaneous","partly sunny",1,1,2,0,0,0,0,0,"AT","BZ, LZ",0,0
+"170","FD_boatLaunch_20200613_08:22_covidCreel.Instantaneous",20200613,"FD","boatLaunch","08:22:00","FD_boatLaunch","covidCreel.Instantaneous","sunny",1,1,1,1,0,0,0,0,"AT","BZ, LZ",1,1
+"171","FD_boatLaunch_20200619_09:19_covidCreel.Instantaneous",20200619,"FD","boatLaunch","09:19:00","FD_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",1,1,1,0,0,0,0,0,"AT","ML",1,1
+"172","FD_boatLaunch_20200624_12:57_covidCreel.Instantaneous",20200624,"FD","boatLaunch","12:57:00","FD_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","LZ",1,0
+"173","FD_boatLaunch_20200626_09:03_covidCreel.Instantaneous",20200626,"FD","boatLaunch","09:03:00","FD_boatLaunch","covidCreel.Instantaneous",NA,2,2,1,1,0,0,0,0,"AT","LZ",2,2
+"174","FD_boatLaunch_20200701_12:35_covidCreel.Instantaneous",20200701,"FD","boatLaunch","12:35:00","FD_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"175","FD_boatLaunch_20200703_18:15_covidCreel.Instantaneous",20200703,"FD","boatLaunch","18:15:00","FD_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,1,0,0,0,0,"AT","ML",4,4
+"176","FD_boatLaunch_20200706_13:11_covidCreel.Instantaneous",20200706,"FD","boatLaunch","13:11:00","FD_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","LZ",4,3
+"177","FD_boatLaunch_20200708_16:31_covidCreel.Instantaneous",20200708,"FD","boatLaunch","16:31:00","FD_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","LZ",1,1
+"178","FD_boatLaunch_20200720_11:43_covidCreel.Instantaneous",20200720,"FD","boatLaunch","11:43:00","FD_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","KR",2,2
+"179","FD_boatLaunch_20200722_12:48_covidCreel.Instantaneous",20200722,"FD","boatLaunch","12:48:00","FD_boatLaunch","covidCreel.Instantaneous","cloudy",0,0,1,1,0,0,0,0,"AT","LZ and BZ",2,2
+"180","FD_boatLaunch_20200725_12:38_covidCreel.Instantaneous",20200725,"FD","boatLaunch","12:38:00","FD_boatLaunch","covidCreel.Instantaneous","sunny",0,0,2,1,0,0,0,0,"AT","LZ and BZ",0,0
+"181","FD_boatLaunch_20200728_17:27_covidCreel.Instantaneous",20200728,"FD","boatLaunch","17:27:00","FD_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"182","FD_boatLaunch_20200730_07:26_covidCreel.Instantaneous",20200730,"FD","boatLaunch","07:26:00","FD_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",2,1
+"183","FD_boatLaunch_20200731_11:55_covidCreel.Instantaneous",20200731,"FD","boatLaunch","11:55:00","FD_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","LZ",0,0
+"184","FD_boatLaunch_20200803_12:00_covidCreel.Instantaneous",20200803,"FD","boatLaunch","12:00:00","FD_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","KR",1,1
+"185","FD_boatLaunch_20200810_13:48_covidCreel.Instantaneous",20200810,"FD","boatLaunch","13:48:00","FD_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,3,0,0,0,0,"AT","BS",4,3
+"186","FD_boatLaunch_20200811_11:03_covidCreel.Instantaneous",20200811,"FD","boatLaunch","11:03:00","FD_boatLaunch","covidCreel.Instantaneous",NA,2,2,0,0,0,0,0,0,"AT","KR",1,1
+"187","HT_boatLaunch_20200607_15:00_covidCreel.Instantaneous",20200607,"HT","boatLaunch","15:00:00","HT_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"188","HT_boatLaunch_20200609_10:09_covidCreel.Instantaneous",20200609,"HT","boatLaunch","10:09:00","HT_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"189","HT_boatLaunch_20200611_12:50_covidCreel.Instantaneous",20200611,"HT","boatLaunch","12:50:00","HT_boatLaunch","covidCreel.Instantaneous","sunny",0,0,1,0,0,0,0,0,"AT","BZ, LZ",1,1
+"190","HT_boatLaunch_20200624_11:14_covidCreel.Instantaneous",20200624,"HT","boatLaunch","11:14:00","HT_boatLaunch","covidCreel.Instantaneous","light rain",0,0,1,1,0,0,0,0,"AT","LZ",0,0
+"191","HT_boatLaunch_20200626_08:11_covidCreel.Instantaneous",20200626,"HT","boatLaunch","08:11:00","HT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",0,0
+"192","HT_boatLaunch_20200701_11:05_covidCreel.Instantaneous",20200701,"HT","boatLaunch","11:05:00","HT_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",2,1
+"193","HT_boatLaunch_20200703_17:19_covidCreel.Instantaneous",20200703,"HT","boatLaunch","17:19:00","HT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","ML",1,1
+"194","HT_boatLaunch_20200706_12:11_covidCreel.Instantaneous",20200706,"HT","boatLaunch","12:11:00","HT_boatLaunch","covidCreel.Instantaneous",NA,2,2,2,1,0,0,0,0,"AT","LZ",0,0
+"195","HT_boatLaunch_20200708_15:31_covidCreel.Instantaneous",20200708,"HT","boatLaunch","15:31:00","HT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"196","HT_boatLaunch_20200720_10:30_covidCreel.Instantaneous",20200720,"HT","boatLaunch","10:30:00","HT_boatLaunch","covidCreel.Instantaneous","cloudy, breezy",0,0,1,0,0,0,0,0,"AT","KR",0,0
+"197","HT_boatLaunch_20200722_11:50_covidCreel.Instantaneous",20200722,"HT","boatLaunch","11:50:00","HT_boatLaunch","covidCreel.Instantaneous","cloudy",0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"198","HT_boatLaunch_20200725_11:36_covidCreel.Instantaneous",20200725,"HT","boatLaunch","11:36:00","HT_boatLaunch","covidCreel.Instantaneous","party sunny",2,2,3,0,0,0,0,0,"AT","LZ and BZ",0,0
+"199","HT_boatLaunch_20200727_13:52_covidCreel.Instantaneous",20200727,"HT","boatLaunch","13:52:00","HT_boatLaunch","covidCreel.Instantaneous","windy; storm clouds",2,2,0,0,0,1,0,1,"AT","KR",0,0
+"200","HT_boatLaunch_20200728_16:29_covidCreel.Instantaneous",20200728,"HT","boatLaunch","16:29:00","HT_boatLaunch","covidCreel.Instantaneous",NA,2,2,0,0,0,0,0,0,"AT","ML",0,0
+"201","HT_boatLaunch_20200731_11:04_covidCreel.Instantaneous",20200731,"HT","boatLaunch","11:04:00","HT_boatLaunch","covidCreel.Instantaneous",NA,2,2,0,0,0,0,0,0,"AT","LZ",0,0
+"202","HT_boatLaunch_20200803_10:55_covidCreel.Instantaneous",20200803,"HT","boatLaunch","10:55:00","HT_boatLaunch","covidCreel.Instantaneous",NA,1,0,0,0,0,0,0,0,"AT","KR",0,0
+"203","HT_boatLaunch_20200810_12:39_covidCreel.Instantaneous",20200810,"HT","boatLaunch","12:39:00","HT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"204","HT_boatLaunch_20200811_10:00_covidCreel.Instantaneous",20200811,"HT","boatLaunch","10:00:00","HT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",1,1
+"205","ID_boatLaunch_20200622_18:45_covidCreel.Instantaneous",20200622,"ID","boatLaunch","18:45:00","ID_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"206","ID_boatLaunch_20200629_17:45_covidCreel.Instantaneous",20200629,"ID","boatLaunch","17:45:00","ID_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"207","ID_boatLaunch_20200630_11:19_covidCreel.Instantaneous",20200630,"ID","boatLaunch","11:19:00","ID_boatLaunch","covidCreel.Instantaneous","clear, sunny",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"208","ID_boatLaunch_20200701_07:48_covidCreel.Instantaneous",20200701,"ID","boatLaunch","07:48:00","ID_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"209","ID_boatLaunch_20200703_14:18_covidCreel.Instantaneous",20200703,"ID","boatLaunch","14:18:00","ID_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"210","ID_boatLaunch_20200706_17:20_covidCreel.Instantaneous",20200706,"ID","boatLaunch","17:20:00","ID_boatLaunch","covidCreel.Instantaneous","light rain",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"211","ID_boatLaunch_20200712_11:37_covidCreel.Instantaneous",20200712,"ID","boatLaunch","11:37:00","ID_boatLaunch","covidCreel.Instantaneous","sunny",0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"212","ID_boatLaunch_20200713_11:35_covidCreel.Instantaneous",20200713,"ID","boatLaunch","11:35:00","ID_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"213","ID_boatLaunch_20200810_09:35_covidCreel.Instantaneous",20200810,"ID","boatLaunch","09:35:00","ID_boatLaunch","covidCreel.Instantaneous","Raining",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"214","IV_boatLaunch_20200621_08:17_covidCreel.Instantaneous",20200621,"IV","boatLaunch","08:17:00","IV_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",3,2
+"215","IV_boatLaunch_20200625_13:57_covidCreel.Instantaneous",20200625,"IV","boatLaunch","13:57:00","IV_boatLaunch","covidCreel.Instantaneous",NA,2,2,2,2,0,0,0,0,"AT","LZ",13,9
+"216","IV_boatLaunch_20200626_12:40_covidCreel.Instantaneous",20200626,"IV","boatLaunch","12:40:00","IV_boatLaunch","covidCreel.Instantaneous",NA,0,0,5,5,0,0,0,0,"AT","LZ",15,12
+"217","IV_boatLaunch_20200702_08:09_covidCreel.Instantaneous",20200702,"IV","boatLaunch","08:09:00","IV_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","LZ",8,5
+"218","IV_boatLaunch_20200704_08:35_covidCreel.Instantaneous",20200704,"IV","boatLaunch","08:35:00","IV_boatLaunch","covidCreel.Instantaneous","holiday",3,1,3,3,0,0,0,0,"AT","LZ",10,7
+"219","IV_boatLaunch_20200716_12:14_covidCreel.Instantaneous",20200716,"IV","boatLaunch","12:14:00","IV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ and BZ",9,9
+"220","IV_boatLaunch_20200717_12:15_covidCreel.Instantaneous",20200717,"IV","boatLaunch","12:15:00","IV_boatLaunch","covidCreel.Instantaneous",NA,0,0,7,5,0,0,0,0,"AT","BS",9,8
+"221","IV_boatLaunch_20200729_14:36_covidCreel.Instantaneous",20200729,"IV","boatLaunch","14:36:00","IV_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",3,3
+"222","IV_boatLaunch_20200730_10:58_covidCreel.Instantaneous",20200730,"IV","boatLaunch","10:58:00","IV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",5,4
+"223","IV_boatLaunch_20200813_08:34_covidCreel.Instantaneous",20200813,"IV","boatLaunch","08:34:00","IV_boatLaunch","covidCreel.Instantaneous",NA,2,2,4,4,0,0,0,0,"AT","BS",7,6
+"224","JS_boatLaunch_20200613_09:41_covidCreel.Instantaneous",20200613,"JS","boatLaunch","09:41:00","JS_boatLaunch","covidCreel.Instantaneous","sunny",0,0,1,1,0,0,0,0,"AT","BZ, LZ",2,1
+"225","JS_boatLaunch_20200619_11:53_covidCreel.Instantaneous",20200619,"JS","boatLaunch","11:53:00","JS_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",0,0,1,1,0,0,0,0,"AT","ML",0,0
+"226","JS_boatLaunch_20200626_10:28_covidCreel.Instantaneous",20200626,"JS","boatLaunch","10:28:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"227","JS_boatLaunch_20200706_14:26_covidCreel.Instantaneous",20200706,"JS","boatLaunch","14:26:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"228","JS_boatLaunch_20200708_17:34_covidCreel.Instantaneous",20200708,"JS","boatLaunch","17:34:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",0,0
+"229","JS_boatLaunch_20200716_08:50_covidCreel.Instantaneous",20200716,"JS","boatLaunch","08:50:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"230","JS_boatLaunch_20200717_09:36_covidCreel.Instantaneous",20200717,"JS","boatLaunch","09:36:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","BS",2,1
+"231","JS_boatLaunch_20200728_18:26_covidCreel.Instantaneous",20200728,"JS","boatLaunch","18:26:00","JS_boatLaunch","covidCreel.Instantaneous",NA,1,0,0,0,3,0,0,0,"AT","ML",0,0
+"232","JS_boatLaunch_20200729_12:24_covidCreel.Instantaneous",20200729,"JS","boatLaunch","12:24:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"233","JS_boatLaunch_20200730_08:17_covidCreel.Instantaneous",20200730,"JS","boatLaunch","08:17:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"234","JS_boatLaunch_20200803_13:39_covidCreel.Instantaneous",20200803,"JS","boatLaunch","13:39:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","KR",0,0
+"235","JS_boatLaunch_20200811_12:23_covidCreel.Instantaneous",20200811,"JS","boatLaunch","12:23:00","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","KR",0,0
+"236","LC_boatLaunch_20200621_10:57_covidCreel.Instantaneous",20200621,"LC","boatLaunch","10:57:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",2,1
+"237","LC_boatLaunch_20200622_15:10_covidCreel.Instantaneous",20200622,"LC","boatLaunch","15:10:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,4,4,0,0,0,0,"AT","BS",1,0
+"238","LC_boatLaunch_20200623_09:33_covidCreel.Instantaneous",20200623,"LC","boatLaunch","09:33:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",1,1
+"239","LC_boatLaunch_20200625_16:01_covidCreel.Instantaneous",20200625,"LC","boatLaunch","16:01:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"240","LC_boatLaunch_20200629_15:15_covidCreel.Instantaneous",20200629,"LC","boatLaunch","15:15:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,0,0,0,0,0,"AT","BS",0,0
+"241","LC_boatLaunch_20200702_10:03_covidCreel.Instantaneous",20200702,"LC","boatLaunch","10:03:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",2,2
+"242","LC_boatLaunch_20200704_10:44_covidCreel.Instantaneous",20200704,"LC","boatLaunch","10:44:00","LC_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"243","LC_boatLaunch_20200706_15:01_covidCreel.Instantaneous",20200706,"LC","boatLaunch","15:01:00","LC_boatLaunch","covidCreel.Instantaneous",NA,1,0,0,0,0,0,0,0,"AT","BS",1,0
+"244","LC_boatLaunch_20200708_11:33_covidCreel.Instantaneous",20200708,"LC","boatLaunch","11:33:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"245","LC_boatLaunch_20200713_08:24_covidCreel.Instantaneous",20200713,"LC","boatLaunch","08:24:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"246","LC_boatLaunch_20200717_14:18_covidCreel.Instantaneous",20200717,"LC","boatLaunch","14:18:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"247","LC_boatLaunch_20200727_08:40_covidCreel.Instantaneous",20200727,"LC","boatLaunch","08:40:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,2,0,0,0,"AT","KR",1,1
+"248","LC_boatLaunch_20200729_16:32_covidCreel.Instantaneous",20200729,"LC","boatLaunch","16:32:00","LC_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,1,0,0,0,"AT","ML",2,2
+"249","LC_boatLaunch_20200730_12:23_covidCreel.Instantaneous",20200730,"LC","boatLaunch","12:23:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"250","LC_boatLaunch_20200731_06:52_covidCreel.Instantaneous",20200731,"LC","boatLaunch","06:52:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"251","LC_boatLaunch_20200813_10:25_covidCreel.Instantaneous",20200813,"LC","boatLaunch","10:25:00","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","BS",2,2
+"252","LE_boatLaunch_20200621_08:05_covidCreel.Instantaneous",20200621,"LE","boatLaunch","08:05:00","LE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"253","LE_boatLaunch_20200625_13:47_covidCreel.Instantaneous",20200625,"LE","boatLaunch","13:47:00","LE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"254","LE_boatLaunch_20200626_12:31_covidCreel.Instantaneous",20200626,"LE","boatLaunch","12:31:00","LE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"255","LE_boatLaunch_20200702_08:00_covidCreel.Instantaneous",20200702,"LE","boatLaunch","08:00:00","LE_boatLaunch","covidCreel.Instantaneous",NA,2,2,2,2,0,0,0,0,"AT","LZ",0,0
+"256","LE_boatLaunch_20200704_08:27_covidCreel.Instantaneous",20200704,"LE","boatLaunch","08:27:00","LE_boatLaunch","covidCreel.Instantaneous","holiday",2,2,2,1,0,0,0,0,"AT","LZ",1,1
+"257","LE_boatLaunch_20200716_12:06_covidCreel.Instantaneous",20200716,"LE","boatLaunch","12:06:00","LE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"258","LE_boatLaunch_20200717_12:07_covidCreel.Instantaneous",20200717,"LE","boatLaunch","12:07:00","LE_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,1
+"259","LE_boatLaunch_20200729_14:28_covidCreel.Instantaneous",20200729,"LE","boatLaunch","14:28:00","LE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"260","LE_boatLaunch_20200730_10:51_covidCreel.Instantaneous",20200730,"LE","boatLaunch","10:51:00","LE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"261","LE_boatLaunch_20200813_08:25_covidCreel.Instantaneous",20200813,"LE","boatLaunch","08:25:00","LE_boatLaunch","covidCreel.Instantaneous","Raining",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"262","LH_boatLaunch_20200607_14:15_covidCreel.Instantaneous",20200607,"LH","boatLaunch","14:15:00","LH_boatLaunch","covidCreel.Instantaneous","the wisconsin license plate had a chicago sticker",1,1,0,0,2,0,0,0,"AT","BZ, LZ",0,0
+"263","LH_boatLaunch_20200611_11:57_covidCreel.Instantaneous",20200611,"LH","boatLaunch","11:57:00","LH_boatLaunch","covidCreel.Instantaneous","partly sunny; kayak on the dock at boat launch; no fishing gear; no one in sight",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"264","LH_boatLaunch_20200623_13:01_covidCreel.Instantaneous",20200623,"LH","boatLaunch","13:01:00","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"265","LH_boatLaunch_20200624_10:22_covidCreel.Instantaneous",20200624,"LH","boatLaunch","10:22:00","LH_boatLaunch","covidCreel.Instantaneous",NA,1,0,0,0,0,0,0,0,"AT","LZ",0,0
+"266","LH_boatLaunch_20200626_07:30_covidCreel.Instantaneous",20200626,"LH","boatLaunch","07:30:00","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"267","LH_boatLaunch_20200630_14:40_covidCreel.Instantaneous",20200630,"LH","boatLaunch","14:40:00","LH_boatLaunch","covidCreel.Instantaneous","party cloudy, breezy",0,0,0,0,0,0,0,0,"AT","KR",1,1
+"268","LH_boatLaunch_20200701_10:11_covidCreel.Instantaneous",20200701,"LH","boatLaunch","10:11:00","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"269","LH_boatLaunch_20200702_13:59_covidCreel.Instantaneous",20200702,"LH","boatLaunch","13:59:00","LH_boatLaunch","covidCreel.Instantaneous","rain",0,0,1,1,0,0,0,0,"AT","LZ",0,0
+"270","LH_boatLaunch_20200703_16:20_covidCreel.Instantaneous",20200703,"LH","boatLaunch","16:20:00","LH_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",0,0
+"271","LH_boatLaunch_20200706_11:26_covidCreel.Instantaneous",20200706,"LH","boatLaunch","11:26:00","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"272","LH_boatLaunch_20200708_14:49_covidCreel.Instantaneous",20200708,"LH","boatLaunch","14:49:00","LH_boatLaunch","covidCreel.Instantaneous",NA,1,0,0,0,0,0,0,0,"AT","LZ",0,0
+"273","LH_boatLaunch_20200720_08:57_covidCreel.Instantaneous",20200720,"LH","boatLaunch","08:57:00","LH_boatLaunch","covidCreel.Instantaneous","clear skies, chilly",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"274","LH_boatLaunch_20200722_11:02_covidCreel.Instantaneous",20200722,"LH","boatLaunch","11:02:00","LH_boatLaunch","covidCreel.Instantaneous","cloudy",0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"275","LH_boatLaunch_20200725_10:41_covidCreel.Instantaneous",20200725,"LH","boatLaunch","10:41:00","LH_boatLaunch","covidCreel.Instantaneous","party sunny",0,0,1,1,0,0,0,0,"AT","LZ and BZ",1,1
+"276","LH_boatLaunch_20200727_12:48_covidCreel.Instantaneous",20200727,"LH","boatLaunch","12:48:00","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"277","LH_boatLaunch_20200728_15:38_covidCreel.Instantaneous",20200728,"LH","boatLaunch","15:38:00","LH_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,0,0,0,0,0,"AT","ML",0,0
+"278","LH_boatLaunch_20200731_10:14_covidCreel.Instantaneous",20200731,"LH","boatLaunch","10:14:00","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"279","LH_boatLaunch_20200803_10:01_covidCreel.Instantaneous",20200803,"LH","boatLaunch","10:01:00","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"280","LH_boatLaunch_20200810_11:49_covidCreel.Instantaneous",20200810,"LH","boatLaunch","11:49:00","LH_boatLaunch","covidCreel.Instantaneous","Raining",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"281","LH_boatLaunch_20200811_09:02_covidCreel.Instantaneous",20200811,"LH","boatLaunch","09:02:00","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"282","LL_boatLaunch_20200621_12:18_covidCreel.Instantaneous",20200621,"LL","boatLaunch","12:18:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"283","LL_boatLaunch_20200622_16:20_covidCreel.Instantaneous",20200622,"LL","boatLaunch","16:20:00","LL_boatLaunch","covidCreel.Instantaneous","culvert behind stop sign",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"284","LL_boatLaunch_20200623_10:42_covidCreel.Instantaneous",20200623,"LL","boatLaunch","10:42:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"285","LL_boatLaunch_20200625_16:54_covidCreel.Instantaneous",20200625,"LL","boatLaunch","16:54:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"286","LL_boatLaunch_20200629_16:15_covidCreel.Instantaneous",20200629,"LL","boatLaunch","16:15:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"287","LL_boatLaunch_20200630_09:34_covidCreel.Instantaneous",20200630,"LL","boatLaunch","09:34:00","LL_boatLaunch","covidCreel.Instantaneous","clear, sunny",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"288","LL_boatLaunch_20200702_10:53_covidCreel.Instantaneous",20200702,"LL","boatLaunch","10:53:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"289","LL_boatLaunch_20200703_13:15_covidCreel.Instantaneous",20200703,"LL","boatLaunch","13:15:00","LL_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","ML",0,0
+"290","LL_boatLaunch_20200704_11:36_covidCreel.Instantaneous",20200704,"LL","boatLaunch","11:36:00","LL_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"291","LL_boatLaunch_20200706_08:44_covidCreel.Instantaneous",20200706,"LL","boatLaunch","08:44:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"292","LL_boatLaunch_20200706_15:39_covidCreel.Instantaneous",20200706,"LL","boatLaunch","15:39:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,0,0,0,0,0,"AT","BS",0,0
+"293","LL_boatLaunch_20200708_12:18_covidCreel.Instantaneous",20200708,"LL","boatLaunch","12:18:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"294","LL_boatLaunch_20200712_09:42_covidCreel.Instantaneous",20200712,"LL","boatLaunch","09:42:00","LL_boatLaunch","covidCreel.Instantaneous","sunny",0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"295","LL_boatLaunch_20200713_09:23_covidCreel.Instantaneous",20200713,"LL","boatLaunch","09:23:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"296","LL_boatLaunch_20200727_09:40_covidCreel.Instantaneous",20200727,"LL","boatLaunch","09:40:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"297","LL_boatLaunch_20200728_13:01_covidCreel.Instantaneous",20200728,"LL","boatLaunch","13:01:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"298","LL_boatLaunch_20200729_16:55_covidCreel.Instantaneous",20200729,"LL","boatLaunch","16:55:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"299","LL_boatLaunch_20200731_07:34_covidCreel.Instantaneous",20200731,"LL","boatLaunch","07:34:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"300","LL_boatLaunch_20200813_11:03_covidCreel.Instantaneous",20200813,"LL","boatLaunch","11:03:00","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"301","LR_boatLaunch_20200613_11:01_covidCreel.Instantaneous",20200613,"LR","boatLaunch","11:01:00","LR_boatLaunch","covidCreel.Instantaneous","sunny",0,0,3,2,0,0,0,0,"AT","BZ, LZ",0,0
+"302","LR_boatLaunch_20200619_14:22_covidCreel.Instantaneous",20200619,"LR","boatLaunch","14:22:00","LR_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",1,1,0,0,0,0,0,0,"AT","ML",1,1
+"303","LR_boatLaunch_20200625_13:01_covidCreel.Instantaneous",20200625,"LR","boatLaunch","13:01:00","LR_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,0,0,0,0,0,"AT","LZ",0,0
+"304","LR_boatLaunch_20200626_11:49_covidCreel.Instantaneous",20200626,"LR","boatLaunch","11:49:00","LR_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,2
+"305","LR_boatLaunch_20200704_07:47_covidCreel.Instantaneous",20200704,"LR","boatLaunch","07:47:00","LR_boatLaunch","covidCreel.Instantaneous","holiday",0,0,1,0,0,0,0,0,"AT","LZ",1,1
+"306","LR_boatLaunch_20200716_10:41_covidCreel.Instantaneous",20200716,"LR","boatLaunch","10:41:00","LR_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,1,0,0,0,0,"AT","LZ and BZ",1,1
+"307","LR_boatLaunch_20200717_11:15_covidCreel.Instantaneous",20200717,"LR","boatLaunch","11:15:00","LR_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","BS",2,2
+"308","LR_boatLaunch_20200729_13:42_covidCreel.Instantaneous",20200729,"LR","boatLaunch","13:42:00","LR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"309","LR_boatLaunch_20200730_09:45_covidCreel.Instantaneous",20200730,"LR","boatLaunch","09:45:00","LR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"310","LT_boatLaunch_20200607_16:15_covidCreel.Instantaneous",20200607,"LT","boatLaunch","16:15:00","LT_boatLaunch","covidCreel.Instantaneous","sunny",0,0,2,2,0,0,0,0,"AT","BZ, LZ",3,3
+"311","LT_boatLaunch_20200609_11:13_covidCreel.Instantaneous",20200609,"LT","boatLaunch","11:13:00","LT_boatLaunch","covidCreel.Instantaneous","partly sunny",1,1,6,2,0,0,0,0,"AT","BZ, LZ",3,3
+"312","LT_boatLaunch_20200613_08:35_covidCreel.Instantaneous",20200613,"LT","boatLaunch","08:35:00","LT_boatLaunch","covidCreel.Instantaneous","sunny",0,0,1,1,0,0,0,0,"AT","BZ, LZ",1,1
+"313","LT_boatLaunch_20200619_09:45_covidCreel.Instantaneous",20200619,"LT","boatLaunch","09:45:00","LT_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",1,1,1,1,0,0,0,0,"AT","ML",1,1
+"314","LT_boatLaunch_20200624_13:08_covidCreel.Instantaneous",20200624,"LT","boatLaunch","13:08:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,5,2,0,0,0,0,"AT","LZ",3,1
+"315","LT_boatLaunch_20200626_09:12_covidCreel.Instantaneous",20200626,"LT","boatLaunch","09:12:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","LZ",3,3
+"316","LT_boatLaunch_20200701_12:22_covidCreel.Instantaneous",20200701,"LT","boatLaunch","12:22:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,4,1,0,0,0,0,"AT","ML",0,0
+"317","LT_boatLaunch_20200703_18:06_covidCreel.Instantaneous",20200703,"LT","boatLaunch","18:06:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,2,0,0,0,0,"AT","ML",3,3
+"318","LT_boatLaunch_20200706_13:21_covidCreel.Instantaneous",20200706,"LT","boatLaunch","13:21:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,5,3,0,0,0,0,"AT","LZ",1,1
+"319","LT_boatLaunch_20200708_16:43_covidCreel.Instantaneous",20200708,"LT","boatLaunch","16:43:00","LT_boatLaunch","covidCreel.Instantaneous",NA,1,0,4,2,0,0,0,0,"AT","LZ",1,1
+"320","LT_boatLaunch_20200720_11:58_covidCreel.Instantaneous",20200720,"LT","boatLaunch","11:58:00","LT_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,0,0,0,0,0,"AT","KR",1,1
+"321","LT_boatLaunch_20200722_12:59_covidCreel.Instantaneous",20200722,"LT","boatLaunch","12:59:00","LT_boatLaunch","covidCreel.Instantaneous","cloudy",0,0,5,2,0,0,0,0,"AT","LZ and BZ",0,0
+"322","LT_boatLaunch_20200725_12:46_covidCreel.Instantaneous",20200725,"LT","boatLaunch","12:46:00","LT_boatLaunch","covidCreel.Instantaneous","partly sunny",2,1,3,3,0,0,0,0,"AT","LZ and BZ",6,6
+"323","LT_boatLaunch_20200728_17:18_covidCreel.Instantaneous",20200728,"LT","boatLaunch","17:18:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","ML",1,1
+"324","LT_boatLaunch_20200730_07:18_covidCreel.Instantaneous",20200730,"LT","boatLaunch","07:18:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"325","LT_boatLaunch_20200731_12:05_covidCreel.Instantaneous",20200731,"LT","boatLaunch","12:05:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",0,0
+"326","LT_boatLaunch_20200803_12:14_covidCreel.Instantaneous",20200803,"LT","boatLaunch","12:14:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",1,1
+"327","LT_boatLaunch_20200810_13:59_covidCreel.Instantaneous",20200810,"LT","boatLaunch","13:59:00","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,1
+"328","LT_boatLaunch_20200811_11:14_covidCreel.Instantaneous",20200811,"LT","boatLaunch","11:14:00","LT_boatLaunch","covidCreel.Instantaneous",NA,1,1,3,0,0,0,0,0,"AT","KR",0,0
+"329","LV_boatLaunch_20200607_16:30_covidCreel.Instantaneous",20200607,"LV","boatLaunch","16:30:00","LV_boatLaunch","covidCreel.Instantaneous","sunny, could not see much of the lake",0,0,3,2,0,0,0,0,"AT","BZ, LZ",6,6
+"330","LV_boatLaunch_20200609_11:33_covidCreel.Instantaneous",20200609,"LV","boatLaunch","11:33:00","LV_boatLaunch","covidCreel.Instantaneous","partly sunny; could not see much of lake",2,2,3,3,0,0,0,0,"AT","BZ, LZ",6,5
+"331","LV_boatLaunch_20200613_08:54_covidCreel.Instantaneous",20200613,"LV","boatLaunch","08:54:00","LV_boatLaunch","covidCreel.Instantaneous","sunny",2,2,3,3,0,0,0,0,"AT","BZ, LZ",5,5
+"332","LV_boatLaunch_20200619_10:18_covidCreel.Instantaneous",20200619,"LV","boatLaunch","10:18:00","LV_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",2,1,1,1,0,0,0,0,"AT","ML",9,7
+"333","LV_boatLaunch_20200624_13:27_covidCreel.Instantaneous",20200624,"LV","boatLaunch","13:27:00","LV_boatLaunch","covidCreel.Instantaneous",NA,0,0,8,8,0,0,0,0,"AT","LZ",9,8
+"334","LV_boatLaunch_20200626_09:30_covidCreel.Instantaneous",20200626,"LV","boatLaunch","09:30:00","LV_boatLaunch","covidCreel.Instantaneous",NA,2,2,4,3,0,0,0,0,"AT","LZ",9,8
+"335","LV_boatLaunch_20200703_18:32_covidCreel.Instantaneous",20200703,"LV","boatLaunch","18:32:00","LV_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,1,0,0,0,0,"AT","ML",2,2
+"336","LV_boatLaunch_20200706_13:37_covidCreel.Instantaneous",20200706,"LV","boatLaunch","13:37:00","LV_boatLaunch","covidCreel.Instantaneous",NA,1,1,3,3,0,0,0,0,"AT","LZ",1,1
+"337","LV_boatLaunch_20200708_16:58_covidCreel.Instantaneous",20200708,"LV","boatLaunch","16:58:00","LV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,0
+"338","LV_boatLaunch_20200717_08:45_covidCreel.Instantaneous",20200717,"LV","boatLaunch","08:45:00","LV_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,3,0,0,0,0,"AT","BS",5,5
+"339","LV_boatLaunch_20200720_12:25_covidCreel.Instantaneous",20200720,"LV","boatLaunch","12:25:00","LV_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,3,0,0,0,0,"AT","KR",3,3
+"340","LV_boatLaunch_20200722_13:33_covidCreel.Instantaneous",20200722,"LV","boatLaunch","13:33:00","LV_boatLaunch","covidCreel.Instantaneous","cloudy",1,1,5,3,3,0,0,0,"AT","LZ and BZ",6,6
+"341","LV_boatLaunch_20200725_13:15_covidCreel.Instantaneous",20200725,"LV","boatLaunch","13:15:00","LV_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,7,1,0,0,0,0,"AT","LZ and BZ",2,2
+"342","LV_boatLaunch_20200728_17:43_covidCreel.Instantaneous",20200728,"LV","boatLaunch","17:43:00","LV_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",1,0
+"343","LV_boatLaunch_20200730_07:41_covidCreel.Instantaneous",20200730,"LV","boatLaunch","07:41:00","LV_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","ML",0,0
+"344","LV_boatLaunch_20200731_12:19_covidCreel.Instantaneous",20200731,"LV","boatLaunch","12:19:00","LV_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","LZ",2,2
+"345","LV_boatLaunch_20200803_12:39_covidCreel.Instantaneous",20200803,"LV","boatLaunch","12:39:00","LV_boatLaunch","covidCreel.Instantaneous",NA,2,1,1,1,0,0,0,0,"AT","KR",7,5
+"346","LV_boatLaunch_20200810_14:20_covidCreel.Instantaneous",20200810,"LV","boatLaunch","14:20:00","LV_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,0
+"347","LV_boatLaunch_20200811_11:37_covidCreel.Instantaneous",20200811,"LV","boatLaunch","11:37:00","LV_boatLaunch","covidCreel.Instantaneous",NA,1,0,2,2,0,0,0,0,"AT","KR",4,4
+"348","MS_boatLaunch_20200607_15:25_covidCreel.Instantaneous",20200607,"MS","boatLaunch","15:25:00","MS_boatLaunch","covidCreel.Instantaneous","overcast",0,0,2,2,0,0,0,0,"AT","BZ, LZ",3,3
+"349","MS_boatLaunch_20200609_10:39_covidCreel.Instantaneous",20200609,"MS","boatLaunch","10:39:00","MS_boatLaunch","covidCreel.Instantaneous","partly sunny",0,0,3,3,0,0,0,0,"AT","BZ, LZ",4,3
+"350","MS_boatLaunch_20200619_07:52_covidCreel.Instantaneous",20200619,"MS","boatLaunch","07:52:00","MS_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",0,0,0,0,0,0,0,0,"AT","ML",0,0
+"351","MS_boatLaunch_20200624_12:26_covidCreel.Instantaneous",20200624,"MS","boatLaunch","12:26:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,2
+"352","MS_boatLaunch_20200626_08:37_covidCreel.Instantaneous",20200626,"MS","boatLaunch","08:37:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","LZ",2,2
+"353","MS_boatLaunch_20200701_11:57_covidCreel.Instantaneous",20200701,"MS","boatLaunch","11:57:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","ML",2,2
+"354","MS_boatLaunch_20200703_17:45_covidCreel.Instantaneous",20200703,"MS","boatLaunch","17:45:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"355","MS_boatLaunch_20200706_12:41_covidCreel.Instantaneous",20200706,"MS","boatLaunch","12:41:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,0
+"356","MS_boatLaunch_20200708_16:06_covidCreel.Instantaneous",20200708,"MS","boatLaunch","16:06:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,1,0,0,0,0,"AT","LZ",0,0
+"357","MS_boatLaunch_20200720_11:06_covidCreel.Instantaneous",20200720,"MS","boatLaunch","11:06:00","MS_boatLaunch","covidCreel.Instantaneous","cloudy, breezy",0,0,1,1,0,0,0,0,"AT","KR",0,0
+"358","MS_boatLaunch_20200722_12:19_covidCreel.Instantaneous",20200722,"MS","boatLaunch","12:19:00","MS_boatLaunch","covidCreel.Instantaneous","cloudy",3,0,1,1,7,0,0,0,"AT","LZ and BZ",1,1
+"359","MS_boatLaunch_20200725_12:04_covidCreel.Instantaneous",20200725,"MS","boatLaunch","12:04:00","MS_boatLaunch","covidCreel.Instantaneous","sunny",0,0,1,1,0,0,0,0,"AT","LZ and BZ",1,1
+"360","MS_boatLaunch_20200727_14:19_covidCreel.Instantaneous",20200727,"MS","boatLaunch","14:19:00","MS_boatLaunch","covidCreel.Instantaneous","windy; storm clouds",0,0,1,1,0,1,0,1,"AT","KR",1,1
+"361","MS_boatLaunch_20200728_16:57_covidCreel.Instantaneous",20200728,"MS","boatLaunch","16:57:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"362","MS_boatLaunch_20200730_06:55_covidCreel.Instantaneous",20200730,"MS","boatLaunch","06:55:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"363","MS_boatLaunch_20200731_11:31_covidCreel.Instantaneous",20200731,"MS","boatLaunch","11:31:00","MS_boatLaunch","covidCreel.Instantaneous",NA,1,0,3,3,0,0,0,0,"AT","LZ",0,0
+"364","MS_boatLaunch_20200803_11:27_covidCreel.Instantaneous",20200803,"MS","boatLaunch","11:27:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","KR",3,2
+"365","MS_boatLaunch_20200810_13:15_covidCreel.Instantaneous",20200810,"MS","boatLaunch","13:15:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","BS",2,2
+"366","MS_boatLaunch_20200811_10:33_covidCreel.Instantaneous",20200811,"MS","boatLaunch","10:33:00","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",2,2
+"367","NH_boatLaunch_20200621_10:35_covidCreel.Instantaneous",20200621,"NH","boatLaunch","10:35:00","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"368","NH_boatLaunch_20200622_14:44_covidCreel.Instantaneous",20200622,"NH","boatLaunch","14:44:00","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"369","NH_boatLaunch_20200623_09:08_covidCreel.Instantaneous",20200623,"NH","boatLaunch","09:08:00","NH_boatLaunch","covidCreel.Instantaneous","kayak",1,1,1,1,0,0,0,0,"AT","KR",0,0
+"370","NH_boatLaunch_20200625_15:41_covidCreel.Instantaneous",20200625,"NH","boatLaunch","15:41:00","NH_boatLaunch","covidCreel.Instantaneous",NA,3,3,2,0,0,0,0,0,"AT","LZ",0,0
+"371","NH_boatLaunch_20200629_14:49_covidCreel.Instantaneous",20200629,"NH","boatLaunch","14:49:00","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"372","NH_boatLaunch_20200702_09:40_covidCreel.Instantaneous",20200702,"NH","boatLaunch","09:40:00","NH_boatLaunch","covidCreel.Instantaneous",NA,3,3,0,0,0,0,0,0,"AT","LZ",0,0
+"373","NH_boatLaunch_20200704_10:24_covidCreel.Instantaneous",20200704,"NH","boatLaunch","10:24:00","NH_boatLaunch","covidCreel.Instantaneous","holiday",4,4,0,0,0,0,0,0,"AT","LZ",0,0
+"374","NH_boatLaunch_20200706_14:38_covidCreel.Instantaneous",20200706,"NH","boatLaunch","14:38:00","NH_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,0,0,0,0,0,"AT","BS",1,0
+"375","NH_boatLaunch_20200713_07:54_covidCreel.Instantaneous",20200713,"NH","boatLaunch","07:54:00","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"376","NH_boatLaunch_20200717_13:58_covidCreel.Instantaneous",20200717,"NH","boatLaunch","13:58:00","NH_boatLaunch","covidCreel.Instantaneous",NA,3,3,1,0,0,0,0,0,"AT","BS",3,3
+"377","NH_boatLaunch_20200727_08:17_covidCreel.Instantaneous",20200727,"NH","boatLaunch","08:17:00","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"378","NH_boatLaunch_20200729_16:14_covidCreel.Instantaneous",20200729,"NH","boatLaunch","16:14:00","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"379","NH_boatLaunch_20200730_12:09_covidCreel.Instantaneous",20200730,"NH","boatLaunch","12:09:00","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"380","NH_boatLaunch_20200731_06:35_covidCreel.Instantaneous",20200731,"NH","boatLaunch","06:35:00","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"381","NH_boatLaunch_20200813_10:04_covidCreel.Instantaneous",20200813,"NH","boatLaunch","10:04:00","NH_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","BS",1,1
+"382","OB_boatLaunch_20200621_14:17_covidCreel.Instantaneous",20200621,"OB","boatLaunch","14:17:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"383","OB_boatLaunch_20200622_17:30_covidCreel.Instantaneous",20200622,"OB","boatLaunch","17:30:00","OB_boatLaunch","covidCreel.Instantaneous","CTH BE closed, detour CR M",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"384","OB_boatLaunch_20200625_17:20_covidCreel.Instantaneous",20200625,"OB","boatLaunch","17:20:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"385","OB_boatLaunch_20200629_16:45_covidCreel.Instantaneous",20200629,"OB","boatLaunch","16:45:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,0
+"386","OB_boatLaunch_20200630_09:57_covidCreel.Instantaneous",20200630,"OB","boatLaunch","09:57:00","OB_boatLaunch","covidCreel.Instantaneous","clear, sunny",0,0,1,1,0,0,0,0,"AT","KR",2,1
+"387","OB_boatLaunch_20200702_11:16_covidCreel.Instantaneous",20200702,"OB","boatLaunch","11:16:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,1
+"388","OB_boatLaunch_20200703_13:48_covidCreel.Instantaneous",20200703,"OB","boatLaunch","13:48:00","OB_boatLaunch","covidCreel.Instantaneous",NA,1,0,0,0,0,0,0,0,"AT","ML",1,0
+"389","OB_boatLaunch_20200704_11:58_covidCreel.Instantaneous",20200704,"OB","boatLaunch","11:58:00","OB_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",2,0
+"390","OB_boatLaunch_20200706_09:06_covidCreel.Instantaneous",20200706,"OB","boatLaunch","09:06:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"391","OB_boatLaunch_20200706_16:21_covidCreel.Instantaneous",20200706,"OB","boatLaunch","16:21:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","BS",1,0
+"392","OB_boatLaunch_20200708_12:38_covidCreel.Instantaneous",20200708,"OB","boatLaunch","12:38:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"393","OB_boatLaunch_20200712_10:08_covidCreel.Instantaneous",20200712,"OB","boatLaunch","10:08:00","OB_boatLaunch","covidCreel.Instantaneous","sunny",0,0,1,0,0,0,0,0,"AT","LZ and BZ",0,0
+"394","OB_boatLaunch_20200713_09:49_covidCreel.Instantaneous",20200713,"OB","boatLaunch","09:49:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",1,1
+"395","OB_boatLaunch_20200727_10:09_covidCreel.Instantaneous",20200727,"OB","boatLaunch","10:09:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","KR",0,0
+"396","OB_boatLaunch_20200728_13:23_covidCreel.Instantaneous",20200728,"OB","boatLaunch","13:23:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"397","OB_boatLaunch_20200729_17:24_covidCreel.Instantaneous",20200729,"OB","boatLaunch","17:24:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,0
+"398","OB_boatLaunch_20200731_07:55_covidCreel.Instantaneous",20200731,"OB","boatLaunch","07:55:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"399","OB_boatLaunch_20200813_11:45_covidCreel.Instantaneous",20200813,"OB","boatLaunch","11:45:00","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","BS",0,0
+"400","PK_boatLaunch_20200607_15:44_covidCreel.Instantaneous",20200607,"PK","boatLaunch","15:44:00","PK_boatLaunch","covidCreel.Instantaneous","could barely see any of the lake",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"401","PK_boatLaunch_20200609_10:46_covidCreel.Instantaneous",20200609,"PK","boatLaunch","10:46:00","PK_boatLaunch","covidCreel.Instantaneous","partly sunny; could barely see lake",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"402","PK_boatLaunch_20200619_08:27_covidCreel.Instantaneous",20200619,"PK","boatLaunch","08:27:00","PK_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",0,0,0,0,0,0,0,0,"AT","ML",1,1
+"403","PK_boatLaunch_20200624_12:39_covidCreel.Instantaneous",20200624,"PK","boatLaunch","12:39:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"404","PK_boatLaunch_20200626_08:45_covidCreel.Instantaneous",20200626,"PK","boatLaunch","08:45:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"405","PK_boatLaunch_20200701_12:00_covidCreel.Instantaneous",20200701,"PK","boatLaunch","12:00:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",1,1
+"406","PK_boatLaunch_20200703_17:52_covidCreel.Instantaneous",20200703,"PK","boatLaunch","17:52:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"407","PK_boatLaunch_20200706_12:48_covidCreel.Instantaneous",20200706,"PK","boatLaunch","12:48:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"408","PK_boatLaunch_20200708_16:13_covidCreel.Instantaneous",20200708,"PK","boatLaunch","16:13:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"409","PK_boatLaunch_20200720_11:16_covidCreel.Instantaneous",20200720,"PK","boatLaunch","11:16:00","PK_boatLaunch","covidCreel.Instantaneous","UW Madison truck and trailer present",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"410","PK_boatLaunch_20200722_12:29_covidCreel.Instantaneous",20200722,"PK","boatLaunch","12:29:00","PK_boatLaunch","covidCreel.Instantaneous","cloudy",0,0,0,0,0,0,0,0,"AT","LZ and BZ",2,1
+"411","PK_boatLaunch_20200725_12:10_covidCreel.Instantaneous",20200725,"PK","boatLaunch","12:10:00","PK_boatLaunch","covidCreel.Instantaneous","hard to see, sunny",0,0,1,1,0,0,0,0,"AT","LZ and BZ",2,1
+"412","PK_boatLaunch_20200728_17:04_covidCreel.Instantaneous",20200728,"PK","boatLaunch","17:04:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"413","PK_boatLaunch_20200730_07:00_covidCreel.Instantaneous",20200730,"PK","boatLaunch","07:00:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"414","PK_boatLaunch_20200731_11:38_covidCreel.Instantaneous",20200731,"PK","boatLaunch","11:38:00","PK_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","LZ",1,1
+"415","PK_boatLaunch_20200803_11:39_covidCreel.Instantaneous",20200803,"PK","boatLaunch","11:39:00","PK_boatLaunch","covidCreel.Instantaneous","cloudy and breezy",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"416","PK_boatLaunch_20200810_13:24_covidCreel.Instantaneous",20200810,"PK","boatLaunch","13:24:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"417","PK_boatLaunch_20200811_10:42_covidCreel.Instantaneous",20200811,"PK","boatLaunch","10:42:00","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",2,2
+"418","PN_boatLaunch_20200607_14:25_covidCreel.Instantaneous",20200607,"PN","boatLaunch","14:25:00","PN_boatLaunch","covidCreel.Instantaneous","could not tell if one boat was fishing or not",0,0,3,2,0,0,0,0,"AT","BZ, LZ",3,3
+"419","PN_boatLaunch_20200611_12:06_covidCreel.Instantaneous",20200611,"PN","boatLaunch","12:06:00","PN_boatLaunch","covidCreel.Instantaneous","sunny",0,0,4,3,0,0,0,0,"AT","BZ, LZ",4,4
+"420","PN_boatLaunch_20200624_10:32_covidCreel.Instantaneous",20200624,"PN","boatLaunch","10:32:00","PN_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,1,0,0,0,0,"AT","LZ",1,1
+"421","PN_boatLaunch_20200626_07:38_covidCreel.Instantaneous",20200626,"PN","boatLaunch","07:38:00","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",0,0
+"422","PN_boatLaunch_20200630_14:53_covidCreel.Instantaneous",20200630,"PN","boatLaunch","14:53:00","PN_boatLaunch","covidCreel.Instantaneous","party cloudy, breezy",0,0,1,0,0,0,0,0,"AT","KR",1,1
+"423","PN_boatLaunch_20200701_10:25_covidCreel.Instantaneous",20200701,"PN","boatLaunch","10:25:00","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",2,1
+"424","PN_boatLaunch_20200703_16:07_covidCreel.Instantaneous",20200703,"PN","boatLaunch","16:07:00","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","ML",5,2
+"425","PN_boatLaunch_20200706_11:35_covidCreel.Instantaneous",20200706,"PN","boatLaunch","11:35:00","PN_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,0,0,0,0,0,"AT","LZ",0,0
+"426","PN_boatLaunch_20200708_14:58_covidCreel.Instantaneous",20200708,"PN","boatLaunch","14:58:00","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"427","PN_boatLaunch_20200720_09:27_covidCreel.Instantaneous",20200720,"PN","boatLaunch","09:27:00","PN_boatLaunch","covidCreel.Instantaneous","clear skies, chilly",0,0,1,1,0,0,0,0,"AT","KR",1,0
+"428","PN_boatLaunch_20200722_11:13_covidCreel.Instantaneous",20200722,"PN","boatLaunch","11:13:00","PN_boatLaunch","covidCreel.Instantaneous","cloudy",0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"429","PN_boatLaunch_20200725_10:51_covidCreel.Instantaneous",20200725,"PN","boatLaunch","10:51:00","PN_boatLaunch","covidCreel.Instantaneous","party sunny",1,1,2,0,0,0,0,0,"AT","LZ and BZ",0,0
+"430","PN_boatLaunch_20200727_13:02_covidCreel.Instantaneous",20200727,"PN","boatLaunch","13:02:00","PN_boatLaunch","covidCreel.Instantaneous","windy; storm clouds",0,0,0,0,0,1,0,1,"AT","KR",0,0
+"431","PN_boatLaunch_20200728_15:50_covidCreel.Instantaneous",20200728,"PN","boatLaunch","15:50:00","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"432","PN_boatLaunch_20200731_10:22_covidCreel.Instantaneous",20200731,"PN","boatLaunch","10:22:00","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"433","PN_boatLaunch_20200803_10:13_covidCreel.Instantaneous",20200803,"PN","boatLaunch","10:13:00","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","KR",3,2
+"434","PN_boatLaunch_20200810_12:02_covidCreel.Instantaneous",20200810,"PN","boatLaunch","12:02:00","PN_boatLaunch","covidCreel.Instantaneous","Raining",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"435","PN_boatLaunch_20200811_09:15_covidCreel.Instantaneous",20200811,"PN","boatLaunch","09:15:00","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,3,0,0,0,0,"AT","KR",2,2
+"436","PT_boatLaunch_20200621_08:30_covidCreel.Instantaneous",20200621,"PT","boatLaunch","08:30:00","PT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"437","PT_boatLaunch_20200625_14:07_covidCreel.Instantaneous",20200625,"PT","boatLaunch","14:07:00","PT_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"438","PT_boatLaunch_20200626_12:48_covidCreel.Instantaneous",20200626,"PT","boatLaunch","12:48:00","PT_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,1,0,0,0,"AT","LZ",0,0
+"439","PT_boatLaunch_20200629_12:47_covidCreel.Instantaneous",20200629,"PT","boatLaunch","12:47:00","PT_boatLaunch","covidCreel.Instantaneous","light rain",2,2,0,0,0,0,0,0,"AT","BS",2,2
+"440","PT_boatLaunch_20200702_08:16_covidCreel.Instantaneous",20200702,"PT","boatLaunch","08:16:00","PT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"441","PT_boatLaunch_20200704_08:42_covidCreel.Instantaneous",20200704,"PT","boatLaunch","08:42:00","PT_boatLaunch","covidCreel.Instantaneous","holiday",0,0,2,2,0,0,0,0,"AT","LZ",2,2
+"442","PT_boatLaunch_20200706_12:40_covidCreel.Instantaneous",20200706,"PT","boatLaunch","12:40:00","PT_boatLaunch","covidCreel.Instantaneous","Thunder, approaching storm",0,0,0,0,0,0,0,1,"AT","BS",0,0
+"443","PT_boatLaunch_20200717_12:17_covidCreel.Instantaneous",20200717,"PT","boatLaunch","12:17:00","PT_boatLaunch","covidCreel.Instantaneous",NA,1,1,5,5,0,0,0,0,"AT","BS",4,4
+"444","PT_boatLaunch_20200729_14:43_covidCreel.Instantaneous",20200729,"PT","boatLaunch","14:43:00","PT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"445","PT_boatLaunch_20200730_11:05_covidCreel.Instantaneous",20200730,"PT","boatLaunch","11:05:00","PT_boatLaunch","covidCreel.Instantaneous","Bad River Band license plate for out of state non-trailered vehicle",3,2,0,0,0,0,0,0,"AT","ML",1,1
+"446","PT_boatLaunch_20200813_08:34_covidCreel.Instantaneous",20200813,"PT","boatLaunch","08:34:00","PT_boatLaunch","covidCreel.Instantaneous","Raining",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"447","SA_boatLaunch_20200611_10:29_covidCreel.Instantaneous",20200611,"SA","boatLaunch","10:29:00","SA_boatLaunch","covidCreel.Instantaneous","very windy overcast",0,0,0,0,0,1,0,0,"AT","BZ, LZ",0,0
+"448","SA_boatLaunch_20200624_08:55_covidCreel.Instantaneous",20200624,"SA","boatLaunch","08:55:00","SA_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",1,1
+"449","SA_boatLaunch_20200629_18:55_covidCreel.Instantaneous",20200629,"SA","boatLaunch","18:55:00","SA_boatLaunch","covidCreel.Instantaneous",NA,1,0,1,1,0,0,0,0,"AT","BS",1,1
+"450","SA_boatLaunch_20200630_13:05_covidCreel.Instantaneous",20200630,"SA","boatLaunch","13:05:00","SA_boatLaunch","covidCreel.Instantaneous","clear, sunny",1,0,0,0,0,0,0,0,"AT","KR",1,0
+"451","SA_boatLaunch_20200701_08:59_covidCreel.Instantaneous",20200701,"SA","boatLaunch","08:59:00","SA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"452","SA_boatLaunch_20200702_12:28_covidCreel.Instantaneous",20200702,"SA","boatLaunch","12:28:00","SA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"453","SA_boatLaunch_20200703_15:02_covidCreel.Instantaneous",20200703,"SA","boatLaunch","15:02:00","SA_boatLaunch","covidCreel.Instantaneous",NA,1,0,1,0,0,0,0,0,"AT","ML",4,4
+"454","SA_boatLaunch_20200706_10:18_covidCreel.Instantaneous",20200706,"SA","boatLaunch","10:18:00","SA_boatLaunch","covidCreel.Instantaneous",NA,3,3,2,2,0,0,0,0,"AT","LZ",1,1
+"455","SA_boatLaunch_20200708_13:46_covidCreel.Instantaneous",20200708,"SA","boatLaunch","13:46:00","SA_boatLaunch","covidCreel.Instantaneous",NA,2,2,1,0,0,0,0,0,"AT","LZ",0,0
+"456","SA_boatLaunch_20200712_12:43_covidCreel.Instantaneous",20200712,"SA","boatLaunch","12:43:00","SA_boatLaunch","covidCreel.Instantaneous","sunny",0,0,2,1,0,0,0,0,"AT","LZ and BZ",0,0
+"457","SA_boatLaunch_20200713_12:50_covidCreel.Instantaneous",20200713,"SA","boatLaunch","12:50:00","SA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",2,2
+"458","SA_boatLaunch_20200727_11:39_covidCreel.Instantaneous",20200727,"SA","boatLaunch","11:39:00","SA_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,0,0,0,0,0,"AT","KR",0,0
+"459","SA_boatLaunch_20200728_14:34_covidCreel.Instantaneous",20200728,"SA","boatLaunch","14:34:00","SA_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",0,0
+"460","SA_boatLaunch_20200731_09:11_covidCreel.Instantaneous",20200731,"SA","boatLaunch","09:11:00","SA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"461","SA_boatLaunch_20200803_08:48_covidCreel.Instantaneous",20200803,"SA","boatLaunch","08:48:00","SA_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","KR",1,1
+"462","SA_boatLaunch_20200810_10:22_covidCreel.Instantaneous",20200810,"SA","boatLaunch","10:22:00","SA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"463","SE_boatLaunch_20200621_10:20_covidCreel.Instantaneous",20200621,"SE","boatLaunch","10:20:00","SE_boatLaunch","covidCreel.Instantaneous","sunny, 67 degrees",0,0,0,0,0,0,0,0,"AT","ML",1,1
+"464","SE_boatLaunch_20200622_14:30_covidCreel.Instantaneous",20200622,"SE","boatLaunch","14:30:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"465","SE_boatLaunch_20200625_15:29_covidCreel.Instantaneous",20200625,"SE","boatLaunch","15:29:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"466","SE_boatLaunch_20200629_14:40_covidCreel.Instantaneous",20200629,"SE","boatLaunch","14:40:00","SE_boatLaunch","covidCreel.Instantaneous","windy",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"467","SE_boatLaunch_20200702_09:33_covidCreel.Instantaneous",20200702,"SE","boatLaunch","09:33:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"468","SE_boatLaunch_20200704_10:16_covidCreel.Instantaneous",20200704,"SE","boatLaunch","10:16:00","SE_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"469","SE_boatLaunch_20200706_14:30_covidCreel.Instantaneous",20200706,"SE","boatLaunch","14:30:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"470","SE_boatLaunch_20200713_07:43_covidCreel.Instantaneous",20200713,"SE","boatLaunch","07:43:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","KR",1,1
+"471","SE_boatLaunch_20200717_13:48_covidCreel.Instantaneous",20200717,"SE","boatLaunch","13:48:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","BS",0,0
+"472","SE_boatLaunch_20200727_08:00_covidCreel.Instantaneous",20200727,"SE","boatLaunch","08:00:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"473","SE_boatLaunch_20200729_16:09_covidCreel.Instantaneous",20200729,"SE","boatLaunch","16:09:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"474","SE_boatLaunch_20200730_12:02_covidCreel.Instantaneous",20200730,"SE","boatLaunch","12:02:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"475","SE_boatLaunch_20200731_06:28_covidCreel.Instantaneous",20200731,"SE","boatLaunch","06:28:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"476","SE_boatLaunch_20200813_09:57_covidCreel.Instantaneous",20200813,"SE","boatLaunch","09:57:00","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,1
+"477","SM_boatLaunch_20200607_14:45_covidCreel.Instantaneous",20200607,"SM","boatLaunch","14:45:00","SM_boatLaunch","covidCreel.Instantaneous","sunny",0,0,2,2,0,0,0,0,"AT","BZ, LZ",2,2
+"478","SM_boatLaunch_20200609_09:53_covidCreel.Instantaneous",20200609,"SM","boatLaunch","09:53:00","SM_boatLaunch","covidCreel.Instantaneous","sunny",0,0,3,1,0,0,0,0,"AT","BZ, LZ",2,2
+"479","SM_boatLaunch_20200611_12:31_covidCreel.Instantaneous",20200611,"SM","boatLaunch","12:31:00","SM_boatLaunch","covidCreel.Instantaneous","sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"480","SM_boatLaunch_20200624_10:52_covidCreel.Instantaneous",20200624,"SM","boatLaunch","10:52:00","SM_boatLaunch","covidCreel.Instantaneous","light rain",0,0,1,1,0,0,0,0,"AT","LZ",2,0
+"481","SM_boatLaunch_20200626_07:55_covidCreel.Instantaneous",20200626,"SM","boatLaunch","07:55:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,3,0,0,0,0,"AT","LZ",3,3
+"482","SM_boatLaunch_20200630_15:16_covidCreel.Instantaneous",20200630,"SM","boatLaunch","15:16:00","SM_boatLaunch","covidCreel.Instantaneous","party cloudy, breezy",1,1,1,0,0,0,0,0,"AT","KR",0,0
+"483","SM_boatLaunch_20200701_10:45_covidCreel.Instantaneous",20200701,"SM","boatLaunch","10:45:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","ML",1,1
+"484","SM_boatLaunch_20200703_16:59_covidCreel.Instantaneous",20200703,"SM","boatLaunch","16:59:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","ML",0,0
+"485","SM_boatLaunch_20200706_11:54_covidCreel.Instantaneous",20200706,"SM","boatLaunch","11:54:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",0,0
+"486","SM_boatLaunch_20200708_15:15_covidCreel.Instantaneous",20200708,"SM","boatLaunch","15:15:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",0,0
+"487","SM_boatLaunch_20200720_10:03_covidCreel.Instantaneous",20200720,"SM","boatLaunch","10:03:00","SM_boatLaunch","covidCreel.Instantaneous","cloudy, breezy",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"488","SM_boatLaunch_20200722_11:31_covidCreel.Instantaneous",20200722,"SM","boatLaunch","11:31:00","SM_boatLaunch","covidCreel.Instantaneous","cloudy",0,0,0,0,0,0,0,0,"AT","LZ and BZ",0,0
+"489","SM_boatLaunch_20200725_11:03_covidCreel.Instantaneous",20200725,"SM","boatLaunch","11:03:00","SM_boatLaunch","covidCreel.Instantaneous","party sunny",0,0,1,0,0,0,0,0,"AT","LZ and BZ",4,4
+"490","SM_boatLaunch_20200727_13:23_covidCreel.Instantaneous",20200727,"SM","boatLaunch","13:23:00","SM_boatLaunch","covidCreel.Instantaneous","windy; storm clouds",0,0,1,1,0,1,0,1,"AT","KR",0,0
+"491","SM_boatLaunch_20200728_16:09_covidCreel.Instantaneous",20200728,"SM","boatLaunch","16:09:00","SM_boatLaunch","covidCreel.Instantaneous",NA,1,0,3,0,0,0,0,0,"AT","ML",2,2
+"492","SM_boatLaunch_20200731_10:47_covidCreel.Instantaneous",20200731,"SM","boatLaunch","10:47:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",0,0
+"493","SM_boatLaunch_20200803_10:35_covidCreel.Instantaneous",20200803,"SM","boatLaunch","10:35:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","KR",1,0
+"494","SM_boatLaunch_20200810_12:23_covidCreel.Instantaneous",20200810,"SM","boatLaunch","12:23:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","BS",3,3
+"495","SM_boatLaunch_20200811_09:39_covidCreel.Instantaneous",20200811,"SM","boatLaunch","09:39:00","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"496","SV_boatLaunch_20200607_13:20_covidCreel.Instantaneous",20200607,"SV","boatLaunch","13:20:00","SV_boatLaunch","covidCreel.Instantaneous","overcast 56 degrees",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"497","SV_boatLaunch_20200611_11:15_covidCreel.Instantaneous",20200611,"SV","boatLaunch","11:15:00","SV_boatLaunch","covidCreel.Instantaneous","very windy overcast",0,0,0,0,0,1,0,0,"AT","BZ, LZ",0,0
+"498","SV_boatLaunch_20200624_09:46_covidCreel.Instantaneous",20200624,"SV","boatLaunch","09:46:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"499","SV_boatLaunch_20200626_07:01_covidCreel.Instantaneous",20200626,"SV","boatLaunch","07:01:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"500","SV_boatLaunch_20200701_09:46_covidCreel.Instantaneous",20200701,"SV","boatLaunch","09:46:00","SV_boatLaunch","covidCreel.Instantaneous",NA,4,2,1,1,0,0,0,0,"AT","ML",0,0
+"501","SV_boatLaunch_20200702_13:24_covidCreel.Instantaneous",20200702,"SV","boatLaunch","13:24:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"502","SV_boatLaunch_20200703_15:48_covidCreel.Instantaneous",20200703,"SV","boatLaunch","15:48:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"503","SV_boatLaunch_20200706_10:53_covidCreel.Instantaneous",20200706,"SV","boatLaunch","10:53:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"504","SV_boatLaunch_20200708_14:17_covidCreel.Instantaneous",20200708,"SV","boatLaunch","14:17:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"505","SV_boatLaunch_20200713_13:32_covidCreel.Instantaneous",20200713,"SV","boatLaunch","13:32:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"506","SV_boatLaunch_20200720_08:23_covidCreel.Instantaneous",20200720,"SV","boatLaunch","08:23:00","SV_boatLaunch","covidCreel.Instantaneous","clear skies, chilly",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"507","SV_boatLaunch_20200727_12:18_covidCreel.Instantaneous",20200727,"SV","boatLaunch","12:18:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"508","SV_boatLaunch_20200728_15:07_covidCreel.Instantaneous",20200728,"SV","boatLaunch","15:07:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"509","SV_boatLaunch_20200731_09:43_covidCreel.Instantaneous",20200731,"SV","boatLaunch","09:43:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"510","SV_boatLaunch_20200803_09:31_covidCreel.Instantaneous",20200803,"SV","boatLaunch","09:31:00","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"511","SV_boatLaunch_20200810_11:13_covidCreel.Instantaneous",20200810,"SV","boatLaunch","11:13:00","SV_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","BS",2,2
+"512","SV_boatLaunch_20200811_08:32_covidCreel.Instantaneous",20200811,"SV","boatLaunch","08:32:00","SV_boatLaunch","covidCreel.Instantaneous","Sunny and nice out",0,0,0,0,0,0,0,0,"AT","KR",0,0
+"513","TO_boatLaunch_20200613_10:49_covidCreel.Instantaneous",20200613,"TO","boatLaunch","10:49:00","TO_boatLaunch","covidCreel.Instantaneous","sunny",0,0,0,0,0,0,0,0,"AT","BZ, LZ",0,0
+"514","TO_boatLaunch_20200619_14:00_covidCreel.Instantaneous",20200619,"TO","boatLaunch","14:00:00","TO_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",1,1,0,0,0,0,0,0,"AT","ML",1,1
+"515","TO_boatLaunch_20200625_12:47_covidCreel.Instantaneous",20200625,"TO","boatLaunch","12:47:00","TO_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"516","TO_boatLaunch_20200626_11:38_covidCreel.Instantaneous",20200626,"TO","boatLaunch","11:38:00","TO_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"517","TO_boatLaunch_20200704_07:37_covidCreel.Instantaneous",20200704,"TO","boatLaunch","07:37:00","TO_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"518","TO_boatLaunch_20200716_10:09_covidCreel.Instantaneous",20200716,"TO","boatLaunch","10:09:00","TO_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","LZ and BZ",0,0
+"519","TO_boatLaunch_20200717_10:57_covidCreel.Instantaneous",20200717,"TO","boatLaunch","10:57:00","TO_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","BS",0,0
+"520","TO_boatLaunch_20200729_13:31_covidCreel.Instantaneous",20200729,"TO","boatLaunch","13:31:00","TO_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"521","TO_boatLaunch_20200730_09:17_covidCreel.Instantaneous",20200730,"TO","boatLaunch","09:17:00","TO_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"522","TO_boatLaunch_20200811_13:39_covidCreel.Instantaneous",20200811,"TO","boatLaunch","13:39:00","TO_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","KR",0,0
+"523","UG_boatLaunch_20200621_10:08_covidCreel.Instantaneous",20200621,"UG","boatLaunch","10:08:00","UG_boatLaunch","covidCreel.Instantaneous",NA,3,3,3,3,2,0,0,0,"AT","ML",6,5
+"524","UG_boatLaunch_20200622_14:15_covidCreel.Instantaneous",20200622,"UG","boatLaunch","14:15:00","UG_boatLaunch","covidCreel.Instantaneous",NA,1,1,3,3,0,0,0,0,"AT","BS",5,3
+"525","UG_boatLaunch_20200625_15:23_covidCreel.Instantaneous",20200625,"UG","boatLaunch","15:23:00","UG_boatLaunch","covidCreel.Instantaneous",NA,1,1,3,3,0,0,0,0,"AT","LZ",4,4
+"526","UG_boatLaunch_20200629_14:30_covidCreel.Instantaneous",20200629,"UG","boatLaunch","14:30:00","UG_boatLaunch","covidCreel.Instantaneous","windy",1,1,2,2,0,0,0,0,"AT","BS",1,1
+"527","UG_boatLaunch_20200702_09:25_covidCreel.Instantaneous",20200702,"UG","boatLaunch","09:25:00","UG_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"528","UG_boatLaunch_20200704_10:09_covidCreel.Instantaneous",20200704,"UG","boatLaunch","10:09:00","UG_boatLaunch","covidCreel.Instantaneous","holiday",2,2,1,1,0,0,0,0,"AT","LZ",3,3
+"529","UG_boatLaunch_20200706_14:12_covidCreel.Instantaneous",20200706,"UG","boatLaunch","14:12:00","UG_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","BS",3,2
+"530","UG_boatLaunch_20200713_07:31_covidCreel.Instantaneous",20200713,"UG","boatLaunch","07:31:00","UG_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","KR",2,2
+"531","UG_boatLaunch_20200716_11:02_covidCreel.Instantaneous",20200716,"UG","boatLaunch","11:02:00","UG_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,3,0,0,0,0,"AT","LZ and BZ",4,2
+"532","UG_boatLaunch_20200717_13:42_covidCreel.Instantaneous",20200717,"UG","boatLaunch","13:42:00","UG_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","BS",2,2
+"533","UG_boatLaunch_20200727_08:00_covidCreel.Instantaneous",20200727,"UG","boatLaunch","08:00:00","UG_boatLaunch","covidCreel.Instantaneous","trailer with no vehicle present, was not counted",0,0,0,0,0,0,0,0,"AT","KR",1,1
+"534","UG_boatLaunch_20200729_16:01_covidCreel.Instantaneous",20200729,"UG","boatLaunch","16:01:00","UG_boatLaunch","covidCreel.Instantaneous","one trailer with no car",0,0,0,0,0,0,0,0,"AT","ML",2,2
+"535","UG_boatLaunch_20200730_11:57_covidCreel.Instantaneous",20200730,"UG","boatLaunch","11:57:00","UG_boatLaunch","covidCreel.Instantaneous",NA,2,2,0,0,0,0,0,0,"AT","ML",0,0
+"536","UG_boatLaunch_20200813_09:49_covidCreel.Instantaneous",20200813,"UG","boatLaunch","09:49:00","UG_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"537","WB_boatLaunch_20200621_07:37_covidCreel.Instantaneous",20200621,"WB","boatLaunch","07:37:00","WB_boatLaunch","covidCreel.Instantaneous","sunny and 61 degrees",0,0,0,0,0,0,0,0,"AT","ML",0,0
+"538","WB_boatLaunch_20200625_13:36_covidCreel.Instantaneous",20200625,"WB","boatLaunch","13:36:00","WB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"539","WB_boatLaunch_20200626_12:22_covidCreel.Instantaneous",20200626,"WB","boatLaunch","12:22:00","WB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"540","WB_boatLaunch_20200702_07:52_covidCreel.Instantaneous",20200702,"WB","boatLaunch","07:52:00","WB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"541","WB_boatLaunch_20200704_08:18_covidCreel.Instantaneous",20200704,"WB","boatLaunch","08:18:00","WB_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"542","WB_boatLaunch_20200717_11:55_covidCreel.Instantaneous",20200717,"WB","boatLaunch","11:55:00","WB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"543","WB_boatLaunch_20200729_14:18_covidCreel.Instantaneous",20200729,"WB","boatLaunch","14:18:00","WB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"544","WB_boatLaunch_20200730_10:43_covidCreel.Instantaneous",20200730,"WB","boatLaunch","10:43:00","WB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"545","WB_boatLaunch_20200811_14:26_covidCreel.Instantaneous",20200811,"WB","boatLaunch","14:26:00","WB_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","KR",1,1
+"546","WB_boatLaunch_20200813_08:15_covidCreel.Instantaneous",20200813,"WB","boatLaunch","08:15:00","WB_boatLaunch","covidCreel.Instantaneous","Raining",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"547","WC_boatLaunch_20200622_17:57_covidCreel.Instantaneous",20200622,"WC","boatLaunch","17:57:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,1
+"548","WC_boatLaunch_20200623_11:40_covidCreel.Instantaneous",20200623,"WC","boatLaunch","11:40:00","WC_boatLaunch","covidCreel.Instantaneous","skipped Oxbow because of road closure",0,0,1,1,0,0,0,0,"AT","KR",1,1
+"549","WC_boatLaunch_20200625_17:35_covidCreel.Instantaneous",20200625,"WC","boatLaunch","17:35:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"550","WC_boatLaunch_20200629_16:59_covidCreel.Instantaneous",20200629,"WC","boatLaunch","16:59:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,1,0,0,0,0,"AT","BS",1,0
+"551","WC_boatLaunch_20200630_10:15_covidCreel.Instantaneous",20200630,"WC","boatLaunch","10:15:00","WC_boatLaunch","covidCreel.Instantaneous","clear, sunny",0,0,0,0,0,0,0,0,"AT","KR",1,1
+"552","WC_boatLaunch_20200701_06:41_covidCreel.Instantaneous",20200701,"WC","boatLaunch","06:41:00","WC_boatLaunch","covidCreel.Instantaneous","sunny, 69 degrees",0,0,1,1,0,0,0,0,"AT","ML",1,1
+"553","WC_boatLaunch_20200702_11:34_covidCreel.Instantaneous",20200702,"WC","boatLaunch","11:34:00","WC_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,1,0,0,0,0,"AT","LZ",2,2
+"554","WC_boatLaunch_20200703_14:01_covidCreel.Instantaneous",20200703,"WC","boatLaunch","14:01:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"555","WC_boatLaunch_20200704_12:10_covidCreel.Instantaneous",20200704,"WC","boatLaunch","12:10:00","WC_boatLaunch","covidCreel.Instantaneous","holiday",0,0,2,2,0,0,0,0,"AT","LZ",3,2
+"556","WC_boatLaunch_20200706_09:18_covidCreel.Instantaneous",20200706,"WC","boatLaunch","09:18:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,1
+"557","WC_boatLaunch_20200706_16:38_covidCreel.Instantaneous",20200706,"WC","boatLaunch","16:38:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","BS",1,1
+"558","WC_boatLaunch_20200708_12:49_covidCreel.Instantaneous",20200708,"WC","boatLaunch","12:49:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"559","WC_boatLaunch_20200712_10:43_covidCreel.Instantaneous",20200712,"WC","boatLaunch","10:43:00","WC_boatLaunch","covidCreel.Instantaneous","sunny",0,0,2,2,0,0,0,0,"AT","LZ and BZ",2,2
+"560","WC_boatLaunch_20200713_10:10_covidCreel.Instantaneous",20200713,"WC","boatLaunch","10:10:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","KR",1,0
+"561","WC_boatLaunch_20200727_10:29_covidCreel.Instantaneous",20200727,"WC","boatLaunch","10:29:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",4,4
+"562","WC_boatLaunch_20200728_13:40_covidCreel.Instantaneous",20200728,"WC","boatLaunch","13:40:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"563","WC_boatLaunch_20200729_17:39_covidCreel.Instantaneous",20200729,"WC","boatLaunch","17:39:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",1,1
+"564","WC_boatLaunch_20200731_08:10_covidCreel.Instantaneous",20200731,"WC","boatLaunch","08:10:00","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","LZ",2,0
+"565","WC_boatLaunch_20200810_08:45_covidCreel.Instantaneous",20200810,"WC","boatLaunch","08:45:00","WC_boatLaunch","covidCreel.Instantaneous","Raining",0,0,0,0,0,0,0,0,"AT","BS",0,0
+"566","WC_boatLaunch_20200813_11:55_covidCreel.Instantaneous",20200813,"WC","boatLaunch","11:55:00","WC_boatLaunch","covidCreel.Instantaneous",NA,1,0,4,4,0,0,0,0,"AT","BS",5,1
+"567","WN_boatLaunch_20200621_10:46_covidCreel.Instantaneous",20200621,"WN","boatLaunch","10:46:00","WN_boatLaunch","covidCreel.Instantaneous","sunny, 70 degrees",0,0,0,0,0,0,0,0,"AT","ML",1,1
+"568","WN_boatLaunch_20200622_14:55_covidCreel.Instantaneous",20200622,"WN","boatLaunch","14:55:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"569","WN_boatLaunch_20200623_09:18_covidCreel.Instantaneous",20200623,"WN","boatLaunch","09:18:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"570","WN_boatLaunch_20200625_15:50_covidCreel.Instantaneous",20200625,"WN","boatLaunch","15:50:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"571","WN_boatLaunch_20200629_14:55_covidCreel.Instantaneous",20200629,"WN","boatLaunch","14:55:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"572","WN_boatLaunch_20200702_09:53_covidCreel.Instantaneous",20200702,"WN","boatLaunch","09:53:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"573","WN_boatLaunch_20200704_10:35_covidCreel.Instantaneous",20200704,"WN","boatLaunch","10:35:00","WN_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",1,1
+"574","WN_boatLaunch_20200706_14:47_covidCreel.Instantaneous",20200706,"WN","boatLaunch","14:47:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"575","WN_boatLaunch_20200713_08:10_covidCreel.Instantaneous",20200713,"WN","boatLaunch","08:10:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"576","WN_boatLaunch_20200717_14:06_covidCreel.Instantaneous",20200717,"WN","boatLaunch","14:06:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","BS",1,1
+"577","WN_boatLaunch_20200727_08:28_covidCreel.Instantaneous",20200727,"WN","boatLaunch","08:28:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","KR",0,0
+"578","WN_boatLaunch_20200729_16:22_covidCreel.Instantaneous",20200729,"WN","boatLaunch","16:22:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"579","WN_boatLaunch_20200730_12:16_covidCreel.Instantaneous",20200730,"WN","boatLaunch","12:16:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","ML",0,0
+"580","WN_boatLaunch_20200731_06:42_covidCreel.Instantaneous",20200731,"WN","boatLaunch","06:42:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"581","WN_boatLaunch_20200813_10:15_covidCreel.Instantaneous",20200813,"WN","boatLaunch","10:15:00","WN_boatLaunch","covidCreel.Instantaneous",NA,1,0,3,1,0,0,0,0,"AT","BS",2,0
+"582","WS_boatLaunch_20200613_10:12_covidCreel.Instantaneous",20200613,"WS","boatLaunch","10:12:00","WS_boatLaunch","covidCreel.Instantaneous","sunny, all boats were kayaks",1,1,3,0,0,0,0,0,"AT","BZ, LZ",1,0
+"583","WS_boatLaunch_20200619_13:09_covidCreel.Instantaneous",20200619,"WS","boatLaunch","13:09:00","WS_boatLaunch","covidCreel.Instantaneous","raining off and on, and 66 degrees",1,1,1,1,0,0,0,0,"AT","ML",1,1
+"584","WS_boatLaunch_20200625_12:04_covidCreel.Instantaneous",20200625,"WS","boatLaunch","12:04:00","WS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"585","WS_boatLaunch_20200626_11:03_covidCreel.Instantaneous",20200626,"WS","boatLaunch","11:03:00","WS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"586","WS_boatLaunch_20200704_07:03_covidCreel.Instantaneous",20200704,"WS","boatLaunch","07:03:00","WS_boatLaunch","covidCreel.Instantaneous","holiday",0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"587","WS_boatLaunch_20200706_14:53_covidCreel.Instantaneous",20200706,"WS","boatLaunch","14:53:00","WS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"588","WS_boatLaunch_20200708_18:03_covidCreel.Instantaneous",20200708,"WS","boatLaunch","18:03:00","WS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"589","WS_boatLaunch_20200716_09:32_covidCreel.Instantaneous",20200716,"WS","boatLaunch","09:32:00","WS_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","LZ and BZ",1,1
+"590","WS_boatLaunch_20200717_10:07_covidCreel.Instantaneous",20200717,"WS","boatLaunch","10:07:00","WS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","BS",0,0
+"591","WS_boatLaunch_20200729_12:53_covidCreel.Instantaneous",20200729,"WS","boatLaunch","12:53:00","WS_boatLaunch","covidCreel.Instantaneous",NA,2,2,1,0,0,0,0,0,"AT","ML",2,2
+"592","WS_boatLaunch_20200730_08:43_covidCreel.Instantaneous",20200730,"WS","boatLaunch","08:43:00","WS_boatLaunch","covidCreel.Instantaneous",NA,2,2,1,1,0,0,0,0,"AT","ML",2,2
+"593","WS_boatLaunch_20200811_12:56_covidCreel.Instantaneous",20200811,"WS","boatLaunch","12:56:00","WS_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","KR",0,0
+"594","LL_boatLaunch_20200707_08:44_covidCreel.Instantaneous",20200707,"LL","boatLaunch","08:44","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"595","OB_boatLaunch_20200707_09:06_covidCreel.Instantaneous",20200707,"OB","boatLaunch","09:06","OB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"596","WC_boatLaunch_20200707_09:18_covidCreel.Instantaneous",20200707,"WC","boatLaunch","09:18","WC_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,1
+"597","BK_boatLaunch_20200707_09:39_covidCreel.Instantaneous",20200707,"BK","boatLaunch","09:39","BK_boatLaunch","covidCreel.Instantaneous",NA,3,3,0,0,0,0,0,0,"AT","LZ",3,2
+"598","SA_boatLaunch_20200707_10:18_covidCreel.Instantaneous",20200707,"SA","boatLaunch","10:18","SA_boatLaunch","covidCreel.Instantaneous",NA,3,3,2,2,0,0,0,0,"AT","LZ",1,1
+"599","AV_boatLaunch_20200707_10:38_covidCreel.Instantaneous",20200707,"AV","boatLaunch","10:38","AV_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",1,1
+"600","SV_boatLaunch_20200707_10:53_covidCreel.Instantaneous",20200707,"SV","boatLaunch","10:53","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"601","DS_boatLaunch_20200707_11:12_covidCreel.Instantaneous",20200707,"DS","boatLaunch","11:12","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","LZ",2,2
+"602","LH_boatLaunch_20200707_11:26_covidCreel.Instantaneous",20200707,"LH","boatLaunch","11:26","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"603","PN_boatLaunch_20200707_11:35_covidCreel.Instantaneous",20200707,"PN","boatLaunch","11:35","PN_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,0,0,0,0,0,"AT","LZ",0,0
+"604","SM_boatLaunch_20200707_11:54_covidCreel.Instantaneous",20200707,"SM","boatLaunch","11:54","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",0,0
+"605","HT_boatLaunch_20200707_12:11_covidCreel.Instantaneous",20200707,"HT","boatLaunch","12:11","HT_boatLaunch","covidCreel.Instantaneous",NA,2,2,2,1,0,0,0,0,"AT","LZ",0,0
+"606","BOT_boatLaunch_20200707_12:23_covidCreel.Instantaneous",20200707,"BOT","boatLaunch","12:23","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","LZ",3,1
+"607","MS_boatLaunch_20200707_12:41_covidCreel.Instantaneous",20200707,"MS","boatLaunch","12:41","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,0
+"608","PK_boatLaunch_20200707_12:48_covidCreel.Instantaneous",20200707,"PK","boatLaunch","12:48","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",1,1
+"609","FD_boatLaunch_20200707_13:11_covidCreel.Instantaneous",20200707,"FD","boatLaunch","13:11","FD_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","LZ",4,3
+"610","LT_boatLaunch_20200707_13:21_covidCreel.Instantaneous",20200707,"LT","boatLaunch","13:21","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,5,3,0,0,0,0,"AT","LZ",1,1
+"611","LV_boatLaunch_20200707_13:37_covidCreel.Instantaneous",20200707,"LV","boatLaunch","13:37","LV_boatLaunch","covidCreel.Instantaneous",NA,1,1,3,3,0,0,0,0,"AT","LZ",1,1
+"612","ER_boatLaunch_20200707_13:52_covidCreel.Instantaneous",20200707,"ER","boatLaunch","13:52","ER_boatLaunch","covidCreel.Instantaneous",NA,1,1,2,2,0,0,0,0,"AT","LZ",2,2
+"613","AR_boatLaunch_20200707_14:05_covidCreel.Instantaneous",20200707,"AR","boatLaunch","14:05","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","LZ",2,0
+"614","BY_boatLaunch_20200707_14:10_covidCreel.Instantaneous",20200707,"BY","boatLaunch","14:10","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","LZ",1,0
+"615","JS_boatLaunch_20200707_14:26_covidCreel.Instantaneous",20200707,"JS","boatLaunch","14:26","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"616","WS_boatLaunch_20200707_14:53_covidCreel.Instantaneous",20200707,"WS","boatLaunch","14:53","WS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"617","BK_boatLaunch_20200715_12:00_covidCreel.Instantaneous",20200715,"BK","boatLaunch","12:00","BK_boatLaunch","covidCreel.Instantaneous",NA,6,5,3,1,0,0,0,0,"AT","SB",2,2
+"618","SA_boatLaunch_20200715_12:25_covidCreel.Instantaneous",20200715,"SA","boatLaunch","12:25","SA_boatLaunch","covidCreel.Instantaneous",NA,1,1,4,1,0,0,0,0,"AT","SB",0,0
+"619","AV_boatLaunch_20200715_12:45_covidCreel.Instantaneous",20200715,"AV","boatLaunch","12:45","AV_boatLaunch","covidCreel.Instantaneous",NA,2,2,3,2,0,0,0,0,"AT","SB",1,1
+"620","SV_boatLaunch_20200715_13:05_covidCreel.Instantaneous",20200715,"SV","boatLaunch","13:05","SV_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"621","DS_boatLaunch_20200715_13:25_covidCreel.Instantaneous",20200715,"DS","boatLaunch","13:25","DS_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,0,0,0,0,0,"AT","SB",1,1
+"622","LH_boatLaunch_20200715_13:40_covidCreel.Instantaneous",20200715,"LH","boatLaunch","13:40","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"623","PN_boatLaunch_20200715_13:50_covidCreel.Instantaneous",20200715,"PN","boatLaunch","13:50","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,3,0,0,0,0,0,"AT","SB",1,1
+"624","SM_boatLaunch_20200715_14:15_covidCreel.Instantaneous",20200715,"SM","boatLaunch","14:15","SM_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","SB",0,0
+"625","HT_boatLaunch_20200715_14:30_covidCreel.Instantaneous",20200715,"HT","boatLaunch","14:30","HT_boatLaunch","covidCreel.Instantaneous",NA,3,3,1,0,0,0,0,0,"AT","SB",1,1
+"626","BOT_boatLaunch_20200715_14:45_covidCreel.Instantaneous",20200715,"BOT","boatLaunch","14:45","BOT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",2,2
+"627","MS_boatLaunch_20200715_15:25_covidCreel.Instantaneous",20200715,"MS","boatLaunch","15:25","MS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",1,1
+"628","PK_boatLaunch_20200715_16:05_covidCreel.Instantaneous",20200715,"PK","boatLaunch","16:05","PK_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"629","FD_boatLaunch_20200715_16:45_covidCreel.Instantaneous",20200715,"FD","boatLaunch","16:45","FD_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,0,0,0,0,0,"AT","SB",0,0
+"630","LT_boatLaunch_20200715_16:45_covidCreel.Instantaneous",20200715,"LT","boatLaunch","16:45","LT_boatLaunch","covidCreel.Instantaneous",NA,2,1,0,0,0,0,0,0,"AT","SB",0,0
+"631","LV_boatLaunch_20200715_17:05_covidCreel.Instantaneous",20200715,"LV","boatLaunch","17:05","LV_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","SB",4,4
+"632","ER_boatLaunch_20200715_17:30_covidCreel.Instantaneous",20200715,"ER","boatLaunch","17:30","ER_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","SB",0,0
+"633","AR_boatLaunch_20200715_17:45_covidCreel.Instantaneous",20200715,"AR","boatLaunch","17:45","AR_boatLaunch","covidCreel.Instantaneous",NA,3,1,2,0,0,0,0,0,"AT","SB",2,2
+"634","BY_boatLaunch_20200715_18:00_covidCreel.Instantaneous",20200715,"BY","boatLaunch","18:00","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"635","JS_boatLaunch_20200715_18:10_covidCreel.Instantaneous",20200715,"JS","boatLaunch","18:10","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"636","SA_boatLaunch_20200729_18:32_covidCreel.Instantaneous",20200729,"SA","boatLaunch","18:32","SA_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","ML",1,1
+"637","AV_boatLaunch_20200729_18:51_covidCreel.Instantaneous",20200729,"AV","boatLaunch","18:51","AV_boatLaunch","covidCreel.Instantaneous",NA,2,2,1,1,0,0,0,0,"AT","ML",2,2
+"638","ER_boatLaunch_20200731_12:33_covidCreel.Instantaneous",20200731,"ER","boatLaunch","12:33","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"639","AR_boatLaunch_20200731_12:44_covidCreel.Instantaneous",20200731,"AR","boatLaunch","12:44","AR_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","LZ",1,1
+"640","BY_boatLaunch_20200731_12:48_covidCreel.Instantaneous",20200731,"BY","boatLaunch","12:48","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","LZ",1,1
+"641","JS_boatLaunch_20200731_12:52_covidCreel.Instantaneous",20200731,"JS","boatLaunch","12:52","JS_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","LZ",0,0
+"642","LC_boatLaunch_20200806_11:50_covidCreel.Instantaneous",20200806,"LC","boatLaunch","11:50","LC_boatLaunch","covidCreel.Instantaneous","one boat trailer was municipal plate",2,1,0,0,0,0,0,0,"AT","SL",1,1
+"643","BH_boatLaunch_20200806_12:30_covidCreel.Instantaneous",20200806,"BH","boatLaunch","12:30","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,1,0,0,0,0,"AT","SL",2,2
+"644","LL_boatLaunch_20200806_12:50_covidCreel.Instantaneous",20200806,"LL","boatLaunch","12:50","LL_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SL",0,0
+"645","OB_boatLaunch_20200806_13:25_covidCreel.Instantaneous",20200806,"OB","boatLaunch","13:25","OB_boatLaunch","covidCreel.Instantaneous","construction on road restricting access to launch for the day",0,0,1,0,0,0,0,0,"AT","SL",0,0
+"646","WC_boatLaunch_20200806_13:45_covidCreel.Instantaneous",20200806,"WC","boatLaunch","13:45","WC_boatLaunch","covidCreel.Instantaneous",NA,2,1,1,1,0,0,0,0,"AT","SL",3,3
+"647","ID_boatLaunch_20200806_14:35_covidCreel.Instantaneous",20200806,"ID","boatLaunch","14:35","ID_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SL",0,0
+"648","BK_boatLaunch_20200806_14:55_covidCreel.Instantaneous",20200806,"BK","boatLaunch","14:55","BK_boatLaunch","covidCreel.Instantaneous",NA,3,0,3,1,0,0,0,0,"AT","SL",4,1
+"649","SA_boatLaunch_20200806_15:35_covidCreel.Instantaneous",20200806,"SA","boatLaunch","15:35","SA_boatLaunch","covidCreel.Instantaneous",NA,2,1,4,0,0,0,0,0,"AT","SL",2,2
+"650","AV_boatLaunch_20200806_16:00_covidCreel.Instantaneous",20200806,"AV","boatLaunch","16:00","AV_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,1,0,0,0,"AT","SL",1,1
+"651","SV_boatLaunch_20200806_16:20_covidCreel.Instantaneous",20200806,"SV","boatLaunch","16:20","SV_boatLaunch","covidCreel.Instantaneous",NA,6,6,3,0,0,0,0,0,"AT","SL",10,8
+"652","DS_boatLaunch_20200806_16:45_covidCreel.Instantaneous",20200806,"DS","boatLaunch","16:45","DS_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,2,0,0,0,0,"AT","SL",0,0
+"653","LH_boatLaunch_20200806_17:05_covidCreel.Instantaneous",20200806,"LH","boatLaunch","17:05","LH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SL",0,0
+"654","PN_boatLaunch_20200806_17:15_covidCreel.Instantaneous",20200806,"PN","boatLaunch","17:15","PN_boatLaunch","covidCreel.Instantaneous",NA,0,0,6,1,0,0,0,0,"AT","SL",2,2
+"655","HT_boatLaunch_20200806_18:00_covidCreel.Instantaneous",20200806,"HT","boatLaunch","18:00","HT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SL",0,0
+"656","LT_boatLaunch_20200804_11:30_covidCreel.Instantaneous",20200804,"LT","boatLaunch","11:30","LT_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"657","LV_boatLaunch_20200804_11:50_covidCreel.Instantaneous",20200804,"LV","boatLaunch","11:50","LV_boatLaunch","covidCreel.Instantaneous",NA,2,1,1,1,0,0,0,0,"AT","SB",5,4
+"658","ER_boatLaunch_20200804_12:10_covidCreel.Instantaneous",20200804,"ER","boatLaunch","12:10","ER_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"659","AR_boatLaunch_20200804_12:20_covidCreel.Instantaneous",20200804,"AR","boatLaunch","12:20","AR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",2,2
+"660","BY_boatLaunch_20200804_12:25_covidCreel.Instantaneous",20200804,"BY","boatLaunch","12:25","BY_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"661","JS_boatLaunch_20200804_12:30_covidCreel.Instantaneous",20200804,"JS","boatLaunch","12:30","JS_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,0,0,0,0,"AT","SB",0,0
+"662","WS_boatLaunch_20200804_13:00_covidCreel.Instantaneous",20200804,"WS","boatLaunch","13:00","WS_boatLaunch","covidCreel.Instantaneous",NA,2,1,2,2,0,0,0,0,"AT","SB",1,1
+"663","TO_boatLaunch_20200804_13:45_covidCreel.Instantaneous",20200804,"TO","boatLaunch","13:45","TO_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"664","LR_boatLaunch_20200804_13:56_covidCreel.Instantaneous",20200804,"LR","boatLaunch","13:56","LR_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"665","AQ_boatLaunch_20200804_14:20_covidCreel.Instantaneous",20200804,"AQ","boatLaunch","14:20","AQ_boatLaunch","covidCreel.Instantaneous",NA,3,3,3,3,0,0,0,0,"AT","SB",2,2
+"666","WB_boatLaunch_20200804_14:40_covidCreel.Instantaneous",20200804,"WB","boatLaunch","14:40","WB_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"667","LE_boatLaunch_20200804_14:55_covidCreel.Instantaneous",20200804,"LE","boatLaunch","14:55","LE_boatLaunch","covidCreel.Instantaneous",NA,0,0,1,0,0,0,0,0,"AT","SB",0,0
+"668","IV_boatLaunch_20200804_15:08_covidCreel.Instantaneous",20200804,"IV","boatLaunch","15:08","IV_boatLaunch","covidCreel.Instantaneous",NA,0,0,2,1,0,0,0,0,"AT","SB",5,5
+"669","PT_boatLaunch_20200804_15:20_covidCreel.Instantaneous",20200804,"PT","boatLaunch","15:20","PT_boatLaunch","covidCreel.Instantaneous",NA,1,1,1,0,0,0,0,0,"AT","SB",1,1
+"670","CA_boatLaunch_20200804_16:00_covidCreel.Instantaneous",20200804,"CA","boatLaunch","16:00","CA_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"671","DY_boatLaunch_20200804_16:30_covidCreel.Instantaneous",20200804,"DY","boatLaunch","16:30","DY_boatLaunch","covidCreel.Instantaneous",NA,1,1,0,0,3,0,0,0,"AT","SB",0,0
+"672","UG_boatLaunch_20200804_16:35_covidCreel.Instantaneous",20200804,"UG","boatLaunch","16:35","UG_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,3,0,0,0,0,"AT","SB",6,6
+"673","SE_boatLaunch_20200804_16:42_covidCreel.Instantaneous",20200804,"SE","boatLaunch","16:42","SE_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"674","NH_boatLaunch_20200804_16:50_covidCreel.Instantaneous",20200804,"NH","boatLaunch","16:50","NH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"675","WN_boatLaunch_20200804_17:00_covidCreel.Instantaneous",20200804,"WN","boatLaunch","17:00","WN_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"676","LC_boatLaunch_20200804_17:17_covidCreel.Instantaneous",20200804,"LC","boatLaunch","17:17","LC_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0
+"677","BH_boatLaunch_20200804_18:00_covidCreel.Instantaneous",20200804,"BH","boatLaunch","18:00","BH_boatLaunch","covidCreel.Instantaneous",NA,0,0,0,0,0,0,0,0,"AT","SB",0,0

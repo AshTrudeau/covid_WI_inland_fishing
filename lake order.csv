@@ -1,0 +1,40 @@
+lakeName,lakeID,WBIC,landingLocation,notes,panfish,walleye,shore_length_m,length_public_lands_m,prop_public
+Allequash Lake,AQ,2332400,"46.034099, -89.630560",,limit_25,slot_1_over,,,1
+Anvil Lake,AV,968800,"45.93580160, -89.07510530",,limit_25,slot_1_over,6998.2,342.1,0.048883999
+Arrowhead Lake,AR,1541500,"45.90335980, -89.68587580",,limit_25,slot_1_over,,,0
+Birch Lake,BH,2311100,"46.211117, -89.836754",,limit_25,no_min_1_14,,,0
+Black Oak Lake,BK,1630100,"46.155462, -89.306739",,limit_25,slot_1_over,,,0
+Boot Lake,BOT,1619100,"45.965948, -89.331141",,limit_25,slot_1_over,,,0
+Brandy Lake,BY,1541300,"45.904133, -89.698352",,limit_25,slot_1_over,3504,275.8,0.078710046
+Camp Lake,CA,1839100,"45.998149, -89.738959",Rough access road,limit_25,slot_1_over,,,1
+Day Lake,DY,1843500,"46.068292, -89.707130",,limit_25,slot_1_over,,,1
+Deerskin Lake,DS,1601300,"45.981255, -89.161834","Deerskin has a second boat landing, but go to this one on Boat Landing Rd.",limit_25,18_min,5564.3,693.4,0.124615855
+Erickson Lake,ER,983600,"45.947079, -89.630758",,limit_25,slot_1_over,3565.7,813.5,0.228145946
+Found Lake,FD,1593800,"45.947960, -89.443770",,limit_25,18_min,6223.1,0,0
+Hunter Lake,HT,991700,"45.998346, -89.319149",,limit_25,slot_1_over,4941.1,1051.4,0.212786626
+Indian  Lake,ID,2764400,"46.118625, -89.402109","Rough access roads. Technically carry-in, might have trailers if water level is low enough. It's tricky getting here; I suggest trying B  County Road S, to Clair Fire Ln, to White Squaw, to 9 Web Rd, to White Squaw Lake Rd, to Indian Rd. ",limit_25,slot_1_over,,,0
+Irving Lake,IV,2340900,"46.062158, -89.484592",Combined parking lot for Irving and Ballard lakes; just count everyone,limit_25,slot_1_over,5649.6,1088.7,0.192703908
+Johnson Lake,JS,1541100,"45.898751, -89.711911",,limit_25,slot_1_over,,,0
+Lake Adelade,LL,1831700,"46.249823, -89.896853","Hard to see, no sign. Carry-in trail right before fork of Adelaide Rd. and Old Hwy O",limit_25,slot_1_over,3094.5,58.7,0.018969139
+Lake of the Hills,LH,1620500,"45.98615740, -89.24887030",,limit_25,slot_1_over,,,0
+Little Arbor Vitae Lake,LV,1545300,"45.918987, -89.612186",,limit_25,no_min_1_14,7087.8,4142.9,0.584511414
+Little Crooked Lake,LC,2335500,"46.15652520, -89.69361510",,limit_25,slot_1_over,4693,1090,0.232260814
+Little Spider Lake,LR,1540400,"45.966392, -89.710192",,limit_25,slot_1_over,7109,867,0.121958081
+Lone Tree Lake,LE,1000400,"46.042896, -89.504279",Carry-in lake,limit_25,slot_1_over,,,1
+Lost Lake,LT,1593400,"45.961308, -89.476760",,limit_25,slot_1_over,7386.9,757.9,0.10260055
+Muskellunge Lake,MS,1595600,"45.958493, -89.377589",,limit_25,slot_1_over,5961,315.1,0.052860258
+Nichols Lake,NH,1870400,"46.104430, -89.688836",Carry-in lake,limit_25,slot_1_over,1850.2,428.6,0.231650632
+Oxbow Lake,OB,2954800,"46.23718740, -89.67416890",,limit_25,no_min_1_14,,,0
+Partridge Lake,PT,2341500,"46.076571, -89.495256","Parking area is a little down the road from the ramp, but worth checking for trailers parked in the turnaround area at the ramp",speciesLimit,slot_1_over,4924.6,4570.9,0.928176908
+Pickerel Lake,PK,1619700,"45.978595, -89.379058",,speciesLimit,slot_1_over,,,0
+Pioneer Lake,PN,1623400,"46.008103, -89.207641",,limit_25,slot_1_over,,,0
+Silver Lake,SV,1599800,"45.919270, -89.239807",,limit_25,slot_1_over,2238.7,240.4,0.107383749
+Spectacle Lake,SA,717400,"46.010864, -89.012247",,limit_25,slot_1_over,6269.2,875.4,0.139635041
+Stormy Lake,SM,1020300,"46.058707, -89.322635",,limit_25,slot_1_over,,,0
+Street Lake,SE,1884200,"46.095677, -89.707770",Carry-in lake,limit_25,slot_1_over,2334.6,1291.9,0.553371027
+Towanda Lake,TO,1022900,"45.938112, -89.712341",,limit_25,slot_1_over,,,0
+Upper Gresham Lake,UG,2330800,"46.075551, -89.728271",,limit_25,slot_1_over,9289.1,4462.5,0.480401761
+Wabasso Lake,WS,2045000,"45.9736, -89.9994",,limit_25,slot_1_over,,,1
+White Birch Lake,WB,2340500,"46.059603, -89.527267","A little hard to see; side-of-road parking, carry-in steep trail down to lake. Probably won't be able to check for boats from shore. ",limit_25,slot_1_over,3547.9,2959.5,0.834155416
+Whitney Lake,WN,2338100,"46.120713, -89.728948",,limit_25,slot_1_over,5101,4489.4,0.880101941
+Wildcat Lake,WC,2336800,"46.1663, -89.61144560",,limit_25,slot_1_over,6219.7,1524.5,0.245108285

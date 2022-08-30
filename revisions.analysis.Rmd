@@ -1,0 +1,1308 @@
+---
+title: "revisions.analysis"
+output: html_document
+date: '2022-06-14'
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load(tidyverse, lubridate, here, lme4, MASS, DHARMa, MuMIn, texreg, ggeffects, maps, mapproj, RColorBrewer, broom)
+```
+
+
+
+Read in 2020 counts
+```{r}
+
+data.2020<-read_csv(here::here("data for analysis", "sample.events.update.20200727.csv"))
+
+lakeOrder<-read_csv("lake order.csv")
+
+length(unique(lakeOrder$lakeID))
+length(unique(data.2020$lakeID))
+
+```
+ No extra lakeIDs
+ 
+ How many observations for each lake?
+ 
+```{r}
+ncount<-data.2020%>%
+  group_by(lakeID)%>%
+  summarize(n=length(unique(date)))
+ncount
+
+summary(ncount$n)
+```
+ 
+All lakes surveyed between 10 and 23 times. 
+
+```{r}
+arrange(ncount, n)
+```
+
+
+Now processing data from 2018 and 2019
+
+
+```{r}
+data.2018<-read_csv(here("data for analysis","CREEL_POINT_TRAILERCOUNT.csv"), skip=1)
+
+data.2019<-read_csv(here("data for analysis","trailerSamplesIS.csv"))
+```
+
+
+For each of these, I need to collapse vehicle counts by lake_date_time (one row each), while retaining notes (which should be the same for each entry at a given time)
+
+```{r}
+data.2018$time<-as.character(data.2018$time)
+data.2018$time<-paste(str_split_fixed(data.2018$time, ":", 3)[,1], str_split_fixed(data.2018$time,":", 3)[,2], sep=":")
+data.2018$lake_date_time<-paste(data.2018$lakeID, data.2018$dateSample, data.2018$time, sep="_")
+
+data.2019$lakeID<-str_split_fixed(data.2019$siteID, "_", 2)[,1]
+data.2019$dateSample<-ymd(str_split_fixed(data.2019$sampleID, "_", 6)[,3])
+data.2019$time<-str_split_fixed(data.2019$trailerCountID, "_", 6)[,4]
+data.2019$time<-as.POSIXct(data.2019$time, format="%H%M")
+data.2019$time<-format(data.2019$time, "%H:%M")
+
+data.2019$lake_date_time<-paste(data.2019$lakeID, data.2019$dateSample, data.2019$time, sep="_")
+
+```
+
+Process data to collapse rows into counts
+
+```{r}
+data.2018.col<-data.2018%>%
+  group_by(lake_date_time)%>%
+  summarize(nvehiclesFishing=sum(vehiclePresent, na.rm=T),
+            nWIfishing=sum(wisconsinPlates, na.rm=T),
+            notes=unique(notes),
+            heavyWind=unique(heavyWind),
+            heavyRain=unique(heavyRain),
+            heavyClouds=unique(heavyClouds))%>%
+  mutate(lakeID=str_split_fixed(lake_date_time, "_", 3)[,1],
+         date=str_split_fixed(lake_date_time,"_",3)[,2],
+         time=str_split_fixed(lake_date_time, "_", 3)[,3])
+
+
+data.2019.col<-data.2019%>%
+  group_by(lake_date_time)%>%
+  summarize(nvehiclesFishing=sum(vehiclePresent, na.rm=T),
+            nWIfishing=sum(wisconsinPlates, na.rm=T),
+            notes=unique(notes),
+            heavyWind=unique(heavyWind),
+            heavyRain=unique(heavyRain),
+            heavyClouds=unique(heavyClouds))%>%
+  mutate(lakeID=str_split_fixed(lake_date_time, "_", 3)[,1],
+         date=str_split_fixed(lake_date_time,"_",3)[,2],
+         time=str_split_fixed(lake_date_time, "_", 3)[,3])
+
+
+old.data<-rbind.data.frame(data.2018.col, data.2019.col)
+write.csv(old.data, "data.2018.2019.collapsed.csv")
+```
+
+Read in data where I added additional (non-fishing) vehicles from 'notes' column
+
+```{r}
+old.data.2<-read_csv(here::here("data for analysis","data.2018.2019.collapsed.new.col.csv"))
+```
+
+Creating new column, adding nvehiclesFishing to additionalVehicles
+
+```{r}
+old.data.2$additionalVehicles<-ifelse(is.na(old.data.2$additionalVehicles), 0, old.data.2$additionalVehicles)
+
+
+old.data.2$totalVehicles<-old.data.2$nvehiclesFishing+old.data.2$additionalVehicles
+hist(old.data.2$totalVehicles)
+```
+
+Bind new data (2020) to old data
+
+```{r}
+names(data.2020)
+names(old.data.2)
+
+setdiff(names(data.2020), names(old.data.2))
+setdiff(names(old.data.2), names(data.2020))
+
+
+data.18.19<-dplyr::select(old.data.2, lakeID, date, time, totalVehicles)
+
+old.data.2$X1<-NULL
+```
+Formatting both datasets in the same way
+```{r}
+# standardizing date format
+old.data.2$date<-mdy(old.data.2$date)
+
+
+data.2020$lake_date_time<-paste(data.2020$lakeID, data.2020$date, data.2020$time, sep="_")
+```
+
+get total count
+
+```{r}
+data.2020$totalVehicles<-data.2020$totalTrailers+data.2020$totalNonTrailers
+data.2020$nWIfishing<-data.2020$totalInStateTrailers
+
+
+```
+Bind all data into the same data frame, format predictor variables
+
+```{r}
+old.data.bind<-dplyr::select(old.data.2, lake_date_time, totalVehicles, nWIfishing, notes, heavyWind, heavyRain, heavyClouds, lakeID, date, time)
+data.2020.col<-dplyr::select(data.2020, lake_date_time, totalVehicles, nWIfishing, notes, heavyWind, heavyRain, heavyClouds, lakeID, date, time)
+
+data.2020.col$date<-ymd(data.2020.col$date)
+data<-rbind.data.frame(old.data.bind, data.2020.col)
+
+data$dateTime<-ymd_hms(paste(data$date, data$time))
+data$year<-year(data$date)
+data$doy<-yday(data$date)
+data$dow<-wday(data$date, label=T)
+data$weekend<-ifelse(data$dow=="Sun" | data$dow=="Sat", 1, 0)
+
+# July 4 was on a weekend in 2020. July 3 was made a holiday
+
+holidays<-ymd("20180704","20190704","20200703","20180528","20190527","20200525")
+
+data$weekend<-ifelse(data$date%in%holidays, 1, data$weekend)
+
+data$hourOfDay<-as.numeric(hms(data$time))/60/60
+
+data$adverse<-ifelse(data$heavyClouds==1 | data$heavyRain==1 | data$heavyWind==1, 1, 0)
+# replacing NA values with
+data$adverse<-ifelse(is.na(data$adverse), 0, data$adverse)
+```
+
+
+Plotting data
+
+```{r}
+ggplot(data)+
+  geom_point(aes(x=dateTime, y=totalVehicles, color=lakeID))+
+  theme_classic()
+
+ggplot(data)+
+  geom_point(aes(x=doy, y=totalVehicles, color=lakeID))+
+  theme_classic()
+
+ggplot(data)+
+  geom_point(aes(x=hourOfDay, y=totalVehicles, color=lakeID))+
+  theme_classic()
+
+palette<-brewer.pal(3, "Set1")
+ggplot(data)+
+  geom_jitter(aes(x=doy, y=totalVehicles, color=as.factor(year)), alpha=0.5)+
+  scale_color_brewer(palette="Set1")+
+  xlab("Day of year")+
+  ylab("Total vehicles")+
+  guides(color=guide_legend(title="Year"))+
+  theme_classic()
+ggsave(here::here("exploratory plots","count v day of year.jpg"), height=5, width=7)
+
+ggplot(data)+
+  #geom_point(aes(x=hourOfDay, y=totalVehicles, color=as.factor(year)), alpha=0.5)+
+  geom_jitter(aes(x=hourOfDay, y=totalVehicles, color=as.factor(year)), alpha=0.5)+
+  scale_color_brewer(palette="Set1")+
+  xlab("Time of day")+
+  ylab("Total vehicles")+
+  guides(color=guide_legend(title="Year"))+
+  theme_classic()
+ggsave(here::here("exploratory plots","count vs time of day.jpg"), height=5, width=7)
+```
+July 4, 2020 at Black Oak is a big outlier
+
+Let's look at average vehicle count by lake and year
+
+```{r}
+# remove Bay, not really public, and Anvil wasn't actually surveyed pre-COVID
+
+data<-filter(data, lakeID!="BA" & lakeID!="AV")
+data.mean<-data%>%
+  group_by(lakeID, year)%>%
+  summarize(mean=mean(totalVehicles),
+            ncounts=n())
+data.mean
+```
+
+Boxplot counts by year
+
+```{r}
+data$year<-as.factor(data$year)
+ggplot(data)+
+  geom_boxplot(aes(year, totalVehicles))+
+  theme_classic()
+ggsave("boxplot.year.jpg", height=5, width=7)
+```
+
+
+```{r}
+year<-data%>%
+  group_by(year)%>%
+  summarize(mean=mean(totalVehicles),
+            sd=sd(totalVehicles))
+year
+```
+I'm going to drop the outlier value from Black Oak on 7/4/2020. It might have excessive influence on the value of the COVID effect, and the 2018 data on 7/4 was collected wrong (didn't record non-fishing vehicles). So drop both 7/4 observations at Black Oak. 7/3/2020 was also a holiday (7/4 was over the weekend), so also drop that for same reason as 7/4/2020 count
+
+
+```{r}
+# label outlier values
+
+data.label<-data%>%
+    mutate(lake_date=paste(lakeID, date, sep="_"))%>%
+    mutate(outlier=as.factor(
+      ifelse(lake_date=="BK_2020-07-04" | lake_date=="BK_2018-07-04" | lake_date=="BK_2020-07-03" |
+                            lake_date=="SV_2020-08-06", 1, 0)))
+palette<-c("#E69F00", "#56B4E9", "#CC79A7")
+
+
+
+palette<-rev(palette)
+
+
+
+ggplot(data.label)+
+    geom_jitter(aes(x=lakeID, y=totalVehicles, color=outlier), alpha=0.5)+
+  geom_boxplot(aes(x=lakeID, y=totalVehicles, fill=year))+
+ # geom_point(aes(x=lakeID, y=totalVehicles, color=outlier), alpha=0.5)+
+  scale_fill_manual(values=palette)+
+    scale_color_manual(values=c("black","red"))+
+  ylab("Number of vehicles observed")+
+  xlab("Lake ID")+
+  theme_classic()+
+  theme(text=element_text(size=11))
+ggsave(here::here("figures","raw.boxplot.png"), height=4, width=10)
+
+```
+
+Silver lake observation is removed because it emerged as an outlier in the mod.2 fit. 
+
+```{r}
+data.f<-data%>%
+  mutate(lake_date=paste(lakeID, date, sep="_"))%>%
+  filter(lake_date!="BK_2020-07-04" & lake_date!="BK_2018-07-04" & lake_date!="BK_2020-07-03" & lake_date!="SV_2020-08-06")%>%
+  mutate(month=month(date, label=T))%>%
+  mutate(June=ifelse(month=="Jun",1,0),
+         July=ifelse(month=="Jul",1,0),
+         August=ifelse(month=="Aug",1,0))
+
+
+data<-data.f
+```
+
+
+Starting model selection
+
+Questions: 
+
+What is the effect of year on vehicle traffic to lakes?
+Do lakes have different reactions to year? (random slope of lakeID with year)
+
+```{r}
+data$doy.squ<-data$doy^2
+data$hourOfDay.squ<-data$hourOfDay^2
+
+data$doy.sc<-scale(data$doy, center=T, scale=T)
+data$doy.squ.sc<-scale(data$doy.squ, center=T, scale=T)
+data$hourOfDay.sc<-scale(data$hourOfDay, center=T, scale=T)
+data$hourOfDay.squ.sc<-scale(data$hourOfDay.squ, center=T, scale=T)
+data$weekend<-as.factor(data$weekend)
+
+data$month<-as.factor(month(data$date, label=T))
+# scale predictors
+
+data$covid<-ifelse(data$year=="2020",1,0)
+
+write.csv(data, "model.data.csv")
+
+mod<-glm.nb(totalVehicles~month+hourOfDay.sc+hourOfDay.squ.sc+weekend+covid, link="log", data)
+# when plotting residuals, can really see the need for random effects
+
+mod.0<-glmer.nb(totalVehicles~June+July+August+hourOfDay.sc+
+                hourOfDay.squ.sc+adverse+weekend+(1|lakeID), 
+                data=data,verbose=T, 
+                control=glmerControl(optimizer="bobyqa", 
+                                         optCtrl=list(maxfun=1e5))) 
+
+mod.1<-glmer.nb(totalVehicles~June+July+August+hourOfDay.sc+
+                hourOfDay.squ.sc+adverse+weekend+covid+(1|lakeID), 
+                data=data,verbose=T, 
+                control=glmerControl(optimizer="bobyqa", 
+                                         optCtrl=list(maxfun=1e5))) 
+
+```
+
+
+
+So now test that model vs. random slope model
+
+```{r}
+# couldn't use year because some lakes were visited only 1 or 2 years. Going to reclassify as covid or no
+
+
+
+mod.2<-glmer.nb(totalVehicles~June+July+August+hourOfDay.sc+
+                hourOfDay.squ.sc+weekend+adverse+covid+(covid|lakeID), 
+                data=data,verbose=T, 
+                control=glmerControl(optimizer="bobyqa", 
+                                         optCtrl=list(maxfun=1e5))) 
+
+
+AICc(mod.0, mod.1, mod.2)
+Weights(AICc(mod.0, mod.1, mod.2))
+```
+
+
+```{r}
+simulationOutput <- simulateResiduals(fittedModel = mod.2, plot = T)
+```
+
+```{r}
+testResiduals(simulationOutput)
+```
+
+
+```{r}
+
+simulationOutput <- simulateResiduals(fittedModel = mod.2, plot = T)
+testResiduals(simulationOutput)
+
+which(residuals(simulationOutput)==1 | residuals(simulationOutput)==0)
+
+```
+There is no outlier residual in the simulation output? I think the positive test above is a bug. 
+
+save model fit
+```{r}
+
+summary(mod.2)
+
+r.squaredGLMM(mod.2)
+
+
+```
+
+Marginal positive effect of COVID on fishing effort, but considerable variation by lake
+
+```{r}
+drop1(mod.2, test="Chisq")
+```
+
+
+```{r}
+testZeroInflation(simulationOutput)
+```
+```{r}
+s.resid<-simulationOutput$scaledResiduals
+
+plot(s.resid~data$June)
+plot(s.resid~data$July)
+plot(s.resid~data$August)
+plot(s.resid~data$hourOfDay.sc)
+plot(s.resid~data$hourOfDay.squ.sc)
+plot(s.resid~data$year)
+
+plot(s.resid~data$weekend)
+plot(s.resid~data$covid)
+
+plot(s.resid~as.factor(data$lakeID))
+
+
+
+```
+So now I want to add in the lake characteristics. 
+
+
+
+
+```{r}
+lakeOrder<-read_csv(here::here("lakevar","lake order char.csv"))
+vilas.lakes<-read_csv(here::here("lakevar","vilasLakes.csv"))
+fs.lakes<-read_csv(here::here("lakevar","FS_lakes.csv"))
+vilas.fs<-filter(vilas.lakes, WBIC%in%fs.lakes$WBIC)
+
+
+# add WBICs
+wbics<-read_csv(here::here("lakevar","FS_lakes_camping.csv"))
+data.lake.a<-left_join(data.f, wbics[,c("lakeID","WBIC","campgrounds")], by="lakeID")
+
+# add beach, lake size
+vars<-read_csv(here::here("lakevar","vilasLakes.csv"))
+data.lake.b<-left_join(data.lake.a, vars[,c("WBIC","sizeAcres","publicBeach", "publicPark","publicLanding","meanDepth","maxDepth", "lat","long")], by="WBIC")
+
+
+# add shoreline development
+
+dev<-read_csv(here::here("lakevar","ShorelineDevelopment_Vilas_03-15-2018.csv"))
+data.lake<-left_join(data.lake.b, dev[,c("WBIC","buildingDensity200m")], by="WBIC")
+
+data.lake$publicBeach<-ifelse(data.lake$publicBeach=="No",0,1)
+data.lake$publicLanding<-ifelse(data.lake$publicLanding=="No",0,1)
+data.lake$publicPark<-ifelse(data.lake$publicPark=="No",0,1)
+
+# add restrooms and boarding dock (good for shorefishing)
+
+launch.var<-read_csv(here::here("lakevar","vilasCounty_boatLaunchsMFEdb.csv"))
+launch.var$restroom<-ifelse(launch.var$restroomType=="None",0,1)
+launch.var$dock<-ifelse(launch.var$boardingDock=="Yes", 1, 0)
+# Camp and Deerskin are in there twice. 
+
+# need to drop 1 landing each from Deerskin and Camp
+
+launch.var$drop<-ifelse(launch.var$WBIC==1601300 & launch.var$closestIntersection=="Shangri-la Road",1,
+                        ifelse(launch.var$WBIC==1839100 & launch.var$closestIntersection=="State Forest logging road", 1, 0))
+
+launch.var.f<-filter(launch.var, drop==0)
+
+data.lake.launch<-left_join(data.lake, launch.var.f[,c("WBIC","restroom","dock")], by="WBIC")
+
+
+# reference of lake variables combined
+
+vars.ref<-vars[vars$WBIC%in%wbics$WBIC,]
+
+vars.ref%>%
+  group_by(publicPark)%>%
+  tally()
+```
+
+```{r}
+vars$publicBeach<-ifelse(vars$publicBeach=="No",0,1)
+vars$publicLanding<-ifelse(vars$publicLanding=="No",0,1)
+vars$publicPark<-ifelse(vars$publicPark=="No",0,1)
+
+data.lake.launch$sizeHa<-data.lake.launch$sizeAcres*0.405
+#data.lake$publicPark<-ifelse(data.lake$publicPark=="No",0,1)
+data.lake.launch$publicPark<-as.factor(data.lake.launch$publicPark)
+data.lake.launch$sizeHa.sc<-scale(data.lake.launch$sizeHa, center=T, scale=T)
+data.lake.launch$buildingDensity200m.sc<-scale(data.lake.launch$buildingDensity200m, center=T, scale=T)
+
+
+data.lake.launch.pub<-left_join(data.lake.launch, lakeOrder[,c("WBIC","prop_public")])
+
+```
+
+
+```{r}
+
+data.lake.launch.pub.sc<-data.lake.launch.pub%>%
+  mutate(hourOfDay.sc=scale(hourOfDay, center=T, scale=T),
+         hourOfDay.squ=hourOfDay^2,
+         hourOfDay.squ.sc=scale(hourOfDay.squ, center=T, scale=T),
+         covid=ifelse(year=="2020",1,0))
+
+mod.3<-glmer.nb(totalVehicles~June+July+August+hourOfDay.sc+
+                hourOfDay.squ.sc+weekend+adverse+covid+sizeHa.sc*covid+prop_public*covid+
+                  buildingDensity200m.sc*covid+campgrounds*covid+(covid|lakeID), 
+                data=data.lake.launch.pub.sc,verbose=T, 
+                control=glmerControl(optimizer="bobyqa", 
+                                         optCtrl=list(maxfun=1e5))) 
+
+summary(mod.3)
+
+r.squaredGLMM(mod.3)
+```
+
+
+```{r}
+drop1(mod.3, scope=c("June","July","August","hourOfDay.sc","hourOfDay.squ.sc","weekend","adverse","covid","sizeHa.sc","prop_public","buildingDensity200m.sc","campgrounds",
+                     "covid:sizeHa.sc","covid:prop_public","covid:buildingDensity200m.sc","covid:campgrounds"), test="Chisq")
+```
+
+
+
+```{r}
+AICc(mod.2, mod.3)
+```
+adding lake characteristics improves the model fit
+
+```{r}
+simulationOutput <- simulateResiduals(fittedModel = mod.3, plot = T)
+testResiduals(simulationOutput)
+
+```
+
+```{r}
+s.resid<-simulationOutput$scaledResiduals
+
+plot(s.resid~data.lake.launch.pub.sc$June)
+plot(s.resid~data.lake.launch.pub.sc$July)
+plot(s.resid~data.lake.launch.pub.sc$August)
+plot(s.resid~data.lake.launch.pub.sc$hourOfDay.sc)
+plot(s.resid~data.lake.launch.pub.sc$hourOfDay.squ.sc)
+plot(s.resid~data.lake.launch.pub.sc$year)
+
+plot(s.resid~data.lake.launch.pub.sc$weekend)
+plot(s.resid~data.lake.launch.pub.sc$covid)
+
+plot(s.resid~as.factor(data.lake.launch.pub.sc$lakeID))
+
+plot(s.resid~data.lake.launch.pub.sc$campgrounds)
+plot(s.resid~data.lake.launch.pub.sc$prop_public)
+plot(s.resid~data.lake.launch.pub.sc$sizeHa.sc)
+plot(s.resid~data.lake.launch.pub.sc$buildingDensity200m.sc)
+```
+
+Alright, so more vehicles were observed in 2020 at lakes with more public lands on their shoreline
+
+
+Proportion vehicles fishing in 2018 and 2019
+
+```{r}
+
+old.data.2$year<-year(old.data.2$date)
+data.18.19.fish<-old.data.2%>%
+  group_by(year)%>%
+  summarize(prop.fish=sum(nvehiclesFishing)/sum(totalVehicles))
+data.18.19.fish
+```
+
+
+Now compare boat count proportions fishing
+
+```{r}
+
+
+prop.boat.20<-data.2020%>%
+  summarize(prop.fish<-sum(boatsFishing)/sum(totalBoats))
+prop.boat.20
+```
+based on limited observations in 2020, over half of boats on lake were fishing. (on lake = residents + rovers)
+
+And what about in boat counts from 2018 and 2019? 
+
+```{r}
+# odd problem with column names using read_csv
+#boat.18<-read_csv(here("data for analysis","CREEL_POINT_BOATCOUNT.csv"))
+
+boat.18<-read.csv(here::here("data for analysis","CREEL_POINT_BOATCOUNT.csv"))
+
+boat.19<-read_csv(here("data for analysis","boatSamplesIS.csv"))
+```
+
+make 'boatPresent' row
+
+```{r}
+zero<-c("none","cancelled","shore_fisher","wadingFisher")
+boat.18$boatPresent<-ifelse(boat.18$vesselType%in%zero, 0, 1)
+
+zero.2<-c("none","cancelled","shore_angler")
+boat.19$boatPresent<-ifelse(boat.19$vesselType%in%zero.2, 0, 1)
+
+nboat.18<-boat.18%>%
+  group_by(boatCountID)%>%
+  summarize(nBoat=sum(boatPresent),
+            nFishing=sum(fishing, na.rm=T))%>%
+  mutate(nNotFishing=nBoat-nFishing)
+
+nboat.19<-boat.19%>%
+  group_by(boatCountID)%>%
+  summarize(nBoat=sum(boatPresent),
+            nFishing=sum(fishing, na.rm=T))%>%
+  mutate(nNotFishing=nBoat-nFishing)
+
+data.2020$boatsNotFishing<-data.2020$totalBoats-data.2020$boatsFishing
+
+
+  
+
+nboat.df<-data.frame(year=c(2018,2019, 2020), Fishing=c(sum(nboat.18$nFishing),sum(nboat.19$nFishing), sum(data.2020$boatsFishing)), Not.fishing=c(sum(nboat.18$nNotFishing), sum(nboat.19$nNotFishing), sum(data.2020$boatsNotFishing)))
+
+
+nboat.long<-pivot_longer(nboat.df, cols=c(Fishing, Not.fishing), names_to="Activity")
+
+palette<-brewer.pal(n=3, "Dark2")
+
+ggplot(nboat.long)+
+  geom_bar(aes(fill=Activity, x=year, y=value), position="stack", stat="identity" )+
+  scale_fill_manual(values=palette)+
+  xlab("Year")+
+  ylab("Number of boats observed")+
+  theme_classic()
+ggsave(here::here("figures", "boat.activity.png"), height=4, width=6)
+
+nboat.long.perc<-nboat.long%>%
+  group_by(year)%>%
+  mutate(total.obs=sum(value),
+         prop=value/total.obs)
+```
+
+The value for 2020 roughly corresponds with the proportion of boats fishing during boat counts in 2019 and 2018. 
+
+Quick statistical test; is the proportion of boats fishign in 2020 different from those fishing in previous two years? 
+
+```{r}
+
+nboat.18$lakeID<-str_split_fixed(nboat.18$boatCountID, "_", 5)[,1]
+nboat.18$date<-str_split_fixed(nboat.18$boatCountID, "_", 5)[,3]
+nboat.18$time<-str_split_fixed(nboat.18$boatCountID, "_", 5)[,4]
+nboat.18$date_time<-paste(nboat.18$date, nboat.18$time, sep="_")
+
+# add colon to times
+library(chron)
+nboat.18$time<-gsub("(..)(..)","\\1:\\2", nboat.18$time)
+
+nboat.19$lakeID<-str_split_fixed(nboat.19$boatCountID, "_", 5)[,1]
+nboat.19$date<-str_split_fixed(nboat.19$boatCountID, "_", 5)[,3]
+nboat.19$time<-str_split_fixed(nboat.19$boatCountID, "_", 5)[,4]
+nboat.19$date_time<-paste(nboat.19$date, nboat.19$time, sep="_")
+
+nboat.20<-data.2020%>%
+  dplyr::select(lakeID, date, time, totalBoats, boatsFishing)%>%
+  mutate(date_time=paste(date, time, sep="_"))%>%
+  mutate(nNotFishing=totalBoats-boatsFishing)
+
+
+nboat.18<-dplyr::select(nboat.18, lakeID, date, time, nBoat, nFishing, nNotFishing, date_time)
+nboat.19<-dplyr::select(nboat.19, lakeID, date, time, nBoat, nFishing, nNotFishing, date_time)
+
+names(nboat.20)<-c("lakeID","date","time","nBoat","nFishing","date_time","nNotFishing")
+# fix time on nboat.20 (has hh:mm:ss)
+
+nboat.20$time<-str_replace(nboat.20$time, ":00$", "")
+
+nboat.data<-rbind.data.frame(nboat.18, nboat.19, nboat.20)
+
+# expand by boat "uncount"
+
+nboat.data.fishing<-nboat.data%>%
+  group_by(date_time)%>%
+  filter(nFishing>0)%>%
+  uncount(weights=nFishing)%>%
+  mutate(Fishing=rep(1))%>%
+  dplyr::select(lakeID, date, time, date_time, Fishing)%>%
+  ungroup()
+
+nboat.data.notFishing<-nboat.data%>%
+  group_by(date_time)%>%
+  filter(nNotFishing>0)%>%
+  uncount(weights=nNotFishing)%>%
+  mutate(Fishing=rep(0))%>%
+  dplyr::select(lakeID, date, time, date_time, Fishing)%>%
+  ungroup()
+
+# bind those together
+nboat.bind<-rbind.data.frame(nboat.data.fishing, nboat.data.notFishing)
+nboat.bind$date<-ymd(nboat.bind$date)
+nboat.bind$year<-year(nboat.bind$date)
+nboat.bind$covid<-ifelse(nboat.bind$year=="2020", 1, 0)
+
+
+# getting hour of day
+
+nboat.bind$date_time<-ymd_hm(paste(nboat.bind$date, nboat.bind$time, sep=" "))
+midnight<-ymd_hm(paste(nboat.bind$date, "00:00", sep=" "))
+nboat.bind$hourOfDay<-as.numeric(nboat.bind$date_time-midnight)
+nboat.bind$hourOfDay.sq<-nboat.bind$hourOfDay^2
+
+nboat.bind$hourOfDay.sc<-scale(nboat.bind$hourOfDay, scale=T, center=T)
+nboat.bind$hourOfDay.sq.sc<-scale(nboat.bind$hourOfDay.sq, center=T, scale=T)
+
+nboat.bind$June<-ifelse(month(nboat.bind$date)==6,1,0)
+nboat.bind$July<-ifelse(month(nboat.bind$date)==7,1,0)
+nboat.bind$August<-ifelse(month(nboat.bind$date)==8,1,0)
+
+nboat.bind<-filter(nboat.bind, lakeID!="BA" & lakeID!="AV")
+
+
+boat.mod<-glm(Fishing~covid, data=nboat.bind, family="binomial")
+summary(boat.mod)
+```
+accounting for lakeID
+
+```{r}
+
+boat.mod.mm<-glmer(Fishing~covid+(1|lakeID), data=nboat.bind, family="binomial")
+summary(boat.mod.mm)
+```
+did effect of covid depend on the lake? 
+```{r}
+boat.mod.mm.slope<-glmer(Fishing~covid+(covid|lakeID), data=nboat.bind, family="binomial")
+summary(boat.mod.mm.slope)
+```
+Testing assumptions
+
+```{r}
+simulationOutput.boat <- simulateResiduals(fittedModel = boat.mod.mm.slope, plot = T)
+
+```
+```{r}
+AICc(boat.mod, boat.mod.mm, boat.mod.mm.slope)
+```
+```{r}
+Weights(AICc(boat.mod, boat.mod.mm, boat.mod.mm.slope))
+
+```
+
+
+ok, so the probability of an observed boat fishing did not change overall between COVID and non-COVID years, but the proportion and the effect of a COVID year did vary by lake
+
+What if I add the lake variables? 
+
+
+```{r}
+lake.var<-data.lake.launch.pub%>%
+  dplyr::select(lakeID, campgrounds, sizeAcres, buildingDensity200m.sc, sizeHa.sc, prop_public)
+
+lake.var<-distinct(lake.var)
+
+boat.lake<-left_join(nboat.bind, lake.var, by="lakeID")
+
+boat.lake$month<-month(boat.lake$date, label=T)
+
+holidays<-ymd("20180704","20190704","20200703","20180528","20190527","20200525")
+
+
+boat.lake.day<-boat.lake%>%
+  mutate(dayOfYear=yday(date),
+         dayOfYear.sq=dayOfYear^2,
+         dayOfYear.sc=scale(dayOfYear, center=T, scale=T),
+         dayOfYear.sq.sc=scale(dayOfYear.sq, center=T, scale=T),
+         dow=wday(date, label=T),
+         weekend=ifelse(dow%in%c("Sat","Sun") | date%in%holidays,1,0))
+
+```
+
+
+Predicting boat probability of fishing 
+
+Not including adverse weather--adverse weather prevented both boat counts and bus route survey. 
+
+```{r}
+boat.mod.time<-glmer(Fishing~June+July+August+hourOfDay.sc+hourOfDay.sq.sc+
+                       weekend+(covid|lakeID), data=boat.lake.day, family="binomial", control=glmerControl(optimizer="bobyqa", 
+                                         optCtrl=list(maxfun=1e5)))
+
+boat.mod.time.char<-glmer(Fishing~June+July+August+hourOfDay.sc+hourOfDay.sq.sc+
+                       weekend+
+                       covid*sizeHa.sc+covid*campgrounds+covid*prop_public+covid*buildingDensity200m.sc+(covid|lakeID), data=boat.lake.day, family="binomial", control=glmerControl(optimizer="bobyqa", 
+                                         optCtrl=list(maxfun=1e5)))
+
+AICc(boat.mod.time)
+AICc(boat.mod.time.char)
+```
+Adding lake characteristics improves model fit
+
+```{r}
+boat.mod.time.int<-glmer(Fishing~June+July+August+hourOfDay.sc+hourOfDay.sq.sc+
+                       weekend+(1|lakeID), data=boat.lake.day, family="binomial", control=glmerControl(optimizer="bobyqa", 
+                                         optCtrl=list(maxfun=1e5)))
+
+boat.mod.time.char.int<-glmer(Fishing~June+July+August+hourOfDay.sc+hourOfDay.sq.sc+
+                       weekend+
+                       covid*sizeHa.sc+covid*campgrounds+covid*prop_public+covid*buildingDensity200m.sc+(1|lakeID), data=boat.lake.day, family="binomial", control=glmerControl(optimizer="bobyqa", 
+                                         optCtrl=list(maxfun=1e5)))
+
+```
+
+```{r}
+AICc(boat.mod.time, boat.mod.time.char, boat.mod.time.int, boat.mod.time.char.int)
+```
+But not adding random intercept 
+
+```{r}
+summary(boat.mod.time.char)
+```
+
+```{r}
+r.squaredGLMM(boat.mod.time.char)
+```
+
+```{r}
+drop1(boat.mod.time.char, scope=c("covid:sizeHa.sc", "covid:campgrounds","covid:prop_public","covid:buildingDensity200m.sc"),test="Chisq")
+```
+
+```{r}
+drop1(boat.mod.time.char, scope=c("June","July","August","hourOfDay.sc","hourOfDay.sq.sc","weekend","covid","sizeHa.sc","campgrounds","prop_public","buildingDensity200m.sc"), test="Chisq")
+```
+
+
+```{r}
+drop1(boat.mod.time.char, scope=c("June","July","August","hourOfDay.sc","hourOfDay.sq.sc","weekend","covid","sizeHa.sc","campgrounds","prop_public","buildingDensity200m.sc",
+                                  "covid:sizeHa.sc", "covid:campgrounds","covid:prop_public","covid:buildingDensity200m.sc"), test="Chisq")
+```
+
+Larger lakes saw more boats fishing in 2020. Fewer boats fishing regardless of year on highly built lakes. 
+
+```{r}
+simulationOutput <- simulateResiduals(fittedModel = boat.mod.time.char, plot = T)
+testResiduals(simulationOutput)
+
+```
+```{r}
+s.resid<-simulationOutput$scaledResiduals
+
+plot(s.resid~boat.lake$hourOfDay.sc)
+
+```
+
+
+Now that we have those model results, visualizing change by lake. In this case I am going to use the initial mod 2 (without lake characteristics) because I want to see all change by lake, not just that unexplained by lake characteristics. However, it would also be good to visualize that public lands effect. 
+
+```{r}
+pred.dat<-data.frame(lakeID=rep(unique(data.lake.launch.pub$lakeID), each=2))
+
+pred.dat<-pred.dat%>%
+                    mutate(
+                    June=rep(0),
+                     July=rep(0),
+                     August=rep(0),
+                     hourOfDay.sc=rep(mean(data.lake.launch.pub.sc$hourOfDay.sc)),
+                     hourOfDay.squ.sc=rep(mean(data.lake.launch.pub.sc$hourOfDay.squ.sc)),
+                     weekend1=rep(0),
+                     covid=rep(c(0,1), 38)
+                     )
+#pred.dat$covid<-as.factor(pred.dat$covid)
+
+predictions<-predict(mod.2, newdata=pred.dat, re.form=~(covid|lakeID), random.only=T)
+
+pred.dat$predictions.link<-unname(predictions)
+
+pred.dat$predictions<-exp(pred.dat$predictions.link)
+
+```
+
+```{r}
+ggplot(pred.dat)+
+  geom_point(aes(x=covid, y=predictions))+
+  geom_line(aes(x=covid, y=predictions, group=lakeID))+
+  xlab("Year 2020")+
+  ylab("Mean predicted vehicles")+
+  theme_classic()
+
+```
+
+again, this is without the lake characteristics
+```{r}
+write.csv(pred.dat, "random.effects.by.lake.csv")
+
+```
+
+
+What if I added lake characteristics? 
+
+```{r}
+
+pred.dat<-data.frame(lakeID=rep(unique(data.lake.launch.pub$lakeID), each=2))
+
+pred.dat<-data.lake.launch.pub%>%
+  dplyr::select(lakeID, buildingDensity200m.sc, sizeHa.sc, prop_public, campgrounds)
+
+pred.dat.lake<-distinct(pred.dat)
+
+pred.dat<-pred.dat.lake%>%
+  slice(rep(1:n(), each=2))%>%
+  mutate(
+                    June=rep(0),
+                     July=rep(0),
+                     August=rep(0),
+                     hourOfDay.sc=rep(mean(data.lake.launch.pub.sc$hourOfDay.sc)),
+                     hourOfDay.squ.sc=rep(mean(data.lake.launch.pub.sc$hourOfDay.squ.sc)),
+                     weekend=rep(0),
+                    adverse=rep(0),
+                     covid=rep(c(0,1), 38)
+                     )%>%
+  mutate(weekend=factor(weekend, levels=c(0,1)))
+# %>%
+#   mutate(`covid:sizeHa.sc`=covid*sizeHa.sc,
+#          `covid:prop_public`=covid*prop_public,
+#          `covid:buildingDensity200m.sc`=covid*buildingDensity200m.sc,
+#          `covid:campgrounds`=covid*campgrounds)%>%
+#     mutate(covid=as.factor(covid))
+
+
+predictions.char<-predict(mod.3, newdata=pred.dat, re.form=~(covid|lakeID), random.only=F, type="response")
+
+pred.dat$predictions<-unname(predictions.char)
+
+
+
+write.csv(pred.dat, "random.effects.by.lake.with.characteristics.csv")
+
+```
+
+
+Look more closely at predicted differences
+
+```{r}
+diff<-pred.dat%>%
+  group_by(lakeID)%>%
+  summarize(diff=diff(predictions))
+
+
+
+noncovid<-filter(pred.dat, covid==0)
+names(noncovid)[names(noncovid)=="predictions"]<-"noncovid.pred"
+
+pred.dat.covid<-filter(pred.dat, covid==1)
+
+pred.dat.2<-left_join(pred.dat.covid, noncovid[,c("lakeID","noncovid.pred")], by="lakeID")
+
+prop.diff<-pred.dat.2%>%
+  group_by(lakeID)%>%
+  mutate(diff=predictions-noncovid.pred)%>%
+  mutate(prop.diff=diff/noncovid.pred)
+
+diff.arr<-arrange(diff, desc(diff))
+diff.arr
+
+```
+
+
+
+```{r}
+diff.lake<-left_join(diff, distinct(data.lake[,c("lakeID","lat","long","sizeAcres")]), by="lakeID")
+diff.lake$sizeHa<-diff.lake$sizeAcres*0.405
+
+# Muskellunge Lake lat long is wrong
+
+diff.lake[diff.lake$lakeID=="MS",]$lat<-45.95892118
+diff.lake[diff.lake$lakeID=="MS",]$long<--89.37673402
+
+counties<-map_data("county")
+wisconsin<-counties[counties$region=="wisconsin",]
+vilas.map<-wisconsin[wisconsin$subregion=="vilas",]
+
+wi.map<-ggplot()+
+  geom_polygon(data=wisconsin, aes(x=long, y=lat, group=group),
+               fill="black", color="black", size=1)+
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+               fill="darkgray")+
+    theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.position="bottom")
+
+
+vilasCo<-ggplot() + 
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+                fill="darkgray",color="black", size=1)+
+  coord_map()+
+   geom_point(data=diff.lake, aes(x=long, y=lat, fill=diff), pch=21, size=3)+
+  scale_fill_gradient2(low="blue", mid="white", high="red", midpoint=0, guide="colourbar")+
+  labs(fill="Change in mean vehicle\ncount in summer 2020")+
+  ggtitle("Vilas County, WI")+
+  theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.position="bottom")
+vilasCo
+ggsave(here::here("figures","map.covid.change.png"), height=4, width=6)
+
+library(cowplot)
+plot_grid(wi.map, vilasCo)
+ggsave(here::here("figures","full.map.png"), height=4, width=8)
+
+```
+
+Reviewers suggested changing size of lakes on the map. 
+
+```{r}
+vilasCo<-ggplot() + 
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+                fill="darkgray",color="black", size=1)+
+  coord_map()+
+   geom_point(data=diff.lake, aes(x=long, y=lat, fill=diff, size=sizeHa), pch=21)+
+  scale_fill_gradient2(low="blue", mid="white", high="red", midpoint=0, guide="colourbar")+
+  labs(fill="Change in mean vehicle\ncount in summer 2020")+
+  ggtitle("Vilas County, WI")+
+  theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.position="bottom")
+vilasCo
+
+```
+
+
+Add north arrow, population centers. 
+
+
+So I still want to visualize effects of public lands and project overall changes in fishign effort associated with 2020, given these point estimates of average change. 
+
+Also make table for each lake: 
+- mean change in count
+- size
+- prop public shoreline
+- campground
+- building density
+
+
+
+and model predictions and map without lake characteristics? 
+```{r}
+pred.dat.mm<-data.frame(lakeID=rep(unique(data$lakeID), each=2))
+
+pred.dat.mm.col<-pred.dat.mm%>%
+                    mutate(
+                     doy.sc=rep(mean(data$doy.sc)),
+                     doy.squ.sc=rep(mean(data$doy.squ.sc)),
+                     hourOfDay.sc=rep(mean(data$hourOfDay.sc)),
+                     hourOfDay.squ.sc=rep(mean(data$hourOfDay.squ.sc)),
+                     weekend=rep(0),
+                     covid=rep(c(0,1), 38)
+                     )
+#pred.dat.mm.col$covid<-as.factor(pred.dat$covid)
+
+predictions<-predict(mod.2, newdata=pred.dat.mm.col, re.form=~(covid|lakeID), random.only=T)
+
+pred.dat.mm.col$predictions.link<-unname(predictions)
+
+pred.dat.mm.col$predictions<-exp(pred.dat.mm.col$predictions.link)
+
+write.csv(pred.dat.mm.col, "predictions.no.lake.char.csv")
+
+```
+
+
+Look more closely at predicted differences
+
+```{r}
+diff<-pred.dat.mm.col%>%
+  group_by(lakeID)%>%
+  summarize(diff=diff(predictions))
+
+
+
+noncovid<-filter(pred.dat.mm.col, covid==0)
+names(noncovid)[9]<-"noncovid.pred"
+
+pred.dat.mm.col.2<-left_join(pred.dat.mm.col, noncovid[,c("lakeID","noncovid.pred")], by="lakeID")
+
+prop.diff.mm.col<-pred.dat.mm.col.2%>%
+  group_by(lakeID)%>%
+  summarize(diff=diff(predictions),
+            noncovid.pred=unique(noncovid.pred))%>%
+  mutate(prop.diff=diff/noncovid.pred)
+
+diff.arr<-arrange(diff, desc(diff))
+diff.arr
+
+```
+
+
+
+```{r}
+diff.lake<-left_join(diff, distinct(data.lake[,c("lakeID","lat","long","sizeAcres")]), by="lakeID")
+diff.lake$`Surface area (ha)`<-diff.lake$sizeAcres*0.405
+
+# Muskellunge Lake lat long is wrong
+
+diff.lake[diff.lake$lakeID=="MS",]$lat<-45.95892118
+diff.lake[diff.lake$lakeID=="MS",]$long<--89.37673402
+
+counties<-map_data("county")
+wisconsin<-counties[counties$region=="wisconsin",]
+vilas.map<-wisconsin[wisconsin$subregion=="vilas",]
+
+wi.map<-ggplot()+
+  geom_polygon(data=wisconsin, aes(x=long, y=lat, group=group),
+               fill="black", color="black", size=1)+
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+               fill="darkgray")+
+    theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.position="bottom",
+        aspect.ratio=1)
+
+
+vilasCo<-ggplot() + 
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+                fill="darkgray",color="black", size=1)+
+  coord_map()+
+   geom_point(data=diff.lake, aes(x=long, y=lat, fill=diff, size=`Surface area (ha)`), pch=21)+
+  scale_fill_gradient2(low="blue", mid="white", high="red", midpoint=0, guide="colourbar")+
+  labs(fill="Change in mean vehicle\ncount in summer 2020")+
+  ggtitle("Vilas County, WI")+
+  theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.position="bottom")
+vilasCo
+ggsave(here::here("figures","map.covid.change.no.lake.char.png"), height=4, width=6)
+
+library(cowplot)
+plot_grid(wi.map, vilasCo)
+ggsave(here::here("figures","full.map.no.lake.char.png"), height=4, width=8)
+
+# hm, no, legend is messed up
+
+legend<-get_legend(vilasCo)
+
+```
+Right, with lake characteristics included it only shows differences not associated with lake characteristics in the predicted difference. I do want to include those, so no lake characteristics in the predictions
+
+```{r}
+vilasCo<-ggplot() + 
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+                fill="darkgray",color="black", size=1)+
+  coord_map()+
+   geom_point(data=diff.lake, aes(x=long, y=lat, fill=diff, size=`Surface area (ha)`), pch=21)+
+  scale_fill_gradient2(low="blue", mid="white", high="red", midpoint=0, guide="colourbar")+
+  labs(fill="Change in\nmean vehicle\ncount summer\n2020")+
+  ggtitle("Vilas County, WI")+
+  theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.direction="vertical")
+vilasCo
+
+legend<-get_legend(vilasCo)
+
+vilasCo.noLeg<-ggplot() + 
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+                fill="darkgray",color="black", size=1)+
+  coord_map()+
+   geom_point(data=diff.lake, aes(x=long, y=lat, fill=diff, size=`Surface area (ha)`), pch=21)+
+  scale_fill_gradient2(low="blue", mid="white", high="red", midpoint=0, guide="colourbar")+
+  labs(fill="Change in\nmean vehicle\ncount summer\n2020")+
+  ggtitle("Vilas County, WI")+
+  theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.position="none")
+
+
+plot_grid(wi.map, vilasCo.noLeg, legend, nrow=1, rel_widths=c(.4,.4,.2), rel_heights=c(1,1,1))
+ggsave(here::here("figures","test.map.png"), height=4, width=8)
+```
+
+work on WI map, add N arrow, great lakes, etc
+
+```{r}
+library(ggsn)
+
+counties<-map_data("county")
+wisconsin<-counties[counties$region=="wisconsin",]
+vilas.map<-wisconsin[wisconsin$subregion=="vilas",]
+
+cities<-data.frame(city=c("Madison","Milwaukee","Green Bay"), lat=c(43.0722, 43.0389, 44.5133), long=c(-89.4008, -87.9065, -88.0133))
+
+
+```
+
+Add lakes lakes and UP?
+
+```{r}
+lakes<-map_data("lakes")
+greatLakes<-filter(lakes, region=="Great Lakes")
+michigan<-filter(greatLakes, subregion=="Michigan")
+superior<-filter(greatLakes, subregion=="Superior")
+
+states<-map_data("state")
+minnesota<-states[states$region=="minnesota",]
+iowa<-states[states$region=="iowa",]
+illinois<-states[states$region=="illinois",]
+michigan<-states[states$region=="michigan",]
+wisconsin<-states[states$region=="wisconsin",]
+```
+
+
+
+```{r}
+library(sf)
+
+library(ggspatial)
+
+wi<-ggplot()+
+  geom_polygon(data=wisconsin, aes(x=long, y=lat, group=group),
+               fill="white", color="black", size=1)+
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+               fill="red", color="black")+
+  geom_polygon(data=superior, aes(x=long, y=lat, group=group), color="black", fill="lightblue")+
+  geom_polygon(data=minnesota, aes(x=long, y=lat, group=group), color="black", fill="white")+
+  geom_polygon(data=illinois, aes(x=long, y=lat, group=group), color="black", fill="white")+
+  geom_polygon(data=iowa, aes(x=long, y=lat, group=group), color="black", fill="white")+
+  geom_polygon(data=michigan, aes(x=long, y=lat, group=group), color="black", fill="white")+
+  coord_map(xlim=c(-93.7326, -86.5036), ylim=c(42.4922,46.9988))+
+  geom_point(data=cities, aes(x=long, y=lat),  color="black")+
+  geom_text(data=cities,  aes( x=long, y=lat, label=city), inherit.aes=F, color="black", nudge_y=-0.2, size=3)+
+  annotation_north_arrow(which_north="true")+
+
+    theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.position="bottom",
+        aspect.ratio=1)
+# +
+#   north(data=NULL, x.min=-93.7326, x.max=-86.5036, y.min=42.4922, y.max=46.9988, location="topleft", symbol=12)
+ 
+wi
+
+
+```
+
+OK, can I add some towns and cities to the Vilas County map? 
+
+```{r}
+
+towns<-read.csv("vilas.towns.csv")
+
+vilasCo<-ggplot() + 
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+                fill="darkgray",color="black", size=1)+
+   geom_point(data=diff.lake, aes(x=long, y=lat, fill=diff, size=`Surface area (ha)`), pch=21)+
+  scale_fill_gradient2(low="blue", mid="white", high="red", midpoint=0, guide="colourbar")+
+  labs(fill="Change in\nmean vehicle\ncount summer\n2020")+
+  geom_text(data=towns,  aes( x=long, y=lat, label=name), inherit.aes=F, color="black", nudge_y=0.02)+
+  geom_point(data=towns, aes(x=long, y=lat))+
+  coord_map()+
+  ggtitle("Vilas County, WI")+
+  theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.direction="vertical")
+legend<-get_legend(vilasCo)
+
+vilasCo.noLeg<-ggplot() + 
+  geom_polygon(data=vilas.map, aes(x=long, y=lat, group=group),
+                fill="darkgray",color="black", size=1)+
+   geom_point(data=diff.lake, aes(x=long, y=lat, fill=diff, size=`Surface area (ha)`),  pch=21)+
+  scale_fill_gradient2(low="blue", mid="white", high="red", midpoint=0, guide="colourbar")+
+  labs(fill="Change in\nmean vehicle\ncount summer\n2020")+
+  geom_text(data=towns,  aes( x=long, y=lat, label=name), inherit.aes=F, color="black", size=2,nudge_y=0.02)+
+  geom_point(data=towns, aes(x=long, y=lat))+
+  coord_map()+
+  ggtitle("Vilas County, WI")+
+  theme_classic()+
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+          axis.text.y=element_blank(),axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank(),
+        legend.position="none")
+
+```
+
+```{r}
+library(cowplot)
+
+plot_grid(wi, vilasCo.noLeg, legend, nrow=1, rel_widths=c(.4,.4,.2), rel_heights=c(1,1,1))
+ggsave(here::here("figures","full.map.v2.png"), height=4, width=8)
+
+```
+
+

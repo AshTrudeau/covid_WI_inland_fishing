@@ -1,0 +1,705 @@
+---
+title: "license data"
+author: "Ashley Trudeau"
+date: "6/22/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load(tidyverse, lubridate, here, lme4, MASS, DHARMa, MuMIn, texreg, ggeffects, maps, mapproj, RColorBrewer, readxl)
+
+```
+
+Read in license sales data
+```{r}
+allsheets<-function(filename, tibble=T){
+  sheets<-readxl::excel_sheets(filename)
+  x<-lapply(sheets, function(X) read_excel(filename, sheet=X))
+  if(!tibble) x<-lapply(x, as.data.frame)
+  names(x)<-sheets
+  x
+}
+
+data<-allsheets(here::here("license data","Copy of 2020 Sales Patterns1.1.xlsx"))
+```
+
+
+```{r}
+# remove unexplained data in left columns
+res.annual<-data$`RESIDENT ALL ANNUAL`[,-c(1:4)]
+# rename columns
+names(res.annual)<-as.character(res.annual[1,])
+# drop first row (now names)
+res.annual<-res.annual[-1,]
+# fix column names to 
+
+names(res.annual)<-c("monthDay","daily.2015","daily.2016","daily.2017","daily.2018","daily.2019","daily.2020",
+                     "daily.avg.5.year","cum.2015","cum.2016","cum.2017","cum.2018","cum.2019","cum.2020","cum.avg.5.year","ref.cum.2019","ref.cum.5.year")
+
+
+res.annual$sd.5year<-apply(res.annual[,c(9:13)], 1, sd)
+
+sd.5year<-data.frame(monthDay=res.annual$monthDay, sd.5year=res.annual$sd.5year)
+sd.5year.c<-sd.5year[complete.cases(sd.5year),]
+
+counts.only<- dplyr::select(res.annual, monthDay,daily.2015,daily.2016,daily.2017,daily.2018,daily.2019,daily.2020,
+                     daily.avg.5.year)
+counts.only$daily.avg.5.year<-as.numeric(counts.only$daily.avg.5.year)
+
+long.res.annual<-counts.only%>%
+  pivot_longer(-monthDay, 
+               names_to="year",
+               values_to="daily.sales")
+
+split<-str_split_fixed(long.res.annual$year, "daily.", 2)[,2]
+
+long.res.annual$year<-str_split_fixed(long.res.annual$year, "daily.", 2)[,2]
+# get rid of extra rows
+long.res.annual<-filter(long.res.annual, !is.na(monthDay))
+
+# split into average and annual dfs
+resident.annual<-filter(long.res.annual, year!="avg.5.year")
+resident.annual.mean<-filter(long.res.annual, year=="avg.5.year")
+
+# get day of year for plots
+resident.annual$date<-mdy(paste(resident.annual$monthDay, resident.annual$year, sep="/"))
+resident.annual$doy<-yday(resident.annual$date)
+
+# get cumulative sales
+res.annual.sum<-resident.annual%>%
+  group_by(year)%>%
+  arrange(date)%>%
+  mutate(cumulative.sales=cumsum(daily.sales))
+
+
+# repeat day of year and cumulative sales for mean
+resident.annual.mean$date<-mdy(paste(resident.annual.mean$monthDay, "2000", sep="/"))
+resident.annual.mean$doy<-yday(resident.annual.mean$date)
+
+res.annual.mean.sum<-resident.annual.mean%>%
+  group_by(year)%>%
+  arrange(date)%>%
+  mutate(cumulative.sales=cumsum(daily.sales))
+
+
+
+# get last three years
+res.18.19<-filter(res.annual.sum, year%in%c("2018","2019","2020"))
+
+# bind to 5 year average
+
+res.18.19.5year<-rbind.data.frame(res.18.19, res.annual.mean.sum)
+
+ggplot(res.18.19)+
+  geom_line(aes(x=doy, y=cumulative.sales, color=year))+
+    geom_line(data=res.annual.mean.sum, aes(x=doy, y=cumulative.sales), color="black")+
+  theme_classic()
+
+
+ggplot(res.annual.sum)+
+  geom_line(aes(x=doy, y=cumulative.sales, color=year))+
+  geom_line(data=res.annual.mean.sum, aes(x=doy, y=cumulative.sales), color="black")+
+  theme_classic()
+
+
+
+palette<-c( "#E69F00", "#56B4E9", "#CC79A7")
+
+
+
+palette<-rev(palette)
+
+# changing date format for plot
+
+plot.date<-function(df){
+  df$date.c<-as.character(df$date)
+  split<-str_split_fixed(df$date.c,"-",3)
+  df$plotDate<-paste(split[,2],split[,3],"2000", sep="-")
+  df$plotDate<-mdy(df$plotDate)
+  return(df)
+}
+
+res.plot<-plot.date(res.18.19.5year)
+res.plot$year<-ifelse(res.plot$year=="avg.5.year","5 year average\n2015-2019",res.plot$year)
+res.plot$Year<-res.plot$year
+
+# trying to add error bars, so need to separate mean of 5 years from separate values
+
+res.plot.mean<-filter(res.plot, year=="5 year average\n2015-2019")
+res.plot.mean$sd<-sd.5year.c$sd.5year
+# 
+ res.plot.years<-filter(res.plot, year!="5 year average\n2015-2019")
+
+resident<-ggplot()+
+  geom_ribbon(data=res.plot.mean , aes(x=plotDate, ymin=cumulative.sales-1.96*sd, ymax=cumulative.sales+1.96*sd), fill="gray", alpha=0.75)+
+  geom_line(data=res.plot.mean, aes(x=plotDate, y=cumulative.sales), color="black", lwd=1.5)+
+  geom_line(data=res.plot.years, aes(x=plotDate, y=cumulative.sales, color=Year), lwd=1.5)+
+  scale_x_date(labels = function(x) format(x, "%d-%b"), position="bottom")+ 
+  scale_color_manual(values=palette)+
+   ylab("Cumulative number of\nlicense sales")+
+   xlab("Date")+
+   theme_classic()+
+  theme(legend.position="none")
+resident
+ggsave(here::here("figures","resident.sales.png"), height=4, width=6)
+
+
+
+```
+
+
+Nonresident annual
+```{r}
+
+# remove unexplained data in left columns
+nonres.annual<-data$`NONRESIDENT ALL ANNUAL`[,-c(1:4)]
+# rename columns
+names(nonres.annual)<-as.character(nonres.annual[1,])
+# drop first row (now names)
+nonres.annual<-nonres.annual[-1,]
+# fix column names to 
+
+names(nonres.annual)<-c("monthDay","daily.2015","daily.2016","daily.2017","daily.2018","daily.2019","daily.2020",
+                     "daily.avg.5.year","cum.2015","cum.2016","cum.2017","cum.2018","cum.2019","cum.2020","cum.avg.5.year","ref.cum.2019","ref.cum.5.year")
+counts.only<- dplyr::select(nonres.annual, monthDay,daily.2015,daily.2016,daily.2017,daily.2018,daily.2019,daily.2020,
+                     daily.avg.5.year)
+counts.only$daily.avg.5.year<-as.numeric(counts.only$daily.avg.5.year)
+
+long.nonres.annual<-counts.only%>%
+  pivot_longer(-monthDay, 
+               names_to="year",
+               values_to="daily.sales")
+
+split<-str_split_fixed(long.nonres.annual$year, "daily.", 2)[,2]
+
+long.nonres.annual$year<-str_split_fixed(long.nonres.annual$year, "daily.", 2)[,2]
+# get rid of extra rows
+long.nonres.annual<-filter(long.nonres.annual, !is.na(monthDay))
+
+# split into average and annual dfs
+nonresident.annual<-filter(long.nonres.annual, year!="avg.5.year")
+nonresident.annual.mean<-filter(long.nonres.annual, year=="avg.5.year")
+
+# get day of year for plots
+nonresident.annual$date<-mdy(paste(nonresident.annual$monthDay, nonresident.annual$year, sep="/"))
+nonresident.annual$doy<-yday(nonresident.annual$date)
+
+# get cumulative sales
+nonres.annual.sum<-nonresident.annual%>%
+  group_by(year)%>%
+  arrange(date)%>%
+  mutate(cumulative.sales=cumsum(daily.sales))
+
+
+# repeat day of year and cumulative sales for mean
+nonresident.annual.mean$date<-mdy(paste(nonresident.annual.mean$monthDay, "2000", sep="/"))
+nonresident.annual.mean$doy<-yday(nonresident.annual.mean$date)
+
+nonres.annual.mean.sum<-nonresident.annual.mean%>%
+  group_by(year)%>%
+  arrange(date)%>%
+  mutate(cumulative.sales=cumsum(daily.sales))
+
+
+
+# get last three years
+nonres.18.19<-filter(nonres.annual.sum, year%in%c("2018","2019","2020"))
+
+
+comp.dat.nonres<-rbind.data.frame(nonres.18.19, nonres.annual.mean.sum)
+
+
+ggplot(nonres.18.19)+
+  geom_line(aes(x=doy, y=cumulative.sales, color=year))+
+  geom_line(data=nonres.annual.mean.sum, aes(x=doy, y=cumulative.sales), color="black")+
+  theme_classic()
+
+
+ggplot(nonres.annual.sum)+
+  geom_line(aes(x=doy, y=cumulative.sales, color=year))+
+  geom_line(data=nonres.annual.mean.sum, aes(x=doy, y=cumulative.sales), color="black")+
+  theme_classic()
+
+
+ggplot(comp.dat.nonres)+
+  geom_line(aes(x=doy, y=cumulative.sales, color=year))+
+  theme_classic()
+
+
+# changing date format for plot
+
+nonres.18.19.5year<-comp.dat.nonres
+
+
+
+nonres.plot<-plot.date(nonres.18.19.5year)
+nonres.plot$year<-ifelse(nonres.plot$year=="avg.5.year","5 year average\n2015-2019",nonres.plot$year)
+nonres.plot$Year<-nonres.plot$year
+
+
+nonres.annual$sd.5year<-apply(nonres.annual[,c(9:13)], 1, sd)
+
+sd.5year<-data.frame(monthDay=nonres.annual$monthDay, sd.5year=nonres.annual$sd.5year)
+sd.5year.c<-sd.5year[complete.cases(sd.5year),]
+
+
+nonres.plot.mean<-filter(nonres.plot, year=="5 year average\n2015-2019")
+nonres.plot.mean$sd<-sd.5year.c$sd.5year
+
+ nonres.plot.years<-filter(nonres.plot, year!="5 year average\n2015-2019")
+
+
+
+nonresident<-ggplot(nonres.plot)+
+  geom_ribbon(data=nonres.plot.mean , aes(x=plotDate, ymin=cumulative.sales-2*sd, ymax=cumulative.sales+2*sd), fill="gray", alpha=0.75)+
+  geom_line(data=nonres.plot.mean, aes(x=plotDate, y=cumulative.sales), color="black", lwd=1.5)+
+  geom_line(data=nonres.plot.years, aes(x=plotDate, y=cumulative.sales, color=Year), lwd=1.5)+
+    scale_x_date(labels = function(x) format(x, "%d-%b"), position="bottom") +
+  scale_color_manual(values=palette)+
+  ylab("Cumulative number of\nlicense sales")+
+  xlab("Date")+
+  theme_classic()+
+  theme(legend.position="none")
+nonresident
+ggsave(here::here("figures","nonresident.sales.png"), height=4, width=6)
+
+
+
+
+```
+
+still higher than average, but not highest in past 5 years. 2015 saw more nonresident annual license sales. 
+
+
+Now resident and nonresident first time buyers
+
+```{r}
+# remove unexplained data in left columns
+res.ftb<-data$`RESIDENT FTB`[,-c(1:5)]
+# rename columns
+names(res.ftb)<-as.character(res.ftb[1,])
+# drop first row (now names)
+res.ftb<-res.ftb[-1,]
+# fix column names to 
+
+names(res.ftb)<-c("monthDay","daily.2015","daily.2016","daily.2017","daily.2018","daily.2019","daily.2020",
+                     "daily.avg.5.year","cum.2015","cum.2016","cum.2017","cum.2018","cum.2019","cum.2020","cum.avg.5.year","ref.cum.2019","ref.cum.5.year")
+counts.only<- dplyr::select(res.ftb, monthDay,daily.2015,daily.2016,daily.2017,daily.2018,daily.2019,daily.2020,
+                     daily.avg.5.year)
+counts.only$daily.avg.5.year<-as.numeric(counts.only$daily.avg.5.year)
+
+long.res.ftb<-counts.only%>%
+  pivot_longer(-monthDay, 
+               names_to="year",
+               values_to="daily.sales")
+
+split<-str_split_fixed(long.res.ftb$year, "daily.", 2)[,2]
+
+long.res.ftb$year<-str_split_fixed(long.res.ftb$year, "daily.", 2)[,2]
+# get rid of extra rows
+long.res.ftb<-filter(long.res.ftb, !is.na(monthDay))
+
+# split into average and ftb dfs
+resident.ftb<-filter(long.res.ftb, year!="avg.5.year")
+resident.ftb.mean<-filter(long.res.ftb, year=="avg.5.year")
+
+# get day of year for plots
+resident.ftb$date<-mdy(paste(resident.ftb$monthDay, resident.ftb$year, sep="/"))
+resident.ftb$doy<-yday(resident.ftb$date)
+
+# get cumulative sales
+res.ftb.sum<-resident.ftb%>%
+  group_by(year)%>%
+  arrange(date)%>%
+  mutate(cumulative.sales=cumsum(daily.sales))
+
+
+# repeat day of year and cumulative sales for mean
+resident.ftb.mean$date<-mdy(paste(resident.ftb.mean$monthDay, "2000", sep="/"))
+resident.ftb.mean$doy<-yday(resident.ftb.mean$date)
+
+res.ftb.mean.sum<-resident.ftb.mean%>%
+  group_by(year)%>%
+  arrange(date)%>%
+  mutate(cumulative.sales=cumsum(daily.sales))
+
+
+
+# get last three years
+res.ftb.18.19<-filter(res.ftb.sum, year%in%c("2018","2019","2020"))
+
+# bind on 5 year average
+res.ftb.18.19.5year<-rbind.data.frame(res.ftb.18.19, res.ftb.mean.sum)
+
+# fix the dates for the plot
+
+res.ftb.plot<-plot.date(res.ftb.18.19.5year)
+res.ftb.plot$year<-ifelse(res.ftb.plot$year=="avg.5.year","5 year average\n2015-2019",res.ftb.plot$year)
+res.ftb.plot$Year<-res.ftb.plot$year
+
+res.ftb$sd.5year<-apply(res.ftb[,c(9:13)], 1, sd)
+
+sd.5year<-data.frame(monthDay=res.ftb$monthDay, sd.5year=res.ftb$sd.5year)
+sd.5year.c<-sd.5year[complete.cases(sd.5year),]
+
+
+res.ftb.plot.mean<-filter(res.ftb.plot, year=="5 year average\n2015-2019")
+res.ftb.plot.mean$sd<-sd.5year.c$sd.5year
+
+ res.ftb.plot.years<-filter(res.ftb.plot, year!="5 year average\n2015-2019")
+
+
+resident.ftb<-ggplot(res.ftb.plot)+
+  geom_ribbon(data=res.ftb.plot.mean , aes(x=plotDate, ymin=cumulative.sales-2*sd, ymax=cumulative.sales+2*sd), fill="gray", alpha=0.75)+
+  geom_line(data=res.ftb.plot.mean, aes(x=plotDate, y=cumulative.sales), color="black", lwd=1.5)+
+  geom_line(data=res.ftb.plot.years, aes(x=plotDate, y=cumulative.sales, color=Year), lwd=1.5)+
+    scale_x_date(labels = function(x) format(x, "%d-%b"), position="bottom") +
+  scale_color_manual(values=palette)+
+  ylab("Cumulative number of\nlicense sales")+
+  xlab("Date")+
+  theme_classic()+
+  theme(legend.position="none")
+resident.ftb
+ggsave(here::here("figures","resident.ftb.sales.png"), height=4, width=6)
+
+
+
+
+
+
+
+```
+
+
+Nonresident FTB
+
+```{r}
+# remove unexplained data in left columns
+nonres.ftb<-data$`NONRESIDENT FTB`[,-c(1:5)]
+# rename columns
+names(nonres.ftb)<-as.character(nonres.ftb[1,])
+# drop first row (now names)
+nonres.ftb<-nonres.ftb[-1,]
+# fix column names to 
+
+names(nonres.ftb)<-c("monthDay","daily.2015","daily.2016","daily.2017","daily.2018","daily.2019","daily.2020",
+                     "daily.avg.5.year","cum.2015","cum.2016","cum.2017","cum.2018","cum.2019","cum.2020","cum.avg.5.year","ref.cum.2019","ref.cum.5.year")
+counts.only<- dplyr::select(nonres.ftb, monthDay,daily.2015,daily.2016,daily.2017,daily.2018,daily.2019,daily.2020,
+                     daily.avg.5.year)
+counts.only$daily.avg.5.year<-as.numeric(counts.only$daily.avg.5.year)
+
+long.nonres.ftb<-counts.only%>%
+  pivot_longer(-monthDay, 
+               names_to="year",
+               values_to="daily.sales")
+
+split<-str_split_fixed(long.nonres.ftb$year, "daily.", 2)[,2]
+
+long.nonres.ftb$year<-str_split_fixed(long.nonres.ftb$year, "daily.", 2)[,2]
+# get rid of extra rows
+long.nonres.ftb<-filter(long.nonres.ftb, !is.na(monthDay))
+
+# split into average and ftb dfs
+nonresident.ftb<-filter(long.nonres.ftb, year!="avg.5.year")
+nonresident.ftb.mean<-filter(long.nonres.ftb, year=="avg.5.year")
+
+# get day of year for plots
+nonresident.ftb$date<-mdy(paste(nonresident.ftb$monthDay, nonresident.ftb$year, sep="/"))
+nonresident.ftb$doy<-yday(nonresident.ftb$date)
+
+# get cumulative sales
+nonres.ftb.sum<-nonresident.ftb%>%
+  group_by(year)%>%
+  arrange(date)%>%
+  mutate(cumulative.sales=cumsum(daily.sales))
+
+
+# repeat day of year and cumulative sales for mean
+nonresident.ftb.mean$date<-mdy(paste(nonresident.ftb.mean$monthDay, "2000", sep="/"))
+nonresident.ftb.mean$doy<-yday(nonresident.ftb.mean$date)
+
+nonres.ftb.mean.sum<-nonresident.ftb.mean%>%
+  group_by(year)%>%
+  arrange(date)%>%
+  mutate(cumulative.sales=cumsum(daily.sales))
+
+
+
+# get last three years
+nonres.ftb.18.19<-filter(nonres.ftb.sum, year%in%c("2018","2019","2020"))
+
+# bind on 5 year average
+nonres.ftb.18.19.5year<-rbind.data.frame(nonres.ftb.18.19, nonres.ftb.mean.sum)
+
+# fix the dates for the plot
+
+nonres.ftb.plot<-plot.date(nonres.ftb.18.19.5year)
+nonres.ftb.plot$year<-ifelse(nonres.ftb.plot$year=="avg.5.year","5 year average\n2015-2019",nonres.ftb.plot$year)
+nonres.ftb.plot$Year<-nonres.ftb.plot$year
+
+nonres.ftb$sd.5year<-apply(nonres.ftb[,c(9:13)], 1, sd)
+
+sd.5year<-data.frame(monthDay=nonres.ftb$monthDay, sd.5year=nonres.ftb$sd.5year)
+sd.5year.c<-sd.5year[complete.cases(sd.5year),]
+
+
+nonres.ftb.plot.mean<-filter(nonres.ftb.plot, year=="5 year average\n2015-2019")
+nonres.ftb.plot.mean$sd<-sd.5year.c$sd.5year
+
+ nonres.ftb.plot.years<-filter(nonres.ftb.plot, year!="5 year average\n2015-2019")
+
+
+
+nonresident.ftb<-ggplot(nonres.ftb.plot)+
+  geom_ribbon(data=nonres.ftb.plot.mean , aes(x=plotDate, ymin=cumulative.sales-2*sd, ymax=cumulative.sales+2*sd), fill="gray", alpha=0.75)+
+  geom_line(data=nonres.ftb.plot.mean, aes(x=plotDate, y=cumulative.sales), color="black", lwd=1.5)+
+  geom_line(data=nonres.ftb.plot.years, aes(x=plotDate, y=cumulative.sales, color=Year), lwd=1.5)+
+    scale_x_date(labels = function(x) format(x, "%d-%b"), position="bottom") +
+  scale_color_manual(values=palette)+
+  ylab("Cumulative number of\nlicense sales")+
+  xlab("Date")+
+  theme_classic()+
+  theme(legend.position="none")
+nonresident.ftb
+ggsave(here::here("figures","nonresident.ftb.sales.png"), height=4, width=6)
+
+
+
+
+```
+
+Big increase in nonresident FTB license sales (as opposed to more modest increase in regular annual). I think I remember most of the increase in nonres licenses driven by these FTBs?
+
+
+```{r}
+library(cowplot)
+
+palette<-c("#000000", "#E69F00", "#56B4E9", "#CC79A7")
+
+
+
+palette<-rev(palette)
+
+legend.plot<-ggplot(nonres.ftb.plot)+
+  geom_line(aes(x=plotDate, y=cumulative.sales, color=Year), lwd=1)+
+    scale_x_date(labels = function(x) format(x, "%d-%b"), position="bottom") +
+    ylim(0,90000)+
+  scale_color_manual(values=palette)+
+  ylab("Cumulative sales")+
+  xlab("Date")+
+  theme_classic()
+
+
+legend<-get_legend(legend.plot + theme(legend.box.margin=margin(0,0,0,0)))
+
+plot_grid(resident, nonresident, legend, resident.ftb, nonresident.ftb, labels=c("A","B","","C","D"),  nrow=2, ncol=3, rel_widths=c(1,1,0.4))
+ggsave(here::here("figures","all.license.sales.png"), height=6, width=9)
+```
+
+What proportion of the increase in resident and nonresident sales in 2020 came from first time buyer licenses? 
+
+```{r}
+res.max<-res.plot%>%
+  group_by(year)%>%
+  summarize(total=max(cumulative.sales))
+
+nonres.max<-nonres.plot%>%
+  group_by(year)%>%
+  summarize(total=max(cumulative.sales))
+
+ftb.res<-res.ftb.plot%>%
+  group_by(year)%>%
+  summarize(total=max(cumulative.sales))
+
+ftb.nonres<-nonres.ftb.plot%>%
+  group_by(year)%>%
+  summarize(total=max(cumulative.sales))
+
+res.max
+ftb.res
+
+```
+Change in resident licenses
+
+```{r}
+1019570-941940
+```
+change in res ftb licenses
+
+```{r}
+87730-51206
+```
+```{r}
+36524/77630
+```
+47% of resident license sales increase came from FTB
+
+nonresidents
+
+```{r}
+nonres.max
+ftb.nonres
+```
+
+Change in nonres
+```{r}
+188034-174627
+```
+Change in ftb
+```{r}
+45088-33481
+```
+```{r}
+11607/13407
+```
+87% of nonres license increase was FTBs
+
+
+Can I plot license sales versus vehicle counts? 
+
+```{r}
+vehicles<-read_csv("model.data.csv")
+
+```
+
+```{r}
+res.2018<-res.annual%>%
+  dplyr::select( monthDay, daily.2018)%>%
+  mutate(year=rep(2018),
+         type="resident")%>%
+  rename(daily.sold=daily.2018)
+
+res.2019<-res.annual%>%
+  dplyr::select(monthDay, daily.2019)%>%
+  mutate(year=rep(2019),
+         type="resident")%>%
+  rename(daily.sold=daily.2019)
+
+res.2020<-res.annual%>%
+  dplyr::select(monthDay, daily.2020)%>%
+  mutate(year=rep(2020),
+         type="resident")%>%
+  rename(daily.sold=daily.2020)
+
+
+nonres.2018<-nonres.annual%>%
+  dplyr::select( monthDay, daily.2018)%>%
+  mutate(year=rep(2018),
+         type="nonresident")%>%
+  rename(daily.sold=daily.2018)
+
+nonres.2019<-nonres.annual%>%
+  dplyr::select(monthDay, daily.2019)%>%
+  mutate(year=rep(2019),
+         type="nonresident")%>%
+  rename(daily.sold=daily.2019)
+
+nonres.2020<-nonres.annual%>%
+  dplyr::select(monthDay, daily.2020)%>%
+  mutate(year=rep(2020),
+         type="nonresident")%>%
+  rename(daily.sold=daily.2020)
+
+license<-rbind.data.frame(res.2018, res.2019, res.2020, nonres.2018, res.2019, nonres.2020)
+
+license.all<-license%>%
+  group_by(year, monthDay)%>%
+  summarize(total.license=sum(daily.sold))%>%
+  ungroup()%>%
+  mutate(date=mdy(paste(monthDay, year, sep="/")))%>%
+  mutate(dayOfYear=yday(date))
+
+```
+
+now join to vehicle count data
+
+```{r}
+#vehicles$dayOfYear<-yday(vehicles$date)
+
+vehicles.license<-left_join(vehicles, license.all[,c("date","total.license","dayOfYear")], by="date")
+vehicles.license$year<-as.factor(vehicles.license$year)
+
+```
+```{r}
+
+palette<-c("#E69F00", "#56B4E9", "#CC79A7")
+
+
+
+palette<-rev(palette)
+
+license.all$year<-as.factor(license.all$year)
+
+license.plot.no.leg<-ggplot(license.all)+
+  geom_point(aes(x=dayOfYear, y=total.license, color=year))+
+  scale_color_manual(values=palette)+
+  xlab("Day of year")+
+  xlim(50, 275)+
+  ylab("Daily licenses sold")+
+  theme_classic()+
+  theme(legend.position="none")
+```
+
+```{r}
+vehicles$year<-as.factor(vehicles$year)
+
+vehicle.plot<-ggplot(vehicles)+
+  geom_point(aes(x=dayOfYear, y=totalVehicles, color=year))+
+  scale_color_manual(values=palette)+
+  xlab("Day of year")+
+  ylab("Vehicle count observations")+
+  theme_classic()
+
+legend<-get_legend(vehicle.plot)
+
+vehicle.plot.no.leg<-ggplot(vehicles)+
+  geom_point(aes(x=dayOfYear, y=totalVehicles, color=year))+
+  scale_color_manual(values=palette)+
+  xlab("Day of year")+
+  ylab("Vehicle count observations")+
+  xlim(50, 275)+
+  theme_classic()+
+  theme(legend.position="none")
+```
+
+
+```{r}
+plot_grid(license.plot.no.leg, vehicle.plot.no.leg, legend, nrow=1, labels=c("A","B"," "), rel_widths = c(0.45, 0.45, 0.1))
+ggsave(here::here("figures","seasonality.sales.vehicles.png"), height=4, width=8)
+```
+
+
+
+```{r}
+ggplot(vehicles)+
+  geom_boxplot(aes(x=year, y=totalVehicles))
+```
+
+```{r}
+ggplot(vehicles)+
+  geom_boxplot(aes(x=lakeID, y=totalVehicles, fill=year))+
+  scale_fill_manual(values=palette)+
+  ylab("Number of vehicles observed")+
+  xlab("Lake ID")+
+  theme_classic()+
+  theme(text=element_text(size=11))
+ggsave(here::here("figures","raw.boxplot.png"), height=4, width=10)
+```
+
+outliers removed--put them back? color code to show which ones
+
+```{r}
+ggplot(vehicles)+
+  geom_point(aes(x=hourOfDay, y=totalVehicles, color=year))+
+  scale_color_manual(values=palette)+
+  theme_classic()+
+  theme(text=element_text(size=15))
+ggsave(here::here("figures","quad.time.png"), height=4, width=6)
+```
+
+
+
+
+
+
