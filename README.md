@@ -24,7 +24,7 @@ lakevar folder
 - vilasLakes.csv: Lake size, access, species presence, and lake type pulled from WDNR Wisconsin Lakes database
 - lake order char.csv: added 8/30/2022, includes proportion of shoreline public lands
 
-Code writes to exploratory plots and figures folders
+Code writes to exploratory plots, figures folders and into the main directory because I'm a goblin.
 
 Code comparing license sales in 2020 to previous 5 years. 
 
