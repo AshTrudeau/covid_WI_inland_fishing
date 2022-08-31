@@ -4,7 +4,6 @@ Code and data comparing vehicle coutns in 2018, 2019, and 2020 at 38 lakes in Vi
 
 Code: revisions.analysis.Rmd
 
-Old version: vehicle.count.analysis.Rmd
 
 Code reads data from 'data for analysis' and 'lakevar' folders. 
 Files:
